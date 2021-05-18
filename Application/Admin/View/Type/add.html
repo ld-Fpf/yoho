@@ -1,0 +1,54 @@
+<include file="__View__/Common/head"/>
+
+<include file="__View__/Common/left"/>
+<div class="right">
+	<div class="now">
+		<div class="now_l"></div>
+		<div class="now_m">
+			<span class="fl">增加类型</span>
+			<!-- <span class="fr fabu"><a href="">增加分类</a></span> -->
+		</div>
+		<div class="now_r"></div>
+		<div class="clear"></div>
+	</div>
+	<form method="post">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wenzhang">
+	<tr>
+		<td class="bg_f8" align="right" width="100">类型名称：</td>
+		<td><input type="text" name="name" value="" class="inputall input200" /></td>
+	</tr>
+	<tr>
+		<td class="bg_f8">&nbsp;</td>
+		<td><button class="tjbtn">提交</button></td>
+	</tr>
+	</table>
+	</form>
+</div>
+		<div class="clear"></div>
+	</div>
+	<div class="foot">Copyright <span class="num">&copy;</span> 2014-2017 <a target="_blank" href="#"></a> 版权所有</div>
+</div>
+<script type="text/javascript"> 
+$(function(){
+	$(".list").find("tr").hover(
+		function(){
+			if ($(this).find("td").hasClass("bgtt")) return;
+			$(this).find("td").css("background-color", "#ffffdd");
+		},
+		function(){
+			if ($(this).find("td").hasClass("bgtt")) return;
+			$(this).find("td").css("background-color", "#fff");
+		}
+	)
+})
+</script>
+
+
+
+		<!-- end right -->
+
+
+
+
+</body>
+</html>	

@@ -1,0 +1,68 @@
+<include file="__View__/Common/head"/>
+
+<include file="__View__/Common/left"/>
+<div class="right">
+	<div class="now">
+		<div class="now_l"></div>
+		<div class="now_m">
+			<span class="fl">编辑品牌</span>
+			<!-- <span class="fr fabu"><a href="admin.php?mod=ad&act=add">增加广告</a></span> -->
+		</div>
+		<div class="now_r"></div>
+		<div class="clear"></div>
+	</div>
+	<form method="post" action="" enctype="multipart/form-data">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wenzhang">
+	<tr>
+		<td class="bg_f8" align="right">品牌名称：</td>
+		<td><input type="text" name="name" value="{$data.name}" class="inputall" /></td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">分类名称：</td>
+		<td>
+			<select name="category_id" class='inputall'>
+				<option value="0">==请选择分类==</option>
+				<foreach from="$cate" key="$k" value="$v">
+					<option value="{$v.category_id}" <if value="$data.category_id eq $v.category_id">selected</if>>{$v._name}</option>
+				</foreach>
+			</select>
+			<!-- <input name="category_id" value="" type="hidden"> -->
+			<span class="ml10"></span>
+		</td>
+	</tr>
+<!-- 	<tr>
+		<td class="bg_f8" align="right">品牌链接：</td>
+		<td><input type="text" name="info[ad_url]" value="" class="inputall" /></td>
+	</tr> -->
+	<tr>
+		<td class="bg_f8" align="right">品牌图片：</td>
+		<td>
+			<empty value="$data.logo">
+				<p><img src="__PUBLIC__/images/nopic.gif" style="border:1px solid #ddd" /></p>
+			<noempty />
+				<p><img src="__ROOT__/{$data.logo}" style="border:1px solid #ddd" /></p>
+			</empty>
+			<input type="hidden" name="logoh" value="{$data.logo}" />
+			<p><input type="file" name="logo" /></p>
+		</td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">品牌排序：</td>
+		<td><input type="text" name="sort" value="{$data.sort}" class="inputall input50" /></td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">热门品牌：</td>
+		<td><input type="radio" name="is_hot" value="0" <if value="$data['is_hot'] eq 0">checked="checked"</if> />&nbsp;否&nbsp;&nbsp;<input type="radio" name="is_hot" value="1" <if value="$data['is_hot'] eq 1">checked="checked"</if> />&nbsp;是</td>
+	</tr>
+	<tr>
+		<td class="bg_f8">&nbsp;</td>
+		<input type="hidden" name="brand_id" value="{$hd.get.bid}" />
+		<td colspan="2"><button class="tjbtn" />提交</button></td>
+	</tr>
+	</table>
+	</form>
+</div>
+	
+		<div class="clear"></div>
+	</div>
+<include file="__View__/Common/foot"/>

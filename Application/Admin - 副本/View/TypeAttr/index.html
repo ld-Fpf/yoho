@@ -1,0 +1,57 @@
+<include file="__View__/Common/head"/>
+
+<include file="__View__/Common/left"/>
+<div class="right">
+	<div class="now">
+		<div class="now_l"></div>
+		<div class="now_m">
+			<span class="fl">属性列表</span>
+			<span class="fr fabu"><a href="{|U:'TypeAttr/add', array('tid' =>$_GET['tid'])}">增加属性</a></span>
+		</div>
+		<div class="now_r"></div>
+		<div class="clear"></div>
+	</div>
+	<form method="post" id="form">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="list mat5">
+	<tr>
+		<td class="bgtt" width="50">属性ID</td>
+		<td class="bgtt" width="150">属性名称</td>
+		<td class="bgtt">属性值</td>
+		<td class="bgtt" width="100">属性类型</td>
+		<td class="bgtt" width="100">操作</td>
+	</tr>
+	<!-- 循环开始 -->
+	<foreach from="$data" key="$k" value="$v">
+		<tr height="60">
+		<td>{$v.taid}</td>
+		<td>{$v.title}</td>
+		<td>{$v.value}</td>
+		<if value="$v[attr_type] eq 1">
+			<td>规格</td>
+		<else />
+			<td>属性</td>
+		</if>
+		<td>
+			<a href="{|U:'TypeAttr/edit', array('tid'=>$v['type_id'], 'taid'=>$v['taid'])}" class="admin_edit mar3">修改</a>
+			<a href="javascript:;" class="admin_del" onclick="if(confirm('确定删除吗？')) location.href='{|U:'TypeAttr/del',array('tid'=>$v['type_id'], 'taid'=>$v['taid'])}'">删除</a>
+		</td>
+	</tr>
+	</foreach>
+	<!-- 循环结束 -->
+	<tr>
+		<td class="bgtt" colspan="6">
+			<span class="fl"><button href="" onclick="pe_doall(this,'form')"></button></span>
+			<span class="fenye">{$page}</span>
+		</td>
+	</tr>
+	</table>
+	</form>
+</div>
+	
+
+		<div class="clear"></div>
+	</div>
+<include file="__View__/Common/foot"/>
+
+
+

@@ -1,0 +1,61 @@
+<include file="__View__/Common/head"/>
+
+<include file="__View__/Common/left"/>
+<div class="right">
+	<div class="now">
+		<div class="now_l"></div>
+		<div class="now_m">
+			<span class="fl">banner列表</span>
+			<span class="fr fabu"><a href="{|U:'Banner/add'}">增加banner</a></span>
+		</div>
+		<div class="now_r"></div>
+		<div class="clear"></div>
+	</div>
+	<form method="post" id="form">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="list mat5">
+	<tr>
+		<td class="bgtt" width="50">ID</td>
+		<td class="bgtt" width="150">banner地址</td>
+		<td class="bgtt">banner图片</td>
+		<td class="bgtt" width="100">是否显示</td>
+		<td class="bgtt" width="100">操作</td>
+	</tr>
+	<!-- 循环开始 -->
+	<foreach from="$data" key="$k" value="$v">
+		<tr height="60">
+		<td>{$v.banner_id}</td>
+		<td>{$v.url}</td>
+		<empty value="$v.pic">
+			<td><a href="" target="_blank"><img src="__PUBLIC__/images/nopic.gif" height="45" style="border:1px solid #ddd"  /></a></td>
+		<noempty />
+			<td><a href="" target="_blank"><img src="__ROOT__/{$v.pic}" height="45"  /></a></td>
+		</empty>
+		<if value="$v[is_show] eq 1">
+			<td>是</td>
+		<else />
+			<td>否</td>
+		</if>
+		<td>
+			<a href="{|U:'Banner/edit', array('bid'=>$v['banner_id'])}" class="admin_edit mar3">修改</a>
+			<a href="javascript:;" class="admin_del" onclick="if(confirm('确定删除吗？')) location.href='{|U:'Banner/del',array('bid'=>$v['banner_id'])}'">删除</a>
+		</td>
+	</tr>
+	</foreach>
+	<!-- 循环结束 -->
+	<tr>
+		<td class="bgtt" colspan="6">
+			<span class="fl"><button href="" onclick="pe_doall(this,'form')"></button></span>
+			<span class="fenye">{$page}</span>
+		</td>
+	</tr>
+	</table>
+	</form>
+</div>
+	
+
+		<div class="clear"></div>
+	</div>
+<include file="__View__/Common/foot"/>
+
+
+

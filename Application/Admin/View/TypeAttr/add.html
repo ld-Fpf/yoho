@@ -1,0 +1,60 @@
+<include file="__View__/Common/head"/>
+
+<include file="__View__/Common/left"/>
+<link rel="stylesheet" href="__PUBLIC__/css/inc.css" />
+	<script type="text/javascript">
+		var url='__CONTROLLER__/addAttr';
+	</script>
+	<script type="text/javascript" src='__CONTROLLER_VIEW__/js/js.js'></script>
+<div class="right">
+	<div class="now">
+		<div class="now_l"></div>
+		<div class="now_m">
+			<span class="fl">增加属性</span>
+			<!-- <span class="fr fabu"><a href="admin.php?mod=ad&act=add">增加广告</a></span> -->
+		</div>
+		<div class="now_r"></div>
+		<div class="clear"></div>
+	</div>
+	<form method="post" action="">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wenzhang">
+	<tr>
+		<td class="bg_f8" align="right">属性名称：</td>
+		<td><input type="text" name="title" class="inputall" /></td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">规格：</td>
+		<td><input id='s1' type="radio" name="attr_type" value="0" checked="checked" />&nbsp;属性&nbsp;&nbsp;<input id='s2' type="radio" name="attr_type" value="1" />&nbsp;规格</td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">属性类型：</td>
+		<td>
+			<select name="show_type" id="show_type" class='ml10 inputselect' onchange='add(this);'>
+				<option value="">===请选择===</option>
+				<option value="input">文字输入框[input]</option>
+				<option value="selected">下拉列表[select]</option>
+				<option value="textarea">文本域[textarea]</option>
+				<option value="radio">单选[radio]</option>
+				<option value="checkbox">复选[checkbox]</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right"></td>
+		<td>
+			<div id="addGoodsAttr"></div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="bg_f8">&nbsp;</td>
+		<input type="hidden" name="type_id" value="{$hd.get.tid}" />
+		<td colspan="2"><button class="tjbtn" />提交</button></td>
+	</tr>
+	</table>
+	</form>
+</div>
+	
+		<div class="clear"></div>
+	</div>
+<include file="__View__/Common/foot"/>

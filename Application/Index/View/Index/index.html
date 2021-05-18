@@ -1,0 +1,519 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Yoho</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/yoho.css">
+	<script type="text/javascript" src="__STATIC__/jquery/jquery-1.7.2.min.js"></script>
+	<include file="__View__/Common/head"/>
+	<link href="__PUBLIC__/css/banner.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="__PUBLIC__/js/banner.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('li a img').mouseenter(function(){
+			// 让当前移入的li里面的图片移动
+			$(this).stop().animate({'opacity':'0.7'}, 200,function(){
+				$(this).animate({'opacity':'1'}, 200);
+			})
+		})
+	})
+	</script>
+<!-- 主体区域开始 -->
+<div class="wrapper screen wrapper-index2">
+	<!-- banner区域开始 -->
+<!-- 	<div class="focus-top2" id="focus-top2">
+		<div id="bigSlide">
+			<ul class="focus-img">
+				<li>
+					<a href="">
+						<img src="__PUBLIC__/images/banner.jpg" width="1150" height="450" />
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div> -->
+	<!-- banner区域结束 -->
+
+<!-- 	<div id="_smallPic" class="focus-bottom">
+		<ul class="clear">
+			<li><a href="" target="_blank"><img src="__PUBLIC__/images/_small_banner.jpg"></a></li>
+			<li><a href="" target="_blank"><img src="__PUBLIC__/images/_small_banner.jpg"></a></li>
+			<li><a href="" target="_blank"><img src="__PUBLIC__/images/_small_banner.jpg"></a></li>
+			<li><a href="" target="_blank"><img src="__PUBLIC__/images/_small_banner.jpg"></a></li>
+			<li><a href="" target="_blank"><img src="__PUBLIC__/images/_small_banner.jpg"></a></li>
+			<li><a href="" target="_blank"><img src="__PUBLIC__/images/_small_banner.jpg"></a></li>
+			<li><a href="" target="_blank"><img src="__PUBLIC__/images/_small_banner.jpg"></a></li>
+			<li><a href="" target="_blank"><img src="__PUBLIC__/images/_small_banner.jpg"></a></li>
+		</ul>
+	</div> -->
+
+	<div class="indexCon fl">
+	    <div class="flashBanner">
+	        <a href=""><img class="bigImg" width="1150" height="450" /></a>
+	        <div class="mask">
+	        
+	        <list from='$banner' name='$d' row='8' start="0" empty=' 没有数据 '>
+			<!-- <a href=""><img src="__ROOT__/{$d.indexpic}" class="lazy"></a> -->
+			<img src="__ROOT__/{$d.pic}" uri="__ROOT__/{$d.pic}" link="__ROOT__/{$d.url}"  width="138" height="54"/>
+		</list>
+	        
+	        </div>
+	    </div>
+	</div>
+
+
+	<!-- 优选品牌开始 -->
+	<dl class="dl-index">
+		<dt class="clear">
+			<div class="left title">优选品牌</div>
+			<div class="right keys">
+				<a href="">CLOTTEE </a><span>|</span>
+				<a href="">Life·After Life</a><span>|</span>
+				<a href="">F.L.Y.D</a><span>|</span>
+				<a href="">人气品牌</a>
+			</div>
+		</dt>
+		<dd class="clear hot-brand-new">
+			<div class=" left recommendBox-new" id="recommendBox">
+			<ul class="new-hot-brand clear">
+				<li><a href="" title="">
+					<img class="lazy" src="__PUBLIC__/images/pinp1.jpg"></a>
+				</li>
+				<li><a href="" title="">
+					<img class="lazy" src="__PUBLIC__/images/pinp2.jpg"></a>
+				</li>
+				<li><a href="" title="">
+					<img class="lazy" src="__PUBLIC__/images/pp1.jpg"></a>
+				</li>
+				<li><a href="" title="">
+					<img class="lazy" src="__PUBLIC__/images/pp2.jpg"></a>
+				</li>
+				<li><a href="" title="">
+					<img class="lazy" src="__PUBLIC__/images/pp3.jpg"></a>
+				</li>
+				<li><a href="" title="">
+					<img class="lazy" src="__PUBLIC__/images/pp4.jpg"></a>
+				</li>
+				<li><a href="" title="">
+					<img class="lazy" src="__PUBLIC__/images/pp5.jpg"></a>
+				</li>
+				<li><a href="" title="">
+					<img class="lazy" src="__PUBLIC__/images/pp6.jpg"></a>
+				</li>
+				<li><a href="" title="">
+					<img class="lazy" src="__PUBLIC__/images/pp7.jpg"></a>
+				</li>
+				<li><a href="" title="">
+					<img class="lazy" src="__PUBLIC__/images/pinp3.jpg"></a>
+				</li>
+				<li><a href="" title="">
+					<img class="lazy" src="__PUBLIC__/images/pinp4.jpg"></a>
+				</li>
+				<li><a href="" title="">
+					<img class="lazy" src="__PUBLIC__/images/pp8.jpg"></a>
+				</li>
+				<li><a href="" title="">
+					<img class="lazy" src="__PUBLIC__/images/pp9.jpg"></a>
+				</li>
+				<li><a href="" title="">
+					<img class="lazy" src="__PUBLIC__/images/pp10.jpg"></a>
+				</li>
+				<li><a href="" title="">
+					<img class="lazy" src="__PUBLIC__/images/pp11.jpg"></a>
+				</li>
+				<li><a href="" title="">
+					<img class="lazy" src="__PUBLIC__/images/pp12.jpg"></a>
+				</li>
+				<li><a href="" title="">
+					<img class="lazy" src="__PUBLIC__/images/pp13.jpg"></a>
+				</li>
+				<li><a href="" title="">
+					<img class="lazy" src="__PUBLIC__/images/pp14.jpg"></a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="index-unit-1 right">
+				<ul class="new-hot-brand clear">
+					<li>
+						<div class="btn-page">
+						  <div class="relative" id="btnBox">
+						  	<a href="javascript:void(0);" class="page-before"></a>
+                     	  	<a href="javascript:void(0);" class="page-next"></a>
+                     	  </div>
+                     	</div>
+					</li>
+					<li>
+						<a href=""><img class="lazy" src="__PUBLIC__/images/pp15.jpg" style=""></a>
+					</li>
+				</ul>
+			</div>
+		</dd>
+	</dl>
+	<!-- 优选品牌结束 -->
+
+	<!-- 人气单品开始 -->
+	<div class="clear">
+		<dl class="dl-index index-unit-5 left">
+			<dt class="clear">
+				<div class="left title">人气单品</div>
+				<div class="right keys">
+					<a href=""> 冬の优选</a><span>|</span>
+					<a href="">裤类精品</a><span>|</span>
+					<a href="">潮鞋来袭</a>
+				</div>
+			</dt>
+			<dd>
+				<ul class="index-ul clear">
+					<list from='$pop' name='$d' row='8' start="0" empty=' 没有数据 '>
+						<li>
+							<a href=""><img src="__ROOT__/{$d.indexpic}" class="lazy"></a>
+						</li>
+					</list>
+				</ul>				
+			</dd>
+		</dl>
+
+		<div class="index-unit-1 index-ads right">
+			<div class="ads-1">
+				<a href=""><img src="__PUBLIC__/images/ads1.jpg" class="lazy"></a>
+			</div>
+			<div class="ads-2">
+				<a href=""><img src="__PUBLIC__/images/ads2.gif" class="lazy"></a>
+			</div>
+		</div>
+	</div>
+	<!-- 人气单品结束 -->
+
+	<!-- 潮流上装开始 -->
+	<dl class="dl-index clear">
+		<dt class="clear">
+			<div class="left title">潮流上装</div>
+			<div class="right keys">
+				<a href="">冬装新品</a><span>|</span>
+				<a href="">新品夹克</a><span>|</span>
+				<a href="">暖冬棉服</a><span>|</span>	
+				<a href="">MORE&gt;</a>
+			</div>
+		</dt>
+		<dd class="left">
+			<div class="relative category-top">
+				<a href=""><img src="__PUBLIC__/images/floor1.jpg" class="lazy"></a>
+			</div>
+			<ul class="category-list left">
+				<list from='$floor1' name='$d' row='6' start="0" empty=' 没有数据 '>
+					<if value='$hd.list.d.index eq 1'>
+						<li><a href="">{$d.name}<span class="hot">HOT</span></a></li>
+					<elseif value='$hd.list.d.index eq 4'/>
+						<li><a href="">{$d.name}<span class="hot">HOT</span></a></li>
+					<else/>
+						<li><a href="">{$d.name}</a></li>
+					</if>
+				</list>
+			</ul>
+			<ul class="brands-list">
+				<list from='$f1b' name='$d' row='6' start="0" empty=' 没有数据 '>
+					<li><a href="">{$d.name}</a></li>
+				</list>
+				<li><a href="">MORE...</a></li>
+			</ul>
+		</dd>
+		<dd class="index-unit-5 right">
+			<ul class="index-ul clear">
+				<li class="li-h-2"><a href="{|U:'List/index', array('cid' => 15)}"><img src="__PUBLIC__/images/floor1_1.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor1_2.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor1_3.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor1_4.jpg" class="lazy"></a></li>
+				<li class="li-h-2"><a href=""><img src="__PUBLIC__/images/floor1_5.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor1_6.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor1_7.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor1_8.jpg" class="lazy"></a></li>
+			</ul>			
+		</dd>
+	</dl>
+	<!-- 潮流上装结束 -->
+
+	<!-- 经典裤装开始 -->
+	<dl class="dl-index clear">
+		<dt class="clear">
+			<div class="left title">经典裤装</div>
+			<div class="right keys">
+				<a href="">休闲裤</a><span>|</span>
+				<a href="">牛仔裤</a><span>|</span>
+				<a href="">工装裤</a><span>|</span>	
+				<a href="">MORE&gt;</a>
+			</div>
+		</dt>
+		<dd class="left">
+			<div class="relative category-top">
+				<a href=""><img src="__PUBLIC__/images/floor2.jpg" class="lazy"></a>
+			</div>
+			<ul class="category-list left">
+				<list from='$floor2' name='$d' row='6' start="0" empty=' 没有数据 '>
+					<if value='$hd.list.d.index eq 1'>
+						<li><a href="">{$d.name}<span class="hot">HOT</span></a></li>
+					<elseif value='$hd.list.d.index eq 3'/>
+						<li><a href="">{$d.name}<span class="hot">HOT</span></a></li>
+					<else/>
+						<li><a href="">{$d.name}</a></li>
+					</if>
+				</list>
+			</ul>
+			<ul class="brands-list">
+				<list from='$f2b' name='$d' row='6' start="0" empty=' 没有数据 '>
+					<li><a href="">{$d.name}</a></li>
+				</list>
+				<li><a href="">MORE...</a></li>
+			</ul>
+		</dd>
+		<dd class="index-unit-5 right">
+			<ul class="index-ul clear">
+				<li class="li-h-2"><a href=""><img src="__PUBLIC__/images/floor2_1.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor2_2.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor2_3.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor2_4.jpg" class="lazy"></a></li>
+				<li class="li-h-2"><a href=""><img src="__PUBLIC__/images/floor2_5.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor2_6.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor2_7.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor2_8.jpg" class="lazy"></a></li>
+			</ul>				
+		</dd>
+	</dl>
+	<!-- 经典裤装结束 -->
+
+	<!-- 时尚鞋履开始 -->
+	<dl class="dl-index clear">
+		<dt class="clear">
+			<div class="left title">时尚鞋履</div>
+			<div class="right keys">
+				<a href="">靴子</a><span>|</span>
+				<a href="">休闲/运动鞋</a><span>|</span>
+				<a href="">复古跑鞋</a><span>|</span>	
+				<a href="">MORE&gt;</a>
+			</div>
+		</dt>
+		<dd class="left">
+			<div class="relative category-top">
+				<a href=""><img src="__PUBLIC__/images/floor3.jpg" class="lazy"></a>
+			</div>
+			<ul class="category-list left">
+				<list from='$floor3' name='$d' row='6' start="0" empty=' 没有数据 '>
+					<if value='$hd.list.d.index eq 1'>
+						<li><a href="">{$d.name}<span class="hot">HOT</span></a></li>
+					<elseif value='$hd.list.d.index eq 3'/>
+						<li><a href="">{$d.name}<span class="hot">HOT</span></a></li>
+					<else/>
+						<li><a href="">{$d.name}</a></li>
+					</if>
+				</list>
+			</ul>
+			<ul class="brands-list">
+				<list from='$f3b' name='$d' row='6' start="0" empty=' 没有数据 '>
+					<li><a href="">{$d.name}</a></li>
+				</list>
+				<li><a href="">MORE...</a></li>
+			</ul>
+		</dd>
+		<dd class="index-unit-5 right">
+			<ul class="index-ul clear">
+				<li class="li-h-2"><a href=""><img src="__PUBLIC__/images/floor3_1.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor3_2.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor3_3.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor3_4.jpg" class="lazy"></a></li>
+				<li class="li-h-2"><a href=""><img src="__PUBLIC__/images/floor3_5.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor3_6.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor3_7.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor3_8.jpg" class="lazy"></a></li>
+			</ul>				
+		</dd>
+	</dl>
+	<!-- 时尚鞋履结束 -->
+
+	<!-- 潮人配饰开始 -->
+	<dl class="dl-index clear">
+		<dt class="clear">
+			<div class="left title">潮人配饰</div>
+			<div class="right keys">
+				<a href="">包品</a><span>|</span>
+				<a href="">耳机</a><span>|</span>
+				<a href="">帽子</a><span>|</span>	
+				<a href="">MORE&gt;</a>
+			</div>
+		</dt>
+		<dd class="left">
+			<div class="relative category-top">
+				<a href=""><img src="__PUBLIC__/images/floor4.jpg" class="lazy"></a>
+			</div>
+			<ul class="category-list left">
+				<list from='$floor4' name='$d' row='6' start="0" empty=' 没有数据 '>
+					<if value='$hd.list.d.index eq 1'>
+						<li><a href="">{$d.name}<span class="hot">HOT</span></a></li>
+					<elseif value='$hd.list.d.index eq 3'/>
+						<li><a href="">{$d.name}<span class="hot">HOT</span></a></li>
+					<else/>
+						<li><a href="">{$d.name}</a></li>
+					</if>
+				</list>
+			</ul>
+			<ul class="brands-list">
+				<list from='$f4b' name='$d' row='6' start="0" empty=' 没有数据 '>
+					<li><a href="">{$d.name}</a></li>
+				</list>
+				<li><a href="">MORE...</a></li>
+			</ul>
+		</dd>
+		<dd class="index-unit-5 right">
+			<ul class="index-ul clear">
+				<li class="li-h-2"><a href=""><img src="__PUBLIC__/images/floor4_1.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor4_2.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor4_3.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor4_4.jpg" class="lazy"></a></li>
+				<li class="li-h-2"><a href=""><img src="__PUBLIC__/images/floor4_5.gif" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor4_6.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor4_7.jpg" class="lazy"></a></li>
+				<li><a href=""><img src="__PUBLIC__/images/floor4_8.jpg" class="lazy"></a></li>
+			</ul>				
+		</dd>
+	</dl>
+	<!-- 潮人配饰结束 -->
+
+	<!-- 底部banner开始 -->
+	<div class="index-banner left">
+		<a href=""><img src="__PUBLIC__/images/s_banner.gif"></a>
+	</div>
+
+	<div class="index-banner left">
+		<a href=""><img src="__PUBLIC__/images/index-banner2.jpg"></a>
+	</div>
+	<!-- 底部banner结束 -->
+
+</div>
+	
+</div>
+<!-- 主体区域结束 -->
+
+<!-- 底部开始 -->
+<div class="index-foot clear">
+	<dl class="clear screen">
+		<dd>
+		<div class="foot-panel">
+			<div class="title relative">
+				<div class="title-line"></div>
+				<div class="text">
+					<span>有货SERVICES</span>
+				</div>
+			</div>
+			<div id="foot-services">
+				<ul class="clear two-dim">
+					<li class="left">
+						<div>
+							<a href="javascript:void(0);"><img src="__PUBLIC__/images/yoho1.png" class="dim-img lazy"></a>
+							<p>YOHO!有货</p>
+						</div>
+					</li>
+					<li class="left">
+						<div>
+							<a href="javascript:void(0);"><img src="__PUBLIC__/images/weibo.png" class="dim-img lazy"></a>
+							<p>微信</p>
+						</div>
+					</li>
+					<li class="left">
+						<div>
+							<a href="javascript:void(0);"><img src="__PUBLIC__/images/weibo.png" class="dim-img lazy"></a><p>微博</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- <p class="item-nav center" id="button-services"><a href="javascript:void(0);" key="0"><span class="iconfont cur">&#x3444;</span></a></p> -->
+		</dd>
+
+		<dd>
+			<img src="__PUBLIC__/images/button_services.jpg" alt="" />
+		</dd>
+		
+		<dd class="last">
+			<a href=""><img src="__PUBLIC__/images/more.jpg" alt="" /></a>
+		</dd>
+
+</div>
+<!-- 底部结束 -->
+
+<!-- 黑色底部开始 -->
+<div class="footer2013 clear">
+	<div class="promise">
+		<div class="screen clear">
+			<div class="left"><span class="iconfont rgbf">&#xe608;</span><span class="red">100%</span><span class="rgbf">品牌授权正品</span></div>
+			<div class="left"><span class="iconfont rgbf">&#xe607;</span><span class="red">7天</span><span class="rgbf">无理由退换货</span></div>
+			<div class="left"><span class="iconfont rgbf">&#xe604;</span><span class="rgbf">客服电话：</span><span class="red">400-889-9646</span>&nbsp;&nbsp;<span class="rgb9">09:00-22:30(周一至周日)</span></div>
+			<div class="right subscribe footer-right"><input style="" class="rgb6 top" name="subscriberBox" id="subscriberBox" value="订阅我们的邮件"><a href="javascript:void(0);" id="subscriberBtn" class="iconfont rgbf">&#xe606;</a></div>
+			</div>
+		</div>
+
+		<div class="footer-help clear">
+			<div class="screen clear">
+				<div class="left">
+					<ul class="clear">
+						<li class="left">
+							<p><span>新手指南</span></p>
+							<p><a href="">新用户注册</a></p>
+							<p><a href="">会员登录</a></p>
+							<p><a href="">订购流程</a></p>
+							<p><a href="">交易须知</a></p>
+						</li>
+						<li class="left">
+							<p><span>付款方式</span></p>
+							<p><a href="">支付方式</a></p>
+							<p><a href="">常见支付问题</a></p>
+							<p><a href="">如何办理退款</a></p>
+							<p><a href="">发票制度说明</a></p>
+						</li>
+						<li class="left">
+							<p><span>配送方式</span></p>
+							<p><a href="">配送时间及范围</a></p>
+							<p><a href="">订单的拆分</a></p>
+							<p><a href="">商品验收与签收</a></p>
+						</li>
+						<li class="left">
+							<p><span>售后服务</span></p>
+							<p><a href="">如何办理退换货</a></p>
+							<p><a href="">退换货政策</a></p>
+						</li>
+						<li class="left">
+							<p><span>帮助中心</span></p>
+							<p><a href="">找回密码</a></p>
+							<p><a href="">常见问题</a></p>
+							<p><a href="">谨防诈骗</a></p>
+						</li>
+						<li class="left">
+							<p><span>优惠政策</span></p>
+							<p><a href="">VIP会员制度说明</a></p>
+							<p><a href="">YOHO币</a></p>
+							<p><a href="">优惠券</a></p>
+							<p><a href="">兑换礼品卡</a></p>
+						</li>
+					</ul>
+				</div>
+			  </div>
+		</div>
+
+
+		<div class="footer-link clear">
+			<div class="screen clear">
+				<div class="left right-flag">
+					<a href=""><img src="http://static.yohobuy.com/images/v3/icon/credit-flag3.png"></a>
+					<a href=""><img src="http://static.yohobuy.com/images/v3/icon/isc2.png"></a>
+				</div>
+				<div class="left about-us">
+					<p>
+						<a href="">返回首页</a><span>|</span><a href="">YOHO!有货</a><span>|</span><a href="">新力传媒</a><span>|</span><a href="">联系我们</a><span>|</span><a href="">隐私条款</a><span>|</span><a href="">友情链接</a>
+					</p>
+					<p>CopyRight © 2007-2016 南京新与力文化传播有限公司 苏ICP备09011225号 NewPower Co. 版权所有 经营许可证编号：苏B2-20120395</p>
+				</div>
+				
+			</div>
+		</div>
+</div>
+<!-- 黑色底部结束 -->
+</body>
+</html>

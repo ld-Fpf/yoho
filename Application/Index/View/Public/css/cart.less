@@ -1,0 +1,698 @@
+// 全局设置
+*{
+	margin:0;
+	padding:0;
+	font-family: arial,"Microsoft YaHei";
+	font-size: 12px;
+	color: #000;
+	line-height: 150%;
+}
+dl, ul, li, ol {
+    list-style: outside none none;
+    padding: 0px;
+    margin: 0px;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+form {
+    display: inline;
+}
+input, textarea, select {
+    vertical-align: middle;
+    font-size: 12px;
+    color: #333;
+    outline: medium none;
+}
+input {
+    border: medium none;
+}
+.login-out{
+	color:#666;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+.red {
+    color: #E01;
+}
+.relative {
+    position: relative;
+}
+.rgb6 {
+    color: #666;
+}
+.rgb2 {
+    color: #222;
+}
+.rgbf {
+    color: #FFF;
+}
+.rgb9 {
+    color: #999;
+}
+.top {
+    vertical-align: top;
+}
+.a_eu {
+	color: #468fa2;
+	text-decoration: underline;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+.clear {
+    clear: both;
+}
+
+// @font-face {font-family: 'iconfont';
+//     src: url('./fonts/iconfont.eot'); /* IE9*/
+//     src: url('./fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//     url('./fonts/iconfont.woff') format('woff'), /* chrome、firefox */
+//     url('./fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+//     url('./fonts/iconfont.svg#uxiconfont') format('svg'); /* iOS 4.1- */
+// }
+@font-face {font-family: 'iconfont';
+    src: url('./fonts/iconfont.eot'); /* IE9*/
+    src: url('./fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('./fonts/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('./fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('./fonts/iconfont.svg#uxiconfont') format('svg'); /* iOS 4.1- */
+}
+  .iconfont{
+    font-family:"iconfont" !important;
+    font-size:12px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+
+
+// 头部开始
+.header-simple {
+	height:68px;
+	margin: 0px 0px 20px;
+	border-bottom: 2px solid #222;
+	.screen990 {
+		width: 990px;
+		margin: 0px auto;
+	}
+	.logo {
+		padding: 13px 0px;
+	}
+	.simple-items {
+		padding: 19px 0px;
+		li {
+			padding: 0px 10px;
+			height: 28px;
+			line-height: 28px;
+			.iconfont{
+				font-size: 10px;
+				color:#000;
+			}
+		}
+	}
+}
+// 头部结束
+
+// 标题部分开始
+.cartnew-title {
+    width: 990px;
+    height: 52px;
+    overflow: hidden;
+    padding: 20px 0px 0px;
+    margin: 0px auto;
+    h2 {
+        height: 32px;
+        width: 200px;
+        overflow: hidden;
+        text-indent: -3000px;
+        background: url(../images/cart_logo.gif) no-repeat scroll 0% 0% transparent;
+        float: left;
+    }
+    .step1 {
+        background-position: 0px 0px;
+    }
+    ul {
+        width: 446px;
+        height: 30px;
+        background: url(../images/cartnew_flow.png) no-repeat scroll right top transparent;
+        float: right;
+        li {
+            width: 176px;
+            height: 30px;
+            text-align: center;
+            float: left;
+            span {
+                display: block;
+                height: 15px;
+                padding: 15px 0px 0px;
+                line-height: 15px;
+                color: #999;
+            }
+            .act {
+                background: url(../images/cart_flow_black.gif) no-repeat scroll center top transparent;
+                color: #000;
+            }
+        }
+        .end {
+            width: 94px;
+            text-align: right;
+        }
+    }
+}
+// 标题部分结束
+
+
+.cartnew_table {
+	border-collapse: collapse;
+	border: 1px solid #CCC;
+	margin-top: -1px;
+}
+
+// 主体部分开始
+.cartnew-main {
+    width: 990px;
+    margin: 0px auto;
+    .cartnew-tips {
+        width: 990px;
+        height:auto;
+        min-height:25px;
+        margin: 0px auto 5px;
+        .tipsbox {
+            width: 648px;
+            height: 23px;
+            line-height: 18px;
+            padding: 4px 5px 4px 10px;
+            color: #666;
+            background: url(../images/cartnew_tipsbox.png) no-repeat scroll 0% 0% transparent;
+            position: relative;
+            float: left;
+            .btn_close {
+                width: 17px;
+                height: 17px;
+                padding: 0px;
+                background: url(../images/i_close_f.png) no-repeat scroll 0% 0% transparent;
+                float: right;
+                cursor: pointer;
+            }
+            strong {
+                color: #000;
+            }
+        }
+    }
+    .cartnew_table {
+    	  width:100%;
+    	  margin-top:10px;
+    	  margin-bottom:-5px;
+              border: medium none;
+        tbody{
+        	tr{
+        		th {
+        		    height: 32px;
+        		    background: none repeat scroll 0% 0% #000;
+        		    color: #FFF;
+        		    vertical-align: middle;
+        		    text-align: center;
+        		}
+        		.th1 {
+        		    width: 344px;
+        		    padding: 0px;
+        		}
+        		.th2 {
+        		    width: 120px;
+        		    padding: 0px;
+        		}
+        		.th3 {
+        		    width: 116px;
+        		    padding: 0px;
+        		}
+        		.th4 {
+        		    width: 120px;
+        		    padding: 0px;
+        		}
+        		.th5 {
+        		    width: 100px;
+        		    padding: 0px;
+        		}
+        		.th6 {
+        		    width: 188px;
+        		    padding: 0px;
+        		}
+        		td {
+        		    border: 1px solid #CCC;
+        		    padding: 10px;
+        		    text-align: center;
+        		    span{
+
+        		    }
+        		    .btn_type5 {
+        		        display: inline-block;
+        		        height: 35px;
+        		        background: url(../images/icons02.png) no-repeat scroll 0px -84px transparent;
+        		        padding: 0px 0px 0px 2px;
+        		        overflow: hidden;
+        		        a {
+        		            display: inline-block;
+        		            height: 35px;
+        		            line-height: 32px;
+        		            padding: 0px 20px;
+        		            background: url(../images/icons02.png) no-repeat scroll right -84px transparent;
+        		            border: medium none;
+        		            overflow: visible;
+        		            cursor: pointer;
+        		            margin: 0px;
+        		            color: #666;
+        		        }
+        		    }
+        		}
+        		.cart-empty{
+        			border:none !important;
+        			padding:100px 0 !important;
+        			background:url(../images/cart_empty.gif) no-repeat 200px 56px;
+        			padding-left:260px !important;
+        		}
+        	}
+        }
+    }
+    .cart_pre_sale{
+    	tr {
+    	        border: 1px solid #F7D373;
+    	        td {
+    	            border-top: 0px none;
+    	        }
+    	    }
+    }
+
+	// 购物车内商品信息开始
+    .cart_common_goods{
+    	tr{
+                        th {
+                            height: 32px;
+                            background: none repeat scroll 0% 0% #fff;
+                            color: #FFF;
+                            vertical-align: middle;
+                            text-align: center;
+                        }
+    		td{
+    			a.btn_h{
+    				    height: 22px;
+    				    background: url(../images/btn_hs.png) no-repeat scroll left 0px transparent;
+    				    padding-left: 8px;
+    				    display: inline-block;
+    				    span {
+    				        height: 22px;
+    				        line-height: 21px;
+    				        background: url(../images/btn_hs.png) no-repeat scroll right 0px transparent;
+    				        padding-right: 10px;
+    				        display: inline-block;
+    				        cursor: pointer;
+    				        color: #666;
+    				    }
+    			}
+    			.cartnew-img{
+                                                width:308px;
+    				input {
+		    			    float: left;
+		    			    margin: 25px 15px 0px;
+		    		}
+		    		img {
+		    		    float: left;
+		    		    margin-right: 10px;
+		    		    display: inline;
+		    		    width: 60px;
+		    		}
+		    		p {
+		    		    float: left;
+		    		    padding-top: 15px;
+		    		    text-align: left;
+		    		    width: 195px;
+		    		}
+	    		    .amount_wrapper {
+	    		        width: 70px;
+	    		        height: 20px;
+	    		        display: inline-block;
+	    		        .amount_cut {
+	    		            width: 11px;
+	    		            height: 11px;
+	    		            margin: 5px 5px 0px 0px;
+	    		            display: inline;
+	    		            background: url(../images/ico_jj.png) no-repeat scroll 0px 0px transparent;
+	    		            overflow: hidden;
+	    		            cursor: pointer;
+	    		            border: 0px none;
+	    		            float: left;
+	    		        }
+	    		        .amount_add {
+	    		            width: 11px;
+	    		            height: 11px;
+	    		            margin: 5px 0px 0px 5px;
+	    		            display: inline;
+	    		            background: url(../images/ico_jj.png) no-repeat scroll -11px 0px transparent;
+	    		            overflow: hidden;
+	    		            cursor: pointer;
+	    		            border: 0px none;
+	    		            float: left;
+	    		        }
+	    		        input {
+	    		            width: 35px;
+	    		            height: 18px;
+	    		            line-height: 18px;
+	    		            border: 1px solid #C4C4C4;
+	    		            text-align: center;
+	    		            overflow: hidden;
+	    		            float: left;
+	    		        }
+	    		    }
+
+
+
+
+    			}
+    		}
+    	}
+
+    }
+    // 购物车内商品信息结束
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+// 购物车内商品计数开始
+    .cartnew-sum {
+        background: none repeat scroll 0% 0% #EFEFEF;
+        border: 1px solid #CCC;
+        padding: 10px;
+        height:50px;
+        margin-bottom: 10px;
+        .batch_div{
+		span {
+		    color: #333;
+		}
+		input {
+		    margin-right: 5px;
+		}
+		a {
+		    color: #333;
+		    margin-left: 20px;
+		}
+        }
+        .right {
+            text-align: right;
+            float: right;
+            p{
+            	strong {
+            	    color: #E8044F;
+            	    font-size: 18px;
+            	}
+            }
+            .sum {
+                color: #333;
+                font-weight: bold;
+                padding-bottom: 5px;
+            }
+        }
+    }
+ // 购物车内商品计数结束
+ 
+ // 按钮部分开始
+ .cartnew-submit {
+     padding: 10px 0px 40px;
+     text-align: right;
+     position: relative;
+     a,input {
+         vertical-align: middle;
+     }
+     .btn_continue {
+         float: left;
+         width: 60px;
+         height: 33px;
+         padding: 0px 0px 0px 33px;
+         text-align: left;
+         border: 0px none;
+         line-height: 33px;
+         font-size: 14px;
+         color: #333;
+         font-weight: bold;
+         background: url(../images/btns.png) no-repeat scroll 0px 0px transparent;
+         display: inline-block;
+         cursor: pointer;
+     }
+     .btn_account {
+         width: 133px;
+         height: 33px;
+         padding: 0px;
+         text-align: center;
+         border: 0px none;
+         line-height: 33px;
+         font-size: 14px;
+         color: #FFF;
+         font-weight: bold;
+         background: url(../images/btns.png) no-repeat scroll 0px -33px transparent;
+         display: inline-block;
+         cursor: pointer;
+     }
+ }
+ // 按钮部分结束
+ 
+ .cartnew-goodslist {
+     border: 1px solid #CCC;
+     margin-bottom: 10px;
+     .title {
+         height: 20px;
+         padding: 8px 10px;
+         background: none repeat scroll 0% 0% #EFEFEF;
+     }
+     h2 {
+         height: 20px;
+         line-height: 20px;
+         background: url(../images/i_-.png) no-repeat scroll 0px 2px transparent;
+         font-size: 12px;
+         padding: 0px 0px 0px 20px;
+         float: left;
+         cursor: pointer;
+     }
+     .main {
+         height: 230px;
+         border-top: 1px solid #E3E3E3;
+         ul{
+         	li {
+         	    width: 163px;
+         	    height: 230px;
+         	    border-right: 1px solid #E3E3E3;
+         	    float: left;
+         	    .list {
+         	        width: 100px;
+         	        padding: 10px 0px 0px;
+         	        margin: 0px auto;
+         	        .thumb {
+         	            height: 110px;
+         	        }
+         	        .name {
+         	            height: 35px;
+         	            overflow: hidden;
+         	            a {
+         	                color: #333;
+         	                text-decoration: underline;
+         	                h3 {
+         	                    height: 30px;
+         	                    line-height: 15px;
+         	                    font-size: 12px;
+         	                    font-weight: normal;
+         	                    color: #333;
+         	                    cursor: pointer;
+         	                    overflow: hidden;
+         	                }
+         	            }
+         	        }
+         	        .price {
+         	            color: #333;
+         	            height: 25px;
+         	            line-height: 15px;
+         	            font-weight: bold;
+         	            white-space: nowrap;
+         	            overflow: hidden;
+         	            del {
+         	                color: #999;
+         	            }
+         	        }
+         	        .op {
+         	            text-align: center;
+         	            padding: 0px 0px 5px;
+         	            .btn_view_s {
+         	                width: 100px;
+         	                height: 22px;
+         	                background: url(../images/btn_view_s.png) no-repeat scroll 0% 0% transparent;
+         	                display: inline-block;
+         	                border: 0px none;
+         	            }
+         	        }
+         	    }
+         	}
+         	.end {
+         	    border: 0px none;
+         	}
+         }
+     }
+ }
+
+ .cartnew-goodslist {
+     border: 1px solid #CCC;
+     margin-bottom: 10px;
+ }
+}
+// 主体部分结束
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 黑色底部开始
+.footer2013{
+	width:100%;
+	height:295px;
+	background: none repeat scroll 0% 0% #000;
+	.promise {
+		padding: 20px 0px 10px;
+		// background: none repeat scroll 0% 0% #000;
+		.screen {
+			width: 1150px;
+			margin:0 auto;
+			.left {
+				margin-right: 60px;
+				line-height: 30px;
+				font-size: 12px;
+				font-weight: bold;
+				.iconfont{
+					font-size: 24px;
+					line-height: 24px;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+
+	.footer-right {
+		width: 240px;
+	}
+	.subscribe {
+		border: 1px solid #262626;
+		input {
+			width: 180px;
+			height: 32px;
+			padding: 0px 10px;
+			line-height: 32px;
+			border: medium none;
+			margin: 0px;
+			background: none repeat scroll 0% 0% #000;
+			a {
+				padding: 0px 10px;
+				font-size: 18px;
+				line-height: 32px;
+				opacity: 0.5;
+			}
+		}
+		.iconfont{
+			font-size: 20px;
+			// line-height: 24px;
+			margin-top: 8px;
+		}
+	}
+
+
+
+
+	.footer-help {
+		background: none repeat scroll 0% 0% #000;
+		padding: 15px 0px 30px;
+		.screen {
+			border-top: 1px solid #262626;
+			padding: 15px 0px;
+			width: 1150px;
+			margin:0 auto;
+			ul{
+				li {
+					width: 180px;
+					p {
+						span {
+							color: #FFF;
+							line-height: 24px;
+						}
+						a {
+							color: #666;
+							line-height: 24px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	.footer-link {
+		background: none repeat scroll 0% 0% #000;
+		padding: 30px 0px 30px;
+		.screen {
+			width: 1150px;
+			margin:0 auto;
+			.right-flag {
+				margin-top: 3px;
+				a {
+					margin-right: 5px;
+				}
+			}
+			.about-us {
+				margin-left: 10px;
+				line-height: 20px;
+				color: #666;
+				p{
+					color: #666;
+					a {
+						color: #666;
+					}
+					span{
+						padding: 0px 10px;
+					}
+				}
+			}
+		}
+	}
+}
+// 黑色底部结束

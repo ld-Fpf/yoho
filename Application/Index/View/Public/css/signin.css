@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: arial, "Microsoft YaHei";
+  font-size: 12px;
+  color: #000;
+  line-height: 150%;
+}
+dl,
+ul,
+li,
+ol {
+  list-style: outside none none;
+  padding: 0px;
+  margin: 0px;
+}
+form {
+  display: inline;
+}
+input,
+textarea,
+select {
+  vertical-align: middle;
+  font-size: 12px;
+  color: #333;
+  outline: medium none;
+}
+input {
+  border: medium none;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.red {
+  color: #E01;
+}
+.relative {
+  position: relative;
+}
+.rgb6 {
+  color: #666;
+}
+.rgb2 {
+  color: #222;
+}
+.rgbf {
+  color: #FFF;
+}
+.rgb9 {
+  color: #999;
+}
+.top {
+  vertical-align: top;
+}
+.a_eu {
+  color: #468fa2;
+  text-decoration: underline;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.clear {
+  clear: both;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('fonts/iconfont.eot');
+  src: url('fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('fonts/iconfont.woff') format('woff'), /* chrome、firefox */ url('fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('fonts/iconfont.svg#uxiconfont') format('svg');
+  
+  /* IE9*/
+  /* iOS 4.1- */
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 12px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.header-simple {
+  height: 68px;
+  margin: 0px 0px 20px;
+  border-bottom: 2px solid #222;
+}
+.header-simple .screen990 {
+  width: 990px;
+  margin: 0px auto;
+}
+.header-simple .logo {
+  padding: 13px 0px;
+}
+.header-simple .simple-items {
+  padding: 19px 0px;
+}
+.header-simple .simple-items li {
+  padding: 0px 10px;
+  height: 28px;
+  line-height: 28px;
+}
+.header-simple .simple-items li .iconfont {
+  font-size: 10px;
+  color: #000;
+}
+.container {
+  width: 990px;
+  padding: 0px 0px 10px;
+  height: auto !important;
+  min-height: 300px;
+  margin: 0px auto;
+}
+.container .loginnew-box {
+  padding: 50px 20px;
+}
+.container .loginnew-box .login-form {
+  width: 590px;
+  padding: 5px 20px 0px 0px;
+  float: left;
+}
+.container .loginnew-box .login-form h2 {
+  height: 30px;
+  padding-left: 5px;
+  line-height: 30px;
+  font-family: Arial, helvetica, sans-serif;
+  font-size: 16px;
+  color: #333;
+  border-bottom: 1px dashed #E7E7E7;
+}
+.container .loginnew-box .login-form .z_hydl {
+  text-indent: -999em;
+  background: url(../images/z_hydl.png) no-repeat scroll 5px 5px transparent;
+}
+.container .loginnew-box .login-form .main {
+  padding: 25px 0px;
+  float: left;
+}
+.container .loginnew-box .login-form .main dl {
+  float: left;
+  margin-bottom: 20px;
+}
+.container .loginnew-box .login-form .main dl dt {
+  width: 75px;
+  min-height: 32px;
+  text-align: right;
+  font-size: 14px;
+  line-height: 32px;
+  color: #000;
+  float: left;
+}
+.container .loginnew-box .login-form .main dl dd {
+  width: 500px;
+  min-height: 32px;
+  color: #999;
+  float: left;
+}
+.container .loginnew-box .login-form .main dl dd .input-box {
+  display: inline-block;
+  position: relative;
+}
+.container .loginnew-box .login-form .main dl dd .input-box .input_error {
+  border: 2px solid #E8044F;
+  height: 28px;
+  line-height: 28px;
+}
+.container .loginnew-box .login-form .main dl dd .input-box .input_b {
+  height: 30px;
+  line-height: 30px;
+  color: #333;
+  padding: 0px 5px;
+  font-size: 14px;
+  border: 1px solid #BEBEBE;
+  background: url(../images/input_b.png) no-repeat scroll 0% 0% transparent;
+}
+.container .loginnew-box .login-form .main .stat {
+  clear: both;
+  padding: 0px 0px 20px 75px;
+  color: #999;
+}
+.container .loginnew-box .login-form .main .stat .a_g {
+  color: #999;
+  text-decoration: none;
+}
+.container .loginnew-box .login-form .main .submit {
+  padding: 0px 0px 20px 75px;
+}
+.container .loginnew-box .login-form .main .submit .btn_b_login {
+  width: 135px;
+  height: 35px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 14px;
+  color: #FFF;
+  font-weight: bold;
+  background: url(../images/btn_b.png) no-repeat scroll 0px -210px transparent;
+  display: inline-block;
+  border: 0px none;
+  cursor: pointer;
+}
+.container .loginnew-box .login-info {
+  width: 280px;
+  height: 280px;
+  padding: 100px 0px 0px 58px;
+  margin-top: 35px;
+  float: right;
+  border-left: 1px dashed #E7E7E7;
+}
+.container .loginnew-box .login-info h3 {
+  height: 40px;
+  font-size: 14px;
+  color: #333;
+}
+.container .loginnew-box .login-info .submit {
+  height: 50px;
+  position: relative;
+}
+.container .loginnew-box .login-info .submit .btn_b_h {
+  width: 135px;
+  height: 35px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  background: url(../images/btn_b.png) no-repeat scroll 0px -350px transparent;
+  display: inline-block;
+  border: 0px none;
+  cursor: pointer;
+}
+.footer2013 {
+  width: 100%;
+  height: 295px;
+  background: none repeat scroll 0% 0% #000;
+}
+.footer2013 .promise {
+  padding: 20px 0px 10px;
+}
+.footer2013 .promise .screen {
+  width: 1150px;
+  margin: 0 auto;
+}
+.footer2013 .promise .screen .left {
+  margin-right: 60px;
+  line-height: 30px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.footer2013 .promise .screen .left .iconfont {
+  font-size: 24px;
+  line-height: 24px;
+  margin-right: 5px;
+}
+.footer2013 .footer-right {
+  width: 240px;
+}
+.footer2013 .subscribe {
+  border: 1px solid #262626;
+}
+.footer2013 .subscribe input {
+  width: 180px;
+  height: 32px;
+  padding: 0px 10px;
+  line-height: 32px;
+  border: medium none;
+  margin: 0px;
+  background: none repeat scroll 0% 0% #000;
+}
+.footer2013 .subscribe input a {
+  padding: 0px 10px;
+  font-size: 18px;
+  line-height: 32px;
+  opacity: 0.5;
+}
+.footer2013 .subscribe .iconfont {
+  font-size: 20px;
+  margin-top: 8px;
+}
+.footer2013 .footer-help {
+  background: none repeat scroll 0% 0% #000;
+  padding: 15px 0px 30px;
+}
+.footer2013 .footer-help .screen {
+  border-top: 1px solid #262626;
+  padding: 15px 0px;
+  width: 1150px;
+  margin: 0 auto;
+}
+.footer2013 .footer-help .screen ul li {
+  width: 180px;
+}
+.footer2013 .footer-help .screen ul li p span {
+  color: #FFF;
+  line-height: 24px;
+}
+.footer2013 .footer-help .screen ul li p a {
+  color: #666;
+  line-height: 24px;
+}
+.footer2013 .footer-link {
+  background: none repeat scroll 0% 0% #000;
+  padding: 30px 0px 30px;
+}
+.footer2013 .footer-link .screen {
+  width: 1150px;
+  margin: 0 auto;
+}
+.footer2013 .footer-link .screen .right-flag {
+  margin-top: 3px;
+}
+.footer2013 .footer-link .screen .right-flag a {
+  margin-right: 5px;
+}
+.footer2013 .footer-link .screen .about-us {
+  margin-left: 10px;
+  line-height: 20px;
+  color: #666;
+}
+.footer2013 .footer-link .screen .about-us p {
+  color: #666;
+}
+.footer2013 .footer-link .screen .about-us p a {
+  color: #666;
+}
+.footer2013 .footer-link .screen .about-us p span {
+  padding: 0px 10px;
+}

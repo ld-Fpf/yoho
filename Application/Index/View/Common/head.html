@@ -1,0 +1,226 @@
+<script type="text/javascript">
+	$(function(){
+		// 鼠标移入到menu中，让ul显示，移出之后让ul隐藏
+		$('.chil').hover(function() {
+			$(this).children('.nav-panel').eq(0).show();
+		}, function() {
+			$(this).children('.nav-panel').eq(0).hide();
+		});
+
+	})
+</script>
+</head>
+<body>
+<!-- 头部区域开始 -->
+<div class="head2014">
+	<!-- 顶部导航开始 -->
+	<div class="head-top">
+		<div class="screen clear">
+			<!-- 左边开始 -->
+			<div class="left">
+				<ul class="site-list">
+					<li class="cur"><a href="">YOHO!有货</a> </li>
+					<li><a href="">YOHO.CN</a> </li>
+					<li><a href="">YOHO!SHOW</a> </li>
+				</ul>
+			</div>
+			<!-- 左边结束 -->
+
+			<!-- 右边开始 -->
+			<div class="right">
+				<ul class="top-list">
+					<li class="list" id="loginBox">
+						<span>Hi~</span>
+						<empty value='$hd.session.uid'>
+						[<a href="{|U:'User/login'}" class="list-a login-out">请登录</a>]&nbsp;[<a href="{|U:'User/register'}" class="list-a login-out">免费注册</a>]
+						<noempty/>
+						{$hd.session.username|hd_substr:9,'...'}&nbsp;[<a href="{|U:'User/logout'}" class="list-a login-out">退出</a>]
+						</empty>
+					</li>
+					<li class="list " id="myYohoBox">
+						<a href="" class="list-a">MY有货&nbsp;
+							<span class="iconfont">&#xe603;</span>
+						</a>
+					</li>
+					<li class="list relative" id="miniCartBox">
+						<a href="" class="list-a"><b><span class="iconfont">&#xe602;</span>&nbsp;购物车&nbsp;<span class="red icart-num">0</span>&nbsp;<span class="iconfont">&#xe603;</span></b></a>
+					</li>
+					<li class="list"><a href="" class="list-a">我的订单</a></li>
+					<li class="list"><a href="" class="list-a">我的收藏</a></li>
+					<li class="list " id="messageBox">
+						<a href="" class="list-a"><span class="iconfont" style="font-size:15px;">&#xe605;</span>&nbsp;消息&nbsp;<b><span class="red imessage-num">0</span></b>&nbsp;<span class="ifont10" id="upDown" style="display:none;">.</span></a>
+					</li>
+					<li class="list line-v"><span>|</span></li>
+					<li class="list"><a href="javascript:void(0);" class="list-a" id="favoriteYoho">收藏有货</a></li>
+				</ul>
+			</div>
+			<!-- 右边结束 -->
+
+		</div>
+	</div>
+	<!-- 顶部导航结束 -->
+
+	<!-- 头部中间区域开始 -->
+	<div class="head-mid">
+		<div class="screen clear">
+			<!-- 左侧区域开始 -->
+			<div class="left boys-girls">
+				<a href="" class="cur">BOYS<b>男装</b></a><span>|</span><a href="" class="girls ">GIRLS<b>女装</b></a>
+			</div>
+			<!-- 左侧区域结束 -->
+			<!-- 右侧app开始 -->
+			<div class="right">
+                        <div class="head-two-dim">
+                            <a target="_blank" href="">
+                            	<img class="dim-img" src="__PUBLIC__/images/app.gif">
+                            </a>
+                        </div>
+			</div>
+			<!-- 右侧app结束 -->
+
+			<!-- 右侧搜索开始 -->
+			<div class="right">
+				<div class="nav-input relative">
+					<form action="" method="post" id="searchForm">
+						<input name="keyword" id="query_key" value="" type="text">
+						<a class="iconfont input-button" href="javascript:void(0);">&#xe609;</a>
+					</form>
+				</div>
+			</div>
+			<!-- 右侧搜索结束 -->
+			<div class="center">
+				<a href=""><img style="" alt="YOHO!有货" src="__PUBLIC__/images/logo-boys.png"></a>
+			</div>
+		</div>
+	</div>
+	<!-- 头部中间区域结束 -->
+
+	<!-- 头部导航开始 -->
+	<div class="head-nav">
+		<div class="screen">
+			<ul class="clear nav-bar">
+				<li class="left first">
+					<a href="" class="a-list"><span>新品到着</span></a>
+				</li>
+				<li class="left">
+					<a href="" class="a-list"><span>品牌一览</span></a>
+				</li>
+				<li class="left chil">
+					<a href="" class="a-list"><span>服饰</span></a>
+					<div class="nav-panel" style="display: none;">
+						<div class="screen clear">
+							<ol>
+							</ol>
+							<ol>
+								<li class=""><a href="">上装</a></li>
+								<list from='$upperClo' name='$d' row='5' start="0" empty=' 没有数据 '>
+									<if value='$hd.list.d.index eq 2'>
+										<li class="red"><a href="">{$d.name}</a></li>
+									<elseif value='$hd.list.d.index eq 4'/>
+										<li class="red"><a href="">{$d.name}</a></li>
+									<else/>
+										<li><a href="">{$d.name}</a></li>
+									</if>
+								</list>
+							</ol>
+							<ol>
+								<li class=""><a href="">下装</a></li>
+								<list from='$lowerClo' name='$d' row='4' start="0" empty=' 没有数据 '>
+									<if value='$hd.list.d.index eq 2'>
+										<li class="red"><a href="">{$d.name}</a></li>
+									<else/>
+										<li><a href="">{$d.name}</a></li>
+									</if>
+								</list>
+							</ol>
+							<ol>
+								<li class=""><a href="">经典款型</a></li>
+								<li class="red"><a href="">渔夫大衣</a></li>
+								<li class=""><a href="">直筒裤</a></li>
+								<li class=""><a href="">军事夹克</a></li>
+								<li class=""><a href="">工装裤</a></li>
+								<li class=""><a href="">街头风棉服</a></li>
+							</ol>
+							<ol>
+								<li class=""><a href="">热门品牌</a></li>
+								<list from='$hbrand' name='$d' row='5' start="0" empty=' 没有数据 '>
+									<if value='$hd.list.d.index eq 2'>
+										<li class="red"><a href="">{$d.name}</a></li>
+									<elseif value='$hd.list.d.index eq 4'/>
+										<li class="red"><a href="">{$d.name}</a></li>
+									<else/>
+										<li><a href="">{$d.name}</a></li>
+									</if>
+								</list>
+							</ol>
+							<div class="cate-ads">
+							<a href=""><img alt="" src="__PUBLIC__/images/clothing.jpg"></a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="left chil">
+					<a href="" class="a-list"><span>鞋履</span></a>
+					<div class="nav-panel" style="display: none;">
+						<div class="screen clear">
+							<ol>
+							</ol>
+
+							<ol>
+								<li class=""><a href="">鞋履</a></li>
+								<list from='$shoes' name='$d' row='5' start="0" empty=' 没有数据 '>
+									<if value='$hd.list.d.index eq 2'>
+										<li class="red"><a href="">{$d.name}</a></li>
+									<elseif value='$hd.list.d.index eq 4'/>
+										<li class="red"><a href="">{$d.name}</a></li>
+									<else/>
+										<li><a href="">{$d.name}</a></li>
+									</if>
+								</list>
+							</ol>
+
+							<ol>
+								<li class=""><a href="">经典款型</a></li>
+								<li class="red"><a href="">帆布鞋</a></li>
+								<li class=""><a href="">复古跑鞋</a></li>
+								<li class=""><a href="">板鞋</a></li>
+								<li class=""><a href="">雕花鞋</a></li>
+							</ol>
+							<ol>
+								<li class=""><a href="">热门品牌</a></li>
+								<list from='$sbrand' name='$d' row='5' start="0" empty=' 没有数据 '>
+									<if value='$hd.list.d.index eq 2'>
+										<li class="red"><a href="">{$d.name}</a></li>
+									<elseif value='$hd.list.d.index eq 4'/>
+										<li class="red"><a href="">{$d.name}</a></li>
+									<else/>
+										<li><a href="">{$d.name}</a></li>
+									</if>
+								</list>
+							</ol>
+							<div class="cate-ads">
+							<a href=""><img alt="" src="__PUBLIC__/images/shose.jpg"></a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="left chil">
+					<a href="" class="a-list"><span>包</span></a>
+				</li>
+				<li class="left chil">
+					<a href="" class="a-list"><span>配饰 · 其他</span></a>
+				</li>
+				<li class="left">
+					<a href="" class="a-list"><span>LOOKBOOK</span></a>
+				</li>
+				<li class="left">
+					<a href="" class="a-list"><span>潮流资讯</span></a>
+				</li>
+				<li class="left last">
+					<a href="" class="a-list"><span>SALE</span></a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 头部导航结束 -->
+</div>
+<!-- 头部区域结束 -->

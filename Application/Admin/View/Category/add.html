@@ -1,0 +1,36 @@
+<include file="__View__/Common/head"/>
+
+<include file="__View__/Common/left"/>
+<div class="right">
+	<div class="now">
+		<div class="now_l"></div>
+		<div class="now_m">
+			<span class="fl">增加分类</span>
+		</div>
+		<div class="now_r"></div>
+		<div class="clear"></div>
+	</div>
+	<form method="post" action="">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wenzhang">
+	<tr>
+		<td class="bg_f8" align="right" width="100">分类名称：</td>
+		<td><input type="text" name="name" class="inputall input200" /></td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">分类排序：</td>
+		<td><input type="text" name="sort" value="100" class="inputall input80" /></td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">是否显示：</td>
+		<td><input type="radio" name="is_show" value="0" />&nbsp;否&nbsp;&nbsp;<input type="radio" name="is_show" value="1" checked="checked" />&nbsp;是</td>
+	</tr>
+	<tr>
+		<td class="bg_f8">&nbsp;</td>
+		<td><button class="tjbtn">提交</button></td>
+	</tr>
+	</table>
+	</form>
+</div>
+		<div class="clear"></div>
+	</div>
+<include file="__View__/Common/foot"/>

@@ -1,0 +1,58 @@
+<include file="__View__/Common/head"/>
+
+<include file="__View__/Common/left"/>
+
+<script type="text/javascript">
+    	var CONTROLLER = "__CONTROLLER__";
+    </script>
+    <js file="__CONTROLLER_VIEW__/js/js.js"/>
+    <style type="text/css">
+        .plus_minus{
+            width: 20px;
+        }
+        a:hover{
+        	text-decoration: none;
+        }
+    </style>
+<div class="right">
+	<div class="now">
+		<div class="now_l"></div>
+		<div class="now_m">
+			<span class="fl">商品分类</span>
+			<span class="fr fabu"><a href="{|U:'Category/add'}">增加分类</a></span>
+		</div>
+		<div class="now_r"></div>
+		<div class="clear"></div>
+	</div>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="list mat5">
+	<tr pid=0>
+		<td class="bgtt" width="5"></td>
+		<td class="bgtt" width="100">ID号</td>
+		<td class="bgtt aleft">分类名称</td>
+		<td class="bgtt" width="70">排序</td>
+		<td class="bgtt" width="150">操作</td>
+	</tr>
+	<foreach from="$data" key="$k" value="$v">
+	<tr pid="{$v.pid}" cid="{$v.category_id}">
+		<td>
+			<a href="javascript:;" class="glyphicon glyphicon-plus a-plus" cid="{$v.category_id}">+</a>
+		</td>
+		<td>{$v.category_id}</td>
+		<td class="aleft">{$v._name}</td>
+		<td>{$v.sort}</td>
+		<td>
+			<a href="{|U:'Category/add_son', array('cid'=>$v['category_id'])}" class="admin_add mar3">添加分类</a>
+			<a href="{|U:'Category/edit', array('cid'=>$v['category_id'])}" class="admin_edit mar3">修改</a>
+			<a href="javascript:;" class="admin_del" onclick="if(confirm('确定删除吗？')) location.href='{|U:'Category/del', array('cid'=>$v['category_id'])}'">删除</a>
+		</td>
+	</tr>
+	</foreach>
+		<tr>
+		<td class="bgtt aleft" colspan="5"></td>
+	</tr>
+	</table>
+</div>
+
+		<div class="clear"></div>
+	</div>
+<include file="__View__/Common/foot"/>

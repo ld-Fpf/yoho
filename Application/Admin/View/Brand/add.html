@@ -1,0 +1,62 @@
+<include file="__View__/Common/head"/>
+
+<include file="__View__/Common/left"/>
+<div class="right">
+	<div class="now">
+		<div class="now_l"></div>
+		<div class="now_m">
+			<span class="fl">增加品牌</span>
+			<!-- <span class="fr fabu"><a href="admin.php?mod=ad&act=add">增加广告</a></span> -->
+		</div>
+		<div class="now_r"></div>
+		<div class="clear"></div>
+	</div>
+	<form method="post" action="" enctype="multipart/form-data">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wenzhang">
+	<tr>
+		<td class="bg_f8" align="right">品牌名称：</td>
+		<td><input type="text" name="name" value="" class="inputall" /></td>
+	</tr>
+<!-- 	<tr>
+		<td class="bg_f8" align="right">品牌链接：</td>
+		<td><input type="text" name="info[ad_url]" value="" class="inputall" /></td>
+	</tr> -->
+	<tr>
+		<td class="bg_f8" align="right">分类名称：</td>
+		<td>
+			<select name="category_id" class='inputall'>
+				<option value="0">==请选择分类==</option>
+				<foreach from="$cate" key="$k" value="$v">
+					<option value="{$v.category_id}">{$v._name}</option>
+				</foreach>
+			</select>
+			<!-- <input name="category_id" value="" type="hidden"> -->
+			<span class="ml10"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">品牌图片：</td>
+		<td>
+			<!-- <p><img src="__PUBLIC__/images/nopic.gif" style="border:1px solid #ddd" /></p> -->
+			<p><input type="file" name="logo" /></p>
+		</td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">品牌排序：</td>
+		<td><input type="text" name="sort" value="100" class="inputall input50" /></td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">热门品牌：</td>
+		<td><input type="radio" name="is_hot" value="0" checked="checked" />&nbsp;否&nbsp;&nbsp;<input type="radio" name="is_hot" value="1" />&nbsp;是</td>
+	</tr>
+	<tr>
+		<td class="bg_f8">&nbsp;</td>
+		<td colspan="2"><input type="submit" name="pesubmit" value="提 交" class="tjbtn" /></td>
+	</tr>
+	</table>
+	</form>
+</div>
+	
+		<div class="clear"></div>
+	</div>
+<include file="__View__/Common/foot"/>

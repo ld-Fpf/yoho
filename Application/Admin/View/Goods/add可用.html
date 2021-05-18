@@ -1,0 +1,207 @@
+<include file="__View__/Common/head"/>
+
+<include file="__View__/Common/left"/>
+<link type="text/css" rel="stylesheet" href="__STATIC__/hdjs/hdui.css" />
+<link type="text/css" rel="stylesheet" href="__STATIC__/hdjs/hdjs.css"/>
+<script type='text/javascript' src="__STATIC__/hdjs/hdjs.min.js"></script>
+    <hdui/>
+    <hdcss/>
+    <jquery/>
+    <hdjs/>
+<link rel="stylesheet" href="__PUBLIC__/css/inc.css" />
+<jsconst/>
+<script type="text/javascript">
+		var postUrl = '__CONTROLLER__';
+	</script>
+	<script type="text/javascript" src='__PUBLIC__/js/extend.js'></script>
+	<script type="text/javascript" src='__CONTROLLER_VIEW__/js/js.js'></script>
+<div class="right">
+	<div class="now">
+		<div class="now_l"></div>
+		<div class="now_m">
+			<span class="fl">发布商品</span>
+		</div>
+		<div class="now_r"></div>
+		<div class="clear"></div>
+	</div>
+	<form method="post" action="" enctype="multipart/form-data">
+
+	<div class="tabMenu">
+			<a href="" class="act">商品基本属性</a>
+			<a href="">商品其他属性</a>
+			<a href="">商品详细内容</a>
+			<a href="">商品图片</a>
+		</div>
+		<ul class="tabSub">
+			<li class="act">
+				<table class="form table">
+					<tr>
+						<th colspan='2'>商品基本属性</th>
+						<input type="hidden" name='pid' value='' />
+					</tr>
+					<tr>
+						<td class="tr f14 fm pct15"><span class="pr10">商品名称</span></td>
+						<td><input name='name' type="text" class='ml10 pct60' /></td>
+					</tr>
+					<tr>
+						<td class="tr f14 fm "><span class="pr10">所属栏目</span></td>
+						<td>
+							<select name="category_id" class='ml10'>
+								<option value="0">==请选择分类==</option>
+								<foreach from="$cate" key="$k" value="$v">
+									<option value="{$v.category_id}" tid="{$v.type_id}" pid="{$v.pid}">{$v._name}</option>
+								</foreach>
+							</select>
+							<!-- <input name="category_id" value="" type="hidden"> -->
+							<span class="ml10"></span>
+						</td>
+					</tr>
+					
+					<tr>
+						<td class="tr f14 fm "><span class="pr10">商品属性</span></td>
+						<td>
+							<div id="attr">
+							<table>
+								<tr class='table ml10 pct90 bgwhite bdd'>
+									<td class="tr f14 fm pct15"><span class="pr10">key1</span></td>
+								</tr>
+							</table>
+							</div>
+						</td>
+
+					</tr>
+					
+					<tr>
+						<td class="tr f14 fm "><span class="pr10">商品规格</span></td>
+						<td>
+							<table id="spec">
+								<tr>
+									<th class="tl f14 fm pct15"><span class="pr10">颜色</span></th>
+									<th class="tl f14 fm pct15"><span class="pr10">尺码</span></th>
+									<th>库存</th>
+									<th>价格</th>
+									<th>商品货号</th>
+									<th class='tc fv b pct10'><a href="" class="addSpec gray"><i class="ico icoadd"><c></i>增</a></th>
+								</tr>
+								<tr class='table ml10 pct90 bgwhite bdd'>
+									<td class="tl f14 fm pct15">
+										<span class="pr10">value</span>
+									</td>
+									<td class="tl f14 fm pct15">
+										<span class="pr10">value1</span>
+									</td>
+									<td><input class="pct50" type="text" value="100" name="spec[stock][]" /></td>
+									<td><input class="pct50" type="text" value="" name="spec[price][]" /></td>
+									<td>
+										<input class="pct80" type="text" value="<?php echo time() ;?>" name="spec[goods_sn][]" />
+									</td>
+									<td class="fv b tc"><a href="" class="delSpec red"><i class="ico icodec"><c></i>删</a></td>
+								</tr>
+							</table>	
+						</td>
+					</tr>
+					
+				</table>
+			</li>
+			<li>
+				<table class="table form">
+					<tr>
+						<td class="tr f14 fm "><span class="pr10">上架时间</span></td>
+						<td>
+							<input name='addtime' type="text" class='ml10 pct20' id='updatetime' value="{|date:'Y/m/d h:i:s'}" readonly="readonly" />
+						</td>
+					</tr>
+					<tr>
+						<td class="tr f14 fm "><span class="pr10">商品属性</span></td>
+						<td>
+							<label for="flag1" class='ml10 pct60'>
+								<input type="checkbox" name='flag[]' id='flag1' value='推荐' /> 推荐
+							</label>
+							<label for="flag2" class='ml10 pct60'>
+								<input type="checkbox" name='flag[]' id='flag2' value='置顶' /> 置顶
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="tr f14 fm "><span class="pr10">品牌</span></td>
+						<td>
+							<select name="bid" id="brand" class='ml10'>
+								<option value="">==请选择品牌==</option>
+									<option value="" pic=""></option>
+							</select>
+							<span class="p5" id="brandLogo"></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="tr f14 fm"><span class="pr10">关键字</span></td>
+						<td><textarea class='ml10 pct70' name="keywords" id="" cols="30" rows="2"></textarea></td>
+					</tr>
+					<tr>
+						<td class="tr f14 fm"><span class="pr10">栏目描述</span></td>
+						<td><textarea class='ml10 pct70' name="description" id="" cols="30" rows="3"></textarea></td>
+					</tr>
+					<tr>
+						<td class="tr f14 fm"><span class="pr10">售后服务</span></td>
+						<td><textarea class='ml10 pct70' name="service" id="" cols="30" rows="3"></textarea></td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table class="table form">
+					<tr>
+						<td class="tr f14 fm pct10">详细内容</td>
+						<td><p class="ml10"></p></td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<div class="form">
+					<fieldset>
+						<legend>首页图片</legend>
+						<input type="file" name='index_pic' />
+					</fieldset>
+					<fieldset>
+						<legend>列表图片</legend>
+						<input type="file" name='list_pic' />
+					</fieldset>
+				</div>
+				<div class="bdc mt20 f18 bgwhite-2 p10 rad5">
+					<div class="form white bgwhite p10 f14 rad5">
+						<fieldset id='pic'>
+							<legend>内容页图片</legend>
+							<div class="p5">
+								<input type="file" name='pic[]' />
+								<button type="button" class='btn bggreen2 f14' id='addPic'>增加图片</button>
+							</div>
+						</fieldset>
+						<script type="text/javascript">
+							$('#addPic').click(function(){
+								var h = "<div class='p5'><input type='file' name='pic[]' />\
+											<button type='button' class='btn bgred3 f14' onclick='delPic(this);'>\
+											删除图片</button></div>";
+								$('#pic').append(h);
+							})
+							function delPic(id){
+								$(id).parent().remove();
+							}
+						</script>
+					</div>
+				</div>
+			</li>
+		</ul>
+
+
+	<div class="mat10 center">
+		<button class="tjbtn">提交</button>
+	</div>
+	</form>
+</div>
+<style type="text/css"> 
+a.js_add{display:block; float:left; width:120px; height:30px; line-height:30px; text-align:center;background:#76A500; color:#f5f5f5; border-radius:2px; font-family:'宋体'; font-size:14px; font-weight:bold}
+a:hover.js_add,a:hover.js_del{background-color:#cccc00;}
+a.js_del{width:42px; padding:5px 10px; text-align:center;background:#FF9900; color:#f5f5f5; border-radius:2px; font-family:'宋体'; font-size:12px;}
+</style>
+
+		<div class="clear"></div>
+	</div>
+	<include file="__View__/Common/foot"/>

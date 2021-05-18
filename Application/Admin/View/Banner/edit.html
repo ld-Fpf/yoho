@@ -1,0 +1,47 @@
+<include file="__View__/Common/head"/>
+
+<include file="__View__/Common/left"/>
+<div class="right">
+	<div class="now">
+		<div class="now_l"></div>
+		<div class="now_m">
+			<span class="fl">编辑banner</span>
+			<!-- <span class="fr fabu"><a href="admin.php?mod=ad&act=add">增加广告</a></span> -->
+		</div>
+		<div class="now_r"></div>
+		<div class="clear"></div>
+	</div>
+	<form method="post" action="" enctype="multipart/form-data">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wenzhang">
+	<tr>
+		<td class="bg_f8" align="right">banner地址：</td>
+		<td><input type="text" name="url" value="{$data.url}" class="inputall" /></td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">banner图片：</td>
+		<td>
+			<empty value="$data.pic">
+				<p><img src="__PUBLIC__/images/nopic.gif" style="border:1px solid #ddd" /></p>
+			<noempty />
+				<p><img src="__ROOT__/{$data.pic}" style="border:1px solid #ddd" width="200" /></p>
+			</empty>
+			<input type="hidden" name="pich" value="{$data.pic}" />
+			<p><input type="file" name="pic" /></p>
+		</td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">是否显示：</td>
+		<td><input type="radio" name="is_show" value="0" <if value="$data['is_show'] eq 0">checked="checked"</if> />&nbsp;否&nbsp;&nbsp;<input type="radio" name="is_show" value="1" <if value="$data['is_show'] eq 1">checked="checked"</if> />&nbsp;是</td>
+	</tr>
+	<tr>
+		<td class="bg_f8">&nbsp;</td>
+		<input type="hidden" name="banner_id" value="{$hd.get.bid}" />
+		<td colspan="2"><button class="tjbtn" />提交</button></td>
+	</tr>
+	</table>
+	</form>
+</div>
+	
+		<div class="clear"></div>
+	</div>
+<include file="__View__/Common/foot"/>

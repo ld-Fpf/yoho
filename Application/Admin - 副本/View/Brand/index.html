@@ -1,0 +1,63 @@
+<include file="__View__/Common/head"/>
+
+<include file="__View__/Common/left"/>
+<div class="right">
+	<div class="now">
+		<div class="now_l"></div>
+		<div class="now_m">
+			<span class="fl">品牌列表</span>
+			<span class="fr fabu"><a href="{|U:'Brand/add'}">增加品牌</a></span>
+		</div>
+		<div class="now_r"></div>
+		<div class="clear"></div>
+	</div>
+	<form method="post" id="form">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="list mat5">
+	<tr>
+		<td class="bgtt" width="50">ID</td>
+		<td class="bgtt" width="150">名称</td>
+		<td class="bgtt">品牌图片</td>
+		<td class="bgtt" width="50">排序</td>
+		<td class="bgtt" width="100">是否热门</td>
+		<td class="bgtt" width="100">操作</td>
+	</tr>
+	<!-- 循环开始 -->
+	<foreach from="$data" key="$k" value="$v">
+		<tr height="60">
+		<td>{$v.brand_id}</td>
+		<td>{$v.name}</td>
+		<empty value="$v.logo">
+			<td><a href="" target="_blank"><img src="__PUBLIC__/images/nopic.gif" height="45" style="border:1px solid #ddd"  /></a></td>
+		<noempty />
+			<td><a href="" target="_blank"><img src="__ROOT__/{$v.logo}" height="45"  /></a></td>
+		</empty>
+		<td>{$v.sort}</td>
+		<if value="$v[is_hot] eq 1">
+			<td>是</td>
+		<else />
+			<td>否</td>
+		</if>
+		<td>
+			<a href="{|U:'Brand/edit', array('bid'=>$v['brand_id'])}" class="admin_edit mar3">修改</a>
+			<a href="javascript:;" class="admin_del" onclick="if(confirm('确定删除吗？')) location.href='{|U:'Brand/del',array('bid'=>$v['brand_id'])}'">删除</a>
+		</td>
+	</tr>
+	</foreach>
+	<!-- 循环结束 -->
+	<tr>
+		<td class="bgtt" colspan="6">
+			<span class="fl"><button href="" onclick="pe_doall(this,'form')"></button></span>
+			<span class="fenye">{$page}</span>
+		</td>
+	</tr>
+	</table>
+	</form>
+</div>
+	
+
+		<div class="clear"></div>
+	</div>
+<include file="__View__/Common/foot"/>
+
+
+
