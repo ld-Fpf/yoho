@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>后台首页 - 欢迎使用商城系统</title>
+	<link type="text/css" rel="stylesheet" href="../css/style.css" />
+	<script type="text/javascript" src="../../include/js/jquery.js"></script>
+</head>
+<div class="bgimg"></div>
+<div class="pagetop">
+	<div class="head">
+		<div class="logo fl"></div>
+
+		<div class="admin_t fr">
+			<ul>
+				<li><a href=""><img border=0 src="../images/exit4.gif"></a></li>
+				<li><a href="" onclick="return confirm('你确定要退出系统吗？')" ><img border=0 src="../images/exit3.gif"></a></li>
+			</ul>
+		</div>
+
+		<div class="admin_u fr">
+				<b>欢迎您-</b><a title="" target="_top" href="">admin</a>&nbsp;【超级管理员】 &nbsp;&nbsp;
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="content">
+	<div class="main">
+		<div class="left">
+			<div class="fenlei">
+				<h3>商品管理</h3>
+				<ul>
+					<li ><a href="../goods/list.html">商品列表</a></li>
+					<li ><a href="../goods/cat.html">商品分类</a></li>
+					<li ><a href="../goods/ask.html">商品咨询</a></li>
+					<li ><a href="../goods/comment.html">商品评价</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>交易管理</h3>
+				<ul>
+					<li ><a href="../order/list.html">订单管理</a></li>
+					<li ><a href="../order/payway.html">支付方式</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>信息管理</h3>
+				<ul>
+					<li ><a href="../article/cat.html">文章分类</a></li>
+					<li ><a href="../article/list.html">文章列表</a></li>
+					<li ><a href="../article/page.html">单页列表</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>用户管理</h3>
+				<ul>
+					<li ><a href="../user/list.html">会员列表</a></li>
+					<li ><a href="../user/admin.html">管理列表</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>控制面板</h3>
+				<ul>
+					<li ><a href="../set/base.html">基本信息</a></li>
+					<li ><a href="../set/cache.html">缓存管理</a></li>
+					<li ><a href="../set/link.html">友情链接</a></li>
+					<li ><a href="../set/ad.html">广告列表</a></li>
+				</ul>
+			</div>
+
+		</div>
+		<!-- start right -->
+
+
+<div class="right">
+	<div class="now">
+		<div class="now_l"></div>
+		<div class="now_m">支付方式</div>
+		<div class="now_r"></div>
+		<div class="clear"></div>
+	</div>
+	<form method="post" id="form">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="list mat5">
+	<tr>
+		<td class="bgtt" width="50">排序</td>
+		<td class="bgtt" width="150">支付名称</td>
+		<td class="bgtt">支付描述</td>
+		<td class="bgtt" width="80">启用状态</td>
+		<td class="bgtt" width="44">操作</td>
+	</tr>
+		<tr>
+		<td><input type="text" name="payway_order[1]" value="0" class="inputtext input40" /></td>
+		<td>支付宝</td>
+		<td class="aleft">国内领先的第三方支付平台，为电子商务提供“简单、安全、快速”的在线支付解决方案。</td>
+		<td><span class="cgreen">启用</span></td>
+		<td><a href="zfb.html" class="admin_edit">修改</a></td>
+	</tr>
+		<tr>
+		<td><input type="text" name="payway_order[2]" value="0" class="inputtext input40" /></td>
+		<td>银行转账/汇款</td>
+		<td class="aleft">通过线下汇款方式支付，汇款帐号：建设银行 621700254000005xxxx 刘某某</td>
+		<td><span class="cgreen">启用</span></td>
+		<td><a href="zz.html" class="admin_edit">修改</a></td>
+	</tr>
+		<tr>
+		<td><input type="text" name="payway_order[3]" value="0" class="inputtext input40" /></td>
+		<td>货到付款</td>
+		<td class="aleft">送货上门后再收款，支持现金、POS机刷卡、支票支付</td>
+		<td><span class="cgreen">启用</span></td>
+		<td><a href="hdfk.html" class="admin_edit">修改</a></td>
+	</tr>
+		<tr>
+		<td class="bgtt aleft" colspan="5">
+			<span class="fl"><button href="admin.php?mod=payway&act=order" onclick="pe_doall(this,'form')">批量排序</button></span>
+			<span class="fenye"></span>
+		</td>
+	</tr>
+	</table>
+	</form>
+</div>
+	
+		<!-- end right -->
+
+
+		<div class="clear"></div>
+	</div>
+	<div class="foot">Copyright <span class="num">&copy;</span> 2014-2017 <a target="_blank" href="#"></a> 版权所有</div>
+</div>
+<script type="text/javascript"> 
+$(function(){
+	$(".list").find("tr").hover(
+		function(){
+			if ($(this).find("td").hasClass("bgtt")) return;
+			$(this).find("td").css("background-color", "#ffffdd");
+		},
+		function(){
+			if ($(this).find("td").hasClass("bgtt")) return;
+			$(this).find("td").css("background-color", "#fff");
+		}
+	)
+})
+</script>
+
+
+
+</body>
+</html>	

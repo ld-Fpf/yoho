@@ -1,0 +1,392 @@
+// 全局设置
+*{
+	margin:0;
+	padding:0;
+	font-family: arial,"Microsoft YaHei";
+	font-size: 12px;
+	color: #000;
+	line-height: 150%;
+}
+dl, ul, li, ol {
+    list-style: outside none none;
+    padding: 0px;
+    margin: 0px;
+}
+form {
+    display: inline;
+}
+input, textarea, select {
+    vertical-align: middle;
+    font-size: 12px;
+    color: #333;
+    outline: medium none;
+}
+input {
+    border: medium none;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+.red {
+    color: #E01;
+}
+.relative {
+    position: relative;
+}
+.rgb6 {
+    color: #666;
+}
+.rgb2 {
+    color: #222;
+}
+.rgbf {
+    color: #FFF;
+}
+.rgb9 {
+    color: #999;
+}
+.top {
+    vertical-align: top;
+}
+.a_eu {
+	color: #468fa2;
+	text-decoration: underline;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+.clear {
+    clear: both;
+}
+
+// @font-face {font-family: 'iconfont';
+//     src: url('./fonts/iconfont.eot'); /* IE9*/
+//     src: url('./fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//     url('./fonts/iconfont.woff') format('woff'), /* chrome、firefox */
+//     url('./fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+//     url('./fonts/iconfont.svg#uxiconfont') format('svg'); /* iOS 4.1- */
+// }
+@font-face {font-family: 'iconfont';
+    src: url('./fonts/iconfont.eot'); /* IE9*/
+    src: url('./fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('./fonts/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('./fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('./fonts/iconfont.svg#uxiconfont') format('svg'); /* iOS 4.1- */
+}
+  .iconfont{
+    font-family:"iconfont" !important;
+    font-size:12px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+
+
+// 头部开始
+.header-simple {
+	height:68px;
+	margin: 0px 0px 20px;
+	border-bottom: 2px solid #222;
+	.screen990 {
+		width: 990px;
+		margin: 0px auto;
+	}
+	.logo {
+		padding: 13px 0px;
+	}
+	.simple-items {
+		padding: 19px 0px;
+		li {
+			padding: 0px 10px;
+			height: 28px;
+			line-height: 28px;
+			.iconfont{
+				font-size: 10px;
+				color:#000;
+			}
+		}
+	}
+}
+// 头部结束
+
+
+
+.container {
+	width: 990px;
+	padding: 0px 0px 10px;
+	height: auto !important;
+	min-height: 300px;
+	margin: 0px auto;
+	.loginnew-box {
+		padding: 50px 20px;
+		.login-form {
+			width: 590px;
+			padding: 5px 20px 0px 0px;
+			float: left;
+			h2 {
+				height: 30px;
+				padding-left: 5px;
+				line-height: 30px;
+				font-family: Arial,helvetica,sans-serif;
+				font-size: 16px;
+				color: #333;
+				border-bottom: 1px dashed #E7E7E7;
+			}
+			.z_hydl {
+				text-indent: -999em;
+				background: url(../images/z_hydl.png) no-repeat scroll 5px 5px transparent;
+			}
+			.z_zchy {
+				text-indent: -999em;
+				background: url(../images/z_zchy.png) no-repeat 5px 5px;
+			}
+
+			.main {
+				padding: 25px 0px;
+				float: left;
+				dl {
+					// clear: both;
+					float:left;
+					margin-bottom: 20px;
+					dt {
+						width: 75px;
+						min-height: 32px;
+						text-align: right;
+						font-size: 14px;
+						line-height: 32px;
+						color: #000;
+						float: left;
+					}
+					dd {
+						width: 500px;
+						min-height: 32px;
+						color: #999;
+						float: left;
+						span{
+
+						}
+						.txt {
+							height: 30px;
+							padding: 0px 0px 0px 5px;
+							line-height: 15px;
+							display: inline-block;
+							// vertical-align: middle;
+						}
+						.input-box {
+							display: inline-block;
+							position: relative;
+							.input_error {
+								border: 2px solid #E8044F;
+								height: 28px;
+								line-height: 28px;
+							}
+							.input_b {
+								height: 30px;
+								line-height: 30px;
+								color: #333;
+								padding: 0px 5px;
+								font-size: 14px;
+								border: 1px solid #BEBEBE;
+								background: url(../images/input_b.png) no-repeat scroll 0% 0% transparent;
+							}
+						}
+					}
+				}
+
+				.stat {
+					clear: both;
+					padding: 0px 0px 20px 75px;
+					color: #999;
+					.a_g {
+						color: #999;
+						text-decoration: none;
+					}
+				}
+				.submit {
+					padding: 0px 0px 20px 75px;
+					.btn_b_login {
+						width: 135px;
+						height: 35px;
+						line-height: 32px;
+						text-align: center;
+						font-size: 14px;
+						color: #FFF;
+						font-weight: bold;
+						background: url(../images/btn_b.png) no-repeat scroll 0px -210px transparent;
+						display: inline-block;
+						border: 0px none;
+						cursor: pointer;
+					}
+					.btn_b_reg {
+						width: 135px;
+						height: 35px;
+						line-height: 32px;
+						text-align: center;
+						font-size: 14px;
+						color: #FFF;
+						font-weight: bold;
+						background: url(../images/btn_b.png) no-repeat scroll 0px -70px transparent;
+						display: inline-block;
+						border: 0px none;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+
+		.login-info {
+			width: 280px;
+			height: 280px;
+			padding: 100px 0px 0px 58px;
+			margin-top: 35px;
+			float: right;
+			border-left: 1px dashed #E7E7E7;
+			h3 {
+				height: 40px;
+				font-size: 14px;
+				color: #333;
+			}
+			.submit {
+				height: 50px;
+				position: relative;
+				.btn_b_h {
+					width: 135px;
+					height: 35px;
+					line-height: 32px;
+					text-align: center;
+					font-size: 14px;
+					color: #333;
+					font-weight: bold;
+					background: url(../images/btn_b.png) no-repeat scroll 0px -350px transparent;
+					display: inline-block;
+					border: 0px none;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+
+
+// 黑色底部开始
+.footer2013{
+	width:100%;
+	height:295px;
+	background: none repeat scroll 0% 0% #000;
+	.promise {
+		padding: 20px 0px 10px;
+		// background: none repeat scroll 0% 0% #000;
+		.screen {
+			width: 1150px;
+			margin:0 auto;
+			.left {
+				margin-right: 60px;
+				line-height: 30px;
+				font-size: 12px;
+				font-weight: bold;
+				.iconfont{
+					font-size: 24px;
+					line-height: 24px;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+
+	.footer-right {
+		width: 240px;
+	}
+	.subscribe {
+		border: 1px solid #262626;
+		input {
+			width: 180px;
+			height: 32px;
+			padding: 0px 10px;
+			line-height: 32px;
+			border: medium none;
+			margin: 0px;
+			background: none repeat scroll 0% 0% #000;
+			a {
+				padding: 0px 10px;
+				font-size: 18px;
+				line-height: 32px;
+				opacity: 0.5;
+			}
+		}
+		.iconfont{
+			font-size: 20px;
+			// line-height: 24px;
+			margin-top: 8px;
+		}
+	}
+
+
+
+
+	.footer-help {
+		background: none repeat scroll 0% 0% #000;
+		padding: 15px 0px 30px;
+		.screen {
+			border-top: 1px solid #262626;
+			padding: 15px 0px;
+			width: 1150px;
+			margin:0 auto;
+			ul{
+				li {
+					width: 180px;
+					p {
+						span {
+							color: #FFF;
+							line-height: 24px;
+						}
+						a {
+							color: #666;
+							line-height: 24px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	.footer-link {
+		background: none repeat scroll 0% 0% #000;
+		padding: 30px 0px 30px;
+		.screen {
+			width: 1150px;
+			margin:0 auto;
+			.right-flag {
+				margin-top: 3px;
+				a {
+					margin-right: 5px;
+				}
+			}
+			.about-us {
+				margin-left: 10px;
+				line-height: 20px;
+				color: #666;
+				p{
+					color: #666;
+					a {
+						color: #666;
+					}
+					span{
+						padding: 0px 10px;
+					}
+				}
+			}
+		}
+	}
+}
+// 黑色底部结束

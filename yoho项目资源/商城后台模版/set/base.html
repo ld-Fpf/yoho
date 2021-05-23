@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>后台首页 - 欢迎使用商城系统</title>
+	<link type="text/css" rel="stylesheet" href="../css/style.css" />
+	<script type="text/javascript" src="../../include/js/jquery.js"></script>
+</head>
+<div class="bgimg"></div>
+<div class="pagetop">
+	<div class="head">
+		<div class="logo fl"></div>
+
+		<div class="admin_t fr">
+			<ul>
+				<li><a href=""><img border=0 src="../images/exit4.gif"></a></li>
+				<li><a href="" onclick="return confirm('你确定要退出系统吗？')" ><img border=0 src="../images/exit3.gif"></a></li>
+			</ul>
+		</div>
+
+		<div class="admin_u fr">
+				<b>欢迎您-</b><a title="" target="_top" href="">admin</a>&nbsp;【超级管理员】 &nbsp;&nbsp;
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="content">
+	<div class="main">
+		<div class="left">
+			<div class="fenlei">
+				<h3>商品管理</h3>
+				<ul>
+					<li ><a href="../goods/list.html">商品列表</a></li>
+					<li ><a href="../goods/cat.html">商品分类</a></li>
+					<li ><a href="../goods/ask.html">商品咨询</a></li>
+					<li ><a href="../goods/comment.html">商品评价</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>交易管理</h3>
+				<ul>
+					<li ><a href="../order/list.html">订单管理</a></li>
+					<li ><a href="../order/payway.html">支付方式</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>信息管理</h3>
+				<ul>
+					<li ><a href="../article/cat.html">文章分类</a></li>
+					<li ><a href="../article/list.html">文章列表</a></li>
+					<li ><a href="../article/page.html">单页列表</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>用户管理</h3>
+				<ul>
+					<li ><a href="../user/list.html">会员列表</a></li>
+					<li ><a href="../user/admin.html">管理列表</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>控制面板</h3>
+				<ul>
+					<li ><a href="../set/base.html">基本信息</a></li>
+					<li ><a href="../set/cache.html">缓存管理</a></li>
+					<li ><a href="../set/link.html">友情链接</a></li>
+					<li ><a href="../set/ad.html">广告列表</a></li>
+				</ul>
+			</div>
+
+		</div>
+		<!-- start right -->
+
+<div class="right">
+	<div class="now">
+		<div class="now_l"></div>
+		<div class="now_m">基本信息</div>
+		<div class="now_r"></div>
+		<div class="clear"></div>
+	</div>
+	<form method="post" enctype="multipart/form-data">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wenzhang">
+	<tr>
+		<td class="bg_f8" align="right" width="100">网站标题：</td>
+		<td><input type="text" name="info[web_title]" value="欢迎使用商城系统" class="inputall input500" /></td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">关 键 词：</td>
+		<td><input type="text" name="info[web_keywords]" value="php,shop,php商城系统,b2c商城系统,php商城源码,b2c商城源码,开源免费网上商城系统" class="inputall input500" /></td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">网站描述：</td>
+		<td><textarea name="info[web_description]" style="width:500px;height:100px;">商城系统！</textarea></td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">网站LOGO：</td>
+		<td>
+						<p class="mab5"><img src="http://localhost/l/data/attachment/2014-07/20140716214405i.png" height="60" style="border:1px solid #ddd" /></p>
+						<p><input type="file" name="web_logo" /></p>
+		</td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">网站模板：</td>
+		<td>
+			<select name="info[web_tpl]" class="inputselect">
+						<option value="default" selected="selected">default</option>
+						</select>
+		</td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">咨询热线：</td>
+		<td><input type="text" name="info[web_phone]" value="400-700-1307" class="inputall input500" /></td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">咨询 Q Q：</td>
+		<td><input type="text" name="info[web_qq]" value="745436534,45243" class="inputall input500" /><span class="c888">（多个请用“,”隔开）</span></td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">版权所有：</td>
+		<td><input type="text" name="info[web_copyright]" value="2014-2017 " class="inputall input500" /></td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">备 案 号：</td>
+		<td><input type="text" name="info[web_icp]" value="" class="inputall input500" /></td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">微博地址：</td>
+		<td><input type="text" name="info[web_weibo]" value="" class="inputall input500" /></td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">统计代码：</td>
+		<td><textarea name="info[web_tongji]" style="width:500px;height:150px;"></textarea></td>
+	</tr>
+	<tr>
+		<td class="bg_f8">&nbsp;</td>
+		<td><input type="submit" name="pesubmit" value="提 交" class="tjbtn"></td>
+	</tr>
+	</table>
+	</form>
+</div>
+		<div class="clear"></div>
+	</div>
+	<div class="foot">Copyright <span class="num">&copy;</span> 2014-2017 <a target="_blank" href="#"></a> 版权所有</div>
+</div>
+<script type="text/javascript"> 
+$(function(){
+	$(".list").find("tr").hover(
+		function(){
+			if ($(this).find("td").hasClass("bgtt")) return;
+			$(this).find("td").css("background-color", "#ffffdd");
+		},
+		function(){
+			if ($(this).find("td").hasClass("bgtt")) return;
+			$(this).find("td").css("background-color", "#fff");
+		}
+	)
+})
+</script>
+
+
+
+		<!-- end right -->
+
+
+	
+
+</body>
+</html>	

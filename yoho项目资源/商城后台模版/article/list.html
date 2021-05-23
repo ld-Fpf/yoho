@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>后台首页 - 欢迎使用商城系统</title>
+	<link type="text/css" rel="stylesheet" href="../css/style.css" />
+	<script type="text/javascript" src="../../include/js/jquery.js"></script>
+</head>
+<div class="bgimg"></div>
+<div class="pagetop">
+	<div class="head">
+		<div class="logo fl"></div>
+
+		<div class="admin_t fr">
+			<ul>
+				<li><a href=""><img border=0 src="../images/exit4.gif"></a></li>
+				<li><a href="" onclick="return confirm('你确定要退出系统吗？')" ><img border=0 src="../images/exit3.gif"></a></li>
+			</ul>
+		</div>
+
+		<div class="admin_u fr">
+				<b>欢迎您-</b><a title="" target="_top" href="">admin</a>&nbsp;【超级管理员】 &nbsp;&nbsp;
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="content">
+	<div class="main">
+		<div class="left">
+			<div class="fenlei">
+				<h3>商品管理</h3>
+				<ul>
+					<li ><a href="../goods/list.html">商品列表</a></li>
+					<li ><a href="../goods/cat.html">商品分类</a></li>
+					<li ><a href="../goods/ask.html">商品咨询</a></li>
+					<li ><a href="../goods/comment.html">商品评价</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>交易管理</h3>
+				<ul>
+					<li ><a href="../order/list.html">订单管理</a></li>
+					<li ><a href="../order/payway.html">支付方式</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>信息管理</h3>
+				<ul>
+					<li ><a href="../article/cat.html">文章分类</a></li>
+					<li ><a href="../article/list.html">文章列表</a></li>
+					<li ><a href="../article/page.html">单页列表</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>用户管理</h3>
+				<ul>
+					<li ><a href="../user/list.html">会员列表</a></li>
+					<li ><a href="../user/admin.html">管理列表</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>控制面板</h3>
+				<ul>
+					<li ><a href="../set/base.html">基本信息</a></li>
+					<li ><a href="../set/cache.html">缓存管理</a></li>
+					<li ><a href="../set/link.html">友情链接</a></li>
+					<li ><a href="../set/ad.html">广告列表</a></li>
+				</ul>
+			</div>
+
+		</div>
+		<!-- start right -->
+<div class="right">
+	<div class="now">
+		<div class="now_l"></div>
+		<div class="now_m">
+			<span class="fl">文章列表</span>
+			<span class="fr fabu"><a href="articleadd.html">发布文章</a></span>
+		</div>
+		<div class="now_r"></div>
+		<div class="clear"></div>
+	</div>
+	<div class="search">
+		<div class="fr searbox">
+			<form method="get">
+				<input type="hidden" name="mod" value="article" />
+				文章名称：<input type="text" name="name" value="" class="inputtext inputtext_200" />
+				<select name="class_id" class="inputselect">
+				<option value="" href="?mod=article">全部分类</option>
+								<option value="1" href="?mod=article&class_id=1" >网站公告</option>
+								<option value="2" href="?mod=article&class_id=2" >公司动态</option>
+								<option value="3" href="?mod=article&class_id=3" >相关知识</option>
+								<option value="4" href="?mod=article&class_id=4" >商城新闻</option>
+								</select>
+				<input type="submit" value="搜索" class="input2" />
+			</form>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<form method="post" id="form">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="list">
+	<tr>
+		<td class="bgtt" width="10"><input type="checkbox" name="checkall" onclick="pe_checkall(this, 'article_id')" /></td>
+		<td class="bgtt" width="50">ID号</td>
+		<td class="bgtt">文章名称</td>
+		<td class="bgtt" width="100">文章分类</td>
+		<td class="bgtt" width="100">发布日期</td>
+		<td class="bgtt" width="80">浏览量</td>
+		<td class="bgtt" width="88">操作</td>
+	</tr>
+		<tr>
+		<td><input type="checkbox" name="article_id[]" value="11"></td>
+		<td>11</td>
+		<td class="aleft"><a href="http://localhost/l/article/11" target="_blank">有一折商品上架了</a></td>
+		<td>网站公告</td>
+		<td>2014-07-21</td>
+		<td>0</td>
+		<td>
+			<a href="admin.php?mod=article&act=edit&id=11&fromto=http%3A%2F%2Flocalhost%2Fl%2Fadmin.php%3Fmod%3Darticle" class="admin_edit mar3">修改</a>
+			<a href="admin.php?mod=article&act=del&id=11" class="admin_del" onclick="return pe_cfone(this, '删除')">删除</a>
+		</td>
+	</tr>
+		<tr>
+		<td><input type="checkbox" name="article_id[]" value="10"></td>
+		<td>10</td>
+		<td class="aleft"><a href="http://localhost/l/article/10" target="_blank">春款潮流女鞋全部5折</a></td>
+		<td>网站公告</td>
+		<td>2014-07-21</td>
+		<td>0</td>
+		<td>
+			<a href="admin.php?mod=article&act=edit&id=10&fromto=http%3A%2F%2Flocalhost%2Fl%2Fadmin.php%3Fmod%3Darticle" class="admin_edit mar3">修改</a>
+			<a href="admin.php?mod=article&act=del&id=10" class="admin_del" onclick="return pe_cfone(this, '删除')">删除</a>
+		</td>
+	</tr>
+		<tr>
+		<td><input type="checkbox" name="article_id[]" value="9"></td>
+		<td>9</td>
+		<td class="aleft"><a href="http://localhost/l/article/9" target="_blank">新品服装包活动包游</a></td>
+		<td>网站公告</td>
+		<td>2014-07-21</td>
+		<td>0</td>
+		<td>
+			<a href="admin.php?mod=article&act=edit&id=9&fromto=http%3A%2F%2Flocalhost%2Fl%2Fadmin.php%3Fmod%3Darticle" class="admin_edit mar3">修改</a>
+			<a href="admin.php?mod=article&act=del&id=9" class="admin_del" onclick="return pe_cfone(this, '删除')">删除</a>
+		</td>
+	</tr>
+		<tr>
+		<td><input type="checkbox" name="article_id[]" value="8"></td>
+		<td>8</td>
+		<td class="aleft"><a href="http://localhost/l/article/8" target="_blank">大师法</a></td>
+		<td>网站公告</td>
+		<td>2014-07-21</td>
+		<td>0</td>
+		<td>
+			<a href="admin.php?mod=article&act=edit&id=8&fromto=http%3A%2F%2Flocalhost%2Fl%2Fadmin.php%3Fmod%3Darticle" class="admin_edit mar3">修改</a>
+			<a href="admin.php?mod=article&act=del&id=8" class="admin_del" onclick="return pe_cfone(this, '删除')">删除</a>
+		</td>
+	</tr>
+		<tr>
+		<td><input type="checkbox" name="article_id[]" value="7"></td>
+		<td>7</td>
+		<td class="aleft"><a href="http://localhost/l/article/7" target="_blank">打发打发</a></td>
+		<td>网站公告</td>
+		<td>2014-07-21</td>
+		<td>0</td>
+		<td>
+			<a href="admin.php?mod=article&act=edit&id=7&fromto=http%3A%2F%2Flocalhost%2Fl%2Fadmin.php%3Fmod%3Darticle" class="admin_edit mar3">修改</a>
+			<a href="admin.php?mod=article&act=del&id=7" class="admin_del" onclick="return pe_cfone(this, '删除')">删除</a>
+		</td>
+	</tr>
+		<tr>
+		<td><input type="checkbox" name="article_id[]" value="6"></td>
+		<td>6</td>
+		<td class="aleft"><a href="http://localhost/l/article/6" target="_blank">多发的撒</a></td>
+		<td>网站公告</td>
+		<td>2014-07-21</td>
+		<td>0</td>
+		<td>
+			<a href="admin.php?mod=article&act=edit&id=6&fromto=http%3A%2F%2Flocalhost%2Fl%2Fadmin.php%3Fmod%3Darticle" class="admin_edit mar3">修改</a>
+			<a href="admin.php?mod=article&act=del&id=6" class="admin_del" onclick="return pe_cfone(this, '删除')">删除</a>
+		</td>
+	</tr>
+		<tr>
+		<td><input type="checkbox" name="article_id[]" value="5"></td>
+		<td>5</td>
+		<td class="aleft"><a href="http://localhost/l/article/5" target="_blank">sdfads</a></td>
+		<td>网站公告</td>
+		<td>2014-07-21</td>
+		<td>0</td>
+		<td>
+			<a href="admin.php?mod=article&act=edit&id=5&fromto=http%3A%2F%2Flocalhost%2Fl%2Fadmin.php%3Fmod%3Darticle" class="admin_edit mar3">修改</a>
+			<a href="admin.php?mod=article&act=del&id=5" class="admin_del" onclick="return pe_cfone(this, '删除')">删除</a>
+		</td>
+	</tr>
+		<tr>
+		<td><input type="checkbox" name="article_id[]" value="4"></td>
+		<td>4</td>
+		<td class="aleft"><a href="http://localhost/l/article/4" target="_blank">的说法大赛</a></td>
+		<td>网站公告</td>
+		<td>2014-07-21</td>
+		<td>1</td>
+		<td>
+			<a href="admin.php?mod=article&act=edit&id=4&fromto=http%3A%2F%2Flocalhost%2Fl%2Fadmin.php%3Fmod%3Darticle" class="admin_edit mar3">修改</a>
+			<a href="admin.php?mod=article&act=del&id=4" class="admin_del" onclick="return pe_cfone(this, '删除')">删除</a>
+		</td>
+	</tr>
+		<tr>
+		<td class="bgtt"><input type="checkbox" name="checkall" onclick="pe_checkall(this, 'article_id')" /></td>
+		<td class="bgtt aleft" colspan="6">
+			<span class="fl"><button href="admin.php?mod=article&act=del" onclick="return pe_cfall(this, 'article_id', 'form', '批量删除')">批量删除</button></span>
+			<span class="fenye"></span>
+		</td>
+	</tr>
+	</table>
+	</form>
+</div>
+<script type="text/javascript"> 
+$(function(){
+	$("select").change(function(){
+		window.location.href = 'admin.php' + $(this).find("option:selected").attr("href");
+	})
+})
+</script>
+	
+		<div class="clear"></div>
+	</div>
+	<div class="foot">Copyright <span class="num">&copy;</span> 2014-2017 <a target="_blank" href="#"></a> 版权所有</div>
+</div>
+<script type="text/javascript"> 
+$(function(){
+	$(".list").find("tr").hover(
+		function(){
+			if ($(this).find("td").hasClass("bgtt")) return;
+			$(this).find("td").css("background-color", "#ffffdd");
+		},
+		function(){
+			if ($(this).find("td").hasClass("bgtt")) return;
+			$(this).find("td").css("background-color", "#fff");
+		}
+	)
+})
+</script>
+
+
+
+
+		<!-- end right -->
+
+
+
+</body>
+</html>	

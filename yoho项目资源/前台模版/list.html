@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>商品列表</title>
+	<link rel="stylesheet" type="text/css" href="./style/list.css">
+</head>
+<body>
+<!-- 头部区域开始 -->
+<div class="head2014">
+	<!-- 顶部导航开始 -->
+	<div class="head-top">
+		<div class="screen clear">
+			<!-- 左边开始 -->
+			<div class="left">
+				<ul class="site-list">
+					<li class="cur"><a href="">YOHO!有货</a> </li>
+					<li><a href="">YOHO.CN</a> </li>
+					<li><a href="">YOHO!SHOW</a> </li>
+				</ul>
+			</div>
+			<!-- 左边结束 -->
+
+			<!-- 右边开始 -->
+			<div class="right">
+				<ul class="top-list">
+					<li class="list" id="loginBox">
+						<span>Hi~</span>[<a href="" class="list-a login-out">请登录</a>]&nbsp;[<a href="" class="list-a login-out">免费注册</a>]
+					</li>
+					<li class="list " id="myYohoBox">
+						<a href="" class="list-a">MY有货&nbsp;
+							<span class="iconfont">&#xe603;</span>
+						</a>
+					</li>
+					<li class="list relative" id="miniCartBox">
+						<a href="" class="list-a"><b><span class="iconfont">&#xe602;</span>&nbsp;购物车&nbsp;<span class="red icart-num">0</span>&nbsp;<span class="iconfont">&#xe603;</span></b></a>
+					</li>
+					<li class="list"><a href="" class="list-a">我的订单</a></li>
+					<li class="list"><a href="" class="list-a">我的收藏</a></li>
+					<li class="list " id="messageBox">
+						<a href="" class="list-a"><span class="iconfont" style="font-size:15px;">&#xe605;</span>&nbsp;消息&nbsp;<b><span class="red imessage-num">0</span></b>&nbsp;<span class="ifont10" id="upDown" style="display:none;">.</span></a>
+					</li>
+					<li class="list line-v"><span>|</span></li>
+					<li class="list"><a href="javascript:void(0);" class="list-a" id="favoriteYoho">收藏有货</a></li>
+				</ul>
+			</div>
+			<!-- 右边结束 -->
+
+		</div>
+	</div>
+	<!-- 顶部导航结束 -->
+
+	<!-- 头部中间区域开始 -->
+	<div class="head-mid">
+		<div class="screen clear">
+			<!-- 左侧区域开始 -->
+			<div class="left boys-girls">
+				<a href="" class="cur">BOYS<b>男装</b></a><span>|</span><a href="" class="girls ">GIRLS<b>女装</b></a>
+			</div>
+			<!-- 左侧区域结束 -->
+			<!-- 右侧app开始 -->
+			<div class="right">
+                        <div class="head-two-dim">
+                            <a target="_blank" href="">
+                            	<img class="dim-img" src="./images/app.gif">
+                            </a>
+                        </div>
+			</div>
+			<!-- 右侧app结束 -->
+
+			<!-- 右侧搜索开始 -->
+			<div class="right">
+				<div class="nav-input relative">
+					<form action="" method="post" id="searchForm">
+						<input name="keyword" id="query_key" value="" type="text">
+						<a class="iconfont input-button" href="javascript:void(0);">&#xe609;</a>
+					</form>
+				</div>
+			</div>
+			<!-- 右侧搜索结束 -->
+			<div class="center">
+				<a href=""><img style="" alt="YOHO!有货" src="./images/logo-boys.png"></a>
+			</div>
+		</div>
+	</div>
+	<!-- 头部中间区域结束 -->
+
+	<!-- 头部导航开始 -->
+	<div class="head-nav">
+		<div class="screen">
+			<ul class="clear nav-bar">
+				<li class="left first">
+					<a href="" class="a-list"><span>新品到着</span></a>
+				</li>
+				<li class="left">
+					<a href="" class="a-list"><span>品牌一览</span></a>
+				</li>
+				<li class="left">
+					<a href="" class="a-list"><span>服饰</span></a>
+				</li>
+				<li class="left">
+					<a href="" class="a-list"><span>鞋履</span></a>
+				</li>
+				<li class="left">
+					<a href="" class="a-list"><span>包</span></a>
+				</li>
+				<li class="left">
+					<a href="" class="a-list"><span>配饰 · 其他</span></a>
+				</li>
+				<li class="left">
+					<a href="" class="a-list"><span>LOOKBOOK</span></a>
+				</li>
+				<li class="left">
+					<a href="" class="a-list"><span>潮流资讯</span></a>
+				</li>
+				<li class="left last">
+					<a href="" class="a-list"><span>SALE</span></a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 头部导航结束 -->
+</div>
+<!-- 头部区域结束 -->
+
+
+
+<!-- 主体区域开始 -->
+
+<div class="wrapper screen wrapper-goods">
+	<!-- 面包屑导航开始 -->
+	<div class="mini-site-nav">
+	        <a href="" title="YOHO!有货">BOYS首页</a>
+	</div>
+	<!-- 面包屑导航结束 -->
+
+	<!-- 商品列表开始 -->
+	<div class="clear goods-main">
+		<!-- 左侧分类开始 -->
+		<div class="left goods-left">
+			<ul class="goods-category clear">
+			    <li>
+			    	<a href="">全部品类<span class="num">25089</span></a>
+			    </li>
+			        <li>
+			            <a href="javascript:void(0);">
+			            	<span class="iconfont">&#xe60d;</span>上衣<span class="num">11468</span>
+			            </a>
+			        </li>
+			        <li>
+			            <a href="javascript:void(0);">
+			            	<span class="iconfont">&#xe60d;</span>裤装<span class="num">3062</span>
+			            </a>
+			        </li>
+			        <li>
+			            <a href="javascript:void(0);">
+			            	<span class="iconfont">&#xe60d;</span>裙装<span class="num">715</span>
+			            </a>
+			        </li>
+			        <li>
+			            <a href="javascript:void(0);">
+			            	<span class="iconfont">&#xe60d;</span>鞋靴<span class="num">1909</span>
+			            </a>
+			        </li>
+			        <li>
+			            <a href="javascript:void(0);">
+			            	<span class="iconfont">&#xe60d;</span>包类<span class="num">2355</span>
+			            </a>
+			        </li>
+			        <li>
+			            <a href="javascript:void(0);">
+			            	<span class="iconfont">&#xe60d;</span>服配<span class="num">3780</span>
+			            </a>
+			        </li>
+			        <li>
+			            <a href="javascript:void(0);">
+			            	<span class="iconfont">&#xe60d;</span>创意市集<span class="num">986</span>
+			            </a>
+			        </li>
+			        <li>
+			            <a href="javascript:void(0);">
+			            	<span class="iconfont">&#xe60d;</span>数码周边<span class="num">814</span>
+			            </a>
+			        </li>
+			</ul>
+
+			<div class="goods-serial">
+			      <div id="list-left-ads"></div>
+			</div>
+		</div>
+		<!-- 左侧分类结束 -->
+
+		<!-- 右侧开始 -->
+		<div class="right goods-right">
+		      <div id="searchbanner"></div>
+		      <a name="selected"></a>
+
+		      <!-- 搜索条件开始 -->
+		      <div class="search-condition expand-selected">
+		      	<!-- 品牌列表开始 -->
+		      	<div id="brandList">
+		      	         <dl class="clear brands-list">
+		      	            <dt><span>品牌：</span></dt>
+		      	            <dd class="right brands-more">
+		      	                <a href="javascript:void(0)">更多&nbsp;<span class="iconfont">&#xe603;</span></a>
+		      	            </dd>
+		      	            <dd class="outer-100 search-brands">
+		      	                <ul class="clear">
+                                            <li>
+                                            	<a href="" class=""><span class="select-input"><span class="iconfont">&#xe613;</span></span><span>:CHOCOOLATE</span></a>
+                                            </li>
+                                            <li>
+                                            	<a href="" class=""><span class="select-input"><span class="iconfont">&#xe613;</span></span><span>Life·After Life</span></a>
+                                            </li>
+                                            <li>
+                                            	<a href="" class=""><span class="select-input"><span class="iconfont">&#xe613;</span></span><span>Stussy</span></a>
+                                            </li>
+                                            <li>
+                                            	<a href="" class=""><span class="select-input"><span class="iconfont">&#xe613;</span></span><span>DUNKELVOLK</span></a>
+                                            </li>
+                                            <li>
+                                            	<a href="" class=""><span class="select-input"><span class="iconfont">&#xe613;</span></span><span>VANS</span></a>
+                                            </li>
+                                            <li>
+                                            	<a href="" class=""><span class="select-input"><span class="iconfont">&#xe613;</span></span><span>STAYREAL</span></a>
+                                            </li>
+                                            <li>
+                                            	<a href="" class=""><span class="select-input"><span class="iconfont">&#xe613;</span></span><span>izzue</span></a>
+                                            </li>
+                                            <li>
+                                            	<a href="" class=""><span class="select-input"><span class="iconfont">&#xe613;</span></span><span>HARDLYEVER'S</span></a>
+                                            </li>
+                                            <li>
+                                            	<a href="" class=""><span class="select-input"><span class="iconfont">&#xe613;</span></span><span>THETHING</span></a>
+                                            </li>
+                                            <li>
+                                            	<a href="" class=""><span class="select-input"><span class="iconfont">&#xe613;</span></span><span>JOYRICH</span></a>
+                                            </li>
+	                                    </ul>
+		      	            </dd>
+		      	        </dl>
+		      	    </div>
+		      	<!-- 品牌列表结束 -->
+
+				<!-- 价格筛选开始 -->
+		      	<dl class="clear">
+		      	        <dt><span>价格：</span></dt>
+		      	        <dd class="outer-100">
+		      	            <div class="inner-left">
+		      	                                    <a href="" class="">￥0-300</a>
+		      	                                    <a href="" class="">￥300-600</a>
+		      	                                    <a href="" class="">￥600-1000</a>
+		      	                                    <a href="" class="">￥1000-2000</a>
+		      	                                    <a href="" class="">￥2000以上</a>
+		      	                                <!--说明：price_define控制自定义价格的样式，默认无price_define-->
+		      	                <form action="" id="priceForm" method="get">
+		      	                     <input name="price" id="price" type="hidden">
+		      	                </form>
+		      	                <span class="inline-block">￥&nbsp;<input name="price-start" id="price-start" value="" class="price-input" type="text"><span>&nbsp;&nbsp;-&nbsp;&nbsp;</span><input class="price-input" name="price-end" id="price-end" value="" type="text"><a href="javascript:void(0);" class="price-submit" style="display:none;">确定</a></span>
+		      	            </div>
+		      	        </dd>
+		      	    </dl>
+		      	    <!-- 价格筛选结束 -->
+
+					<!-- 更多选项开始 -->
+		      	    <div class="control-bar">
+		      	        <a class="button-less" style="display:none;" href="javascript:void(0);">收起<span class="iconfont">&#xe60b;</span></a>
+		      	        <a class="button-more" href="javascript:void(0);">更多选项(颜色...)<span class="iconfont">&#xe603;</span></a>
+		      	    </div>
+		      	    <!-- 更多选项结束 -->
+
+
+
+		      	    <!-- 商品排序选项开始 -->
+		      	    <div class="clear sort-condition">
+    	                        <div class="left sort-left">
+    	                            <a href="/?order=s_t_desc" class="">最新<span class="iconfont">&#xe612;</span></a>
+    	                            <!-- a href="">人气<span class="iconfont">]</span></a-->
+    	                            <a href="/?order=s_p_asc" class="">价格<span class="iconfont">&#xe614;</span></a>
+    	                            <a href="/?order=p_d_asc" class="">折扣<span class="iconfont">&#xe614;</span></a>
+    	                            <a href="/?specialoffer=1" class=""><span class="select-input"><span class="iconfont">&#xe613;</span></span><span>特价</span></a>
+    	                            <a href="/?limit=1" class=""><span class="select-input"><span class="iconfont">&#xe613;</span></span><span>限量</span></a>
+    	                            <a href="/?new=1" class=""><span class="select-input"><span class="iconfont">&#xe613;</span></span><span>新品</span></a>
+    	                        </div>
+		      	    </div>
+		      	    <!-- 商品排序选项结束 -->
+
+
+				<!-- 商品循环开始 -->
+	      	    	<div class="goods-list">
+	      	    		<div class="goods-info">
+			      		<div class="lazy">
+			      			<a href="">
+			      				<img src="./images/good-info.jpg" width="235" height="314" />
+			      			</a>
+			      		</div>
+			      		<div class="product-info">
+			      			<div class="name">
+			      				<a href="">Into The Rainbow   好奇眼神圆领毛衣</a>
+			      			</div>
+			      			<div class="brand"><a href="">Into The Rainbow</a></div>
+			      			<div class="price"><span class="rgb9 delete">￥199</span><span><b>￥169</b></span></div>
+			      		</div>
+			      	</div>
+			      	<div class="goods-info">
+			      		<div class="lazy">
+			      			<a href="">
+			      				<img src="./images/good-info.jpg" width="235" height="314" />
+			      			</a>
+			      		</div>
+			      		<div class="product-info">
+			      			<div class="name">
+			      				<a href="">Into The Rainbow   好奇眼神圆领毛衣</a>
+			      			</div>
+			      			<div class="brand"><a href="">Into The Rainbow</a></div>
+			      			<div class="price"><span class="rgb9 delete">￥199</span><span><b>￥169</b></span></div>
+			      		</div>
+			      	</div>
+			      	<div class="goods-info">
+			      		<div class="lazy">
+			      			<a href="">
+			      				<img src="./images/good-info.jpg" width="235" height="314" />
+			      			</a>
+			      		</div>
+			      		<div class="product-info">
+			      			<div class="name">
+			      				<a href="">Into The Rainbow   好奇眼神圆领毛衣</a>
+			      			</div>
+			      			<div class="brand"><a href="">Into The Rainbow</a></div>
+			      			<div class="price"><span class="rgb9 delete">￥199</span><span><b>￥169</b></span></div>
+			      		</div>
+			      	</div>
+			      </div>
+					<!-- 商品循环结束 -->
+				<div class="clear"></div>
+				
+				<!-- 分页开始 -->
+				<div class="goods-bottom clear">
+				      <div class="left">
+				      	<span class="rgb9">1 - 59 / 共25066件商品</span>
+				      </div>
+				      <div class="goods-page right">
+				      	<a href="?page=1" class="cur"><span>1</span></a>
+				      	<a href="?page=2"><span>2</span></a>
+				      	<a href="?page=3"><span>3</span></a>
+				      	<a href="?page=4"><span>4</span></a>
+				      	<a href="?page=5"><span>5</span></a>
+				      	<a><span>...</span></a>
+				      	<a href="?page=425"><span>425</span></a>
+				      	<a href="?page=2" title="下一页">下一页<span class="ifont10">&gt;</span></a>
+				      </div>
+				</div>
+				<!-- 分页结束 -->
+
+			      </div>
+		      </div>
+		      <!-- 搜索条件结束 -->
+
+			<!-- 商品列表展示开始 -->
+		      
+			<!-- 商品列表展示结束 -->
+		</div>
+		<!-- 右侧结束 -->
+
+
+	</div>
+	<!-- 商品列表结束 -->
+
+</div>
+
+<!-- 主体区域结束 -->
+
+<!-- 黑色底部开始 -->
+<div class="footer2013 clear">
+	<div class="promise">
+		<div class="screen clear">
+			<div class="left"><span class="iconfont rgbf">&#xe608;</span><span class="red">100%</span><span class="rgbf">品牌授权正品</span></div>
+			<div class="left"><span class="iconfont rgbf">&#xe607;</span><span class="red">7天</span><span class="rgbf">无理由退换货</span></div>
+			<div class="left"><span class="iconfont rgbf">&#xe604;</span><span class="rgbf">客服电话：</span><span class="red">400-889-9646</span>&nbsp;&nbsp;<span class="rgb9">09:00-22:30(周一至周日)</span></div>
+			<div class="right subscribe footer-right"><input style="" class="rgb6 top" name="subscriberBox" id="subscriberBox" value="订阅我们的邮件"><a href="javascript:void(0);" id="subscriberBtn" class="iconfont rgbf">&#xe606;</a></div>
+			</div>
+		</div>
+
+		<div class="footer-help clear">
+			<div class="screen clear">
+				<div class="left">
+					<ul class="clear">
+						<li class="left">
+							<p><span>新手指南</span></p>
+							<p><a href="">新用户注册</a></p>
+							<p><a href="">会员登录</a></p>
+							<p><a href="">订购流程</a></p>
+							<p><a href="">交易须知</a></p>
+						</li>
+						<li class="left">
+							<p><span>付款方式</span></p>
+							<p><a href="">支付方式</a></p>
+							<p><a href="">常见支付问题</a></p>
+							<p><a href="">如何办理退款</a></p>
+							<p><a href="">发票制度说明</a></p>
+						</li>
+						<li class="left">
+							<p><span>配送方式</span></p>
+							<p><a href="">配送时间及范围</a></p>
+							<p><a href="">订单的拆分</a></p>
+							<p><a href="">商品验收与签收</a></p>
+						</li>
+						<li class="left">
+							<p><span>售后服务</span></p>
+							<p><a href="">如何办理退换货</a></p>
+							<p><a href="">退换货政策</a></p>
+						</li>
+						<li class="left">
+							<p><span>帮助中心</span></p>
+							<p><a href="">找回密码</a></p>
+							<p><a href="">常见问题</a></p>
+							<p><a href="">谨防诈骗</a></p>
+						</li>
+						<li class="left">
+							<p><span>优惠政策</span></p>
+							<p><a href="">VIP会员制度说明</a></p>
+							<p><a href="">YOHO币</a></p>
+							<p><a href="">优惠券</a></p>
+							<p><a href="">兑换礼品卡</a></p>
+						</li>
+					</ul>
+				</div>
+			  </div>
+		</div>
+
+
+		<div class="footer-link clear">
+			<div class="screen clear">
+				<div class="left right-flag">
+					<a href=""><img src="http://static.yohobuy.com/images/v3/icon/credit-flag3.png"></a>
+					<a href=""><img src="http://static.yohobuy.com/images/v3/icon/isc2.png"></a>
+				</div>
+				<div class="left about-us">
+					<p>
+						<a href="">返回首页</a><span>|</span><a href="">YOHO!有货</a><span>|</span><a href="">新力传媒</a><span>|</span><a href="">联系我们</a><span>|</span><a href="">隐私条款</a><span>|</span><a href="">友情链接</a>
+					</p>
+					<p>CopyRight © 2007-2016 南京新与力文化传播有限公司 苏ICP备09011225号 NewPower Co. 版权所有 经营许可证编号：苏B2-20120395</p>
+				</div>
+				
+			</div>
+		</div>
+</div>
+<!-- 黑色底部结束 -->
+</body>
+</html>

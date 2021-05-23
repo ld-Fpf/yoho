@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>后台首页 - 欢迎使用商城系统</title>
+	<link type="text/css" rel="stylesheet" href="../css/style.css" />
+	<script type="text/javascript" src="../../include/js/jquery.js"></script>
+</head>
+<div class="bgimg"></div>
+<div class="pagetop">
+	<div class="head">
+		<div class="logo fl"></div>
+
+		<div class="admin_t fr">
+			<ul>
+				<li><a href=""><img border=0 src="../images/exit4.gif"></a></li>
+				<li><a href="" onclick="return confirm('你确定要退出系统吗？')" ><img border=0 src="../images/exit3.gif"></a></li>
+			</ul>
+		</div>
+
+		<div class="admin_u fr">
+				<b>欢迎您-</b><a title="" target="_top" href="">admin</a>&nbsp;【超级管理员】 &nbsp;&nbsp;
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="content">
+	<div class="main">
+		<div class="left">
+			<div class="fenlei">
+				<h3>商品管理</h3>
+				<ul>
+					<li ><a href="../goods/list.html">商品列表</a></li>
+					<li ><a href="../goods/cat.html">商品分类</a></li>
+					<li ><a href="../goods/ask.html">商品咨询</a></li>
+					<li ><a href="../goods/comment.html">商品评价</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>交易管理</h3>
+				<ul>
+					<li ><a href="../order/list.html">订单管理</a></li>
+					<li ><a href="../order/payway.html">支付方式</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>信息管理</h3>
+				<ul>
+					<li ><a href="../article/cat.html">文章分类</a></li>
+					<li ><a href="../article/list.html">文章列表</a></li>
+					<li ><a href="../article/page.html">单页列表</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>用户管理</h3>
+				<ul>
+					<li ><a href="../user/list.html">会员列表</a></li>
+					<li ><a href="../user/admin.html">管理列表</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>控制面板</h3>
+				<ul>
+					<li ><a href="../set/base.html">基本信息</a></li>
+					<li ><a href="../set/cache.html">缓存管理</a></li>
+					<li ><a href="../set/link.html">友情链接</a></li>
+					<li ><a href="../set/ad.html">广告列表</a></li>
+				</ul>
+			</div>
+
+		</div>
+		<!-- start right -->
+
+<div class="right">
+	<div class="now">
+		<div class="now_l"></div>
+		<div class="now_m">订单列表</div>
+		<div class="now_r"></div>
+		<div class="clear"></div>
+	</div>
+	<!--<div class="tixing">
+		<span class="cgreen">温馨提示：</span>为了方便商户快速与支付宝签约，(PE)目前只集成了常用的 <u>支付宝双功能收款（即时到帐+担保交易）接口</u>。
+		<p><span class="cblue">即时到帐流程</span>：买家 -> 付款给卖家 　-> 卖家到系统后台发货 -> 交易成功</p>
+		<p><span class="cblue">担保交易流程</span>：买家 -> 付款给支付宝 -> 卖家到系统后台发货 -> 买家确认收货 -> 交易资金自动转入卖家 -> 交易成功</p>
+	</div>-->
+	<div class="search">
+		<div class="fl qiehuan">
+			<a href="admin.php?mod=order" class="sel">全部订单</a>
+			| <a href="admin.php?mod=order&state=notpay" >未付款</a>
+			| <a href="admin.php?mod=order&state=paid" >待发货</a>
+			| <a href="admin.php?mod=order&state=send" >已发货</a>
+			| <a href="admin.php?mod=order&state=success" >成功订单</a>
+		</div>
+		<div class="fr searbox">
+			<form method="get">
+				<input type="hidden" name="mod" value="order" />
+				订单编号：<input type="text" name="id" value="" class="inputtext input100" />
+				收货姓名：<input type="text" name="user_tname" value="" class="inputtext input100" />
+				联系方式：<input type="text" name="user_phone" value="" class="inputtext input100" />
+				<input type="submit" value="搜索" class="input2" />
+			</form>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="hy_table">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" class="hy_tb_tt">
+		<tr>
+			<td class="bg_f8" width="">商品详情</td>
+			<td class="bg_f8" width="120">实付款(元)</td>
+			<td class="bg_f8" width="120">交易操作</td>
+			<td class="bg_f8" width="120" style="border-right:0;">订单详情</td>
+		</tr>
+		</table>
+				<div class="hy_table_order c666">
+			<span class="fl">订单编号：1407200005</span>
+			<span class="fr">下单时间：2014-07-20 23:19</span>
+			<div class="clear"></div>
+		</div>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #D4E7FF;">
+		<tr>
+			<td style="text-align:left;">
+								<div class="dingdan_list" style="padding-top:0">
+					<a href="http://localhost/l/product/3" class="fl mar5"><img src="http://localhost/l/data/cache/thumb/2014-07/thumb_60x60_20140720200014e.jpg" width="45" height="45"></a>
+					<div class="fl font12">
+						<a href="http://localhost/l/product/3" title="古积女包女士单肩斜挎包货到付款夏季新款手提包子母包三件套008 湖水蓝0" target="_blank" class="cblue dd_name">古积女包女士单肩斜挎包货到付款夏季新款手提包子母包三件套008 湖水蓝0</a>
+												</div>
+					<span class="fr font12"><span class="num">￥118.0</span>(×1)</span>
+					<div class="clear"></div>
+				</div>
+							</td>
+			<td width="100">
+				<p class="cred num font14 strong">128.0</p>
+				<p class="c888 font12">(含运费10.0元)</p>
+			</td>
+			<td width="100">
+			<!--货到付款-->
+											<p class="cgreen font13">订单创建成功</p>
+				<p><a class="pay_btn" href="admin.php?mod=order&act=state&state=paid&id=1407200005" onclick="return pe_cfone(this, '付款')">付款</a></p>
+											<p class="c888 font12 mat3">银行转账/汇款</p>
+			</td>
+			<td width="100">
+				<a href="orderinfo.html" target="_blank" class="font13">订单详情</a>
+								<p class="mat3"><a href="admin.php?mod=order&act=del&id=1407200005" onclick="return pe_cfone(this, '删除订单')" class="cblue font12">删除订单</a></p>
+							</td>
+		</tr>
+		</table>
+				<div class="hy_table_order c666">
+			<span class="fl">订单编号：1407200003</span>
+			<span class="fr">下单时间：2014-07-20 23:06</span>
+			<div class="clear"></div>
+		</div>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #D4E7FF;">
+		<tr>
+			<td style="text-align:left;">
+								<div class="dingdan_list" style="padding-top:0">
+					<a href="http://localhost/l/product/18" class="fl mar5"><img src="http://localhost/l/data/cache/thumb/2014-07/thumb_60x60_20140720204621u.jpg" width="45" height="45"></a>
+					<div class="fl font12">
+						<a href="http://localhost/l/product/18" title="歌莉娅 2014最新夏季女式真皮低跟凉鞋 OL时尚中跟牛皮女鞋粗跟休闲女" target="_blank" class="cblue dd_name">歌莉娅 2014最新夏季女式真皮低跟凉鞋 OL时尚中跟牛皮女鞋粗跟休闲女</a>
+												</div>
+					<span class="fr font12"><span class="num">￥120.0</span>(×1)</span>
+					<div class="clear"></div>
+				</div>
+							</td>
+			<td width="100">
+				<p class="cred num font14 strong">130.0</p>
+				<p class="c888 font12">(含运费10.0元)</p>
+			</td>
+			<td width="100">
+			<!--货到付款-->
+											<p class="cgreen font13">订单创建成功</p>
+				<p><a class="pay_btn" href="admin.php?mod=order&act=state&state=paid&id=1407200003" onclick="return pe_cfone(this, '付款')">付款</a></p>
+											<p class="c888 font12 mat3">支付宝付款</p>
+			</td>
+			<td width="100">
+				<a href="orderinfo.html" target="_blank" class="font13">订单详情</a>
+								<p class="mat3"><a href="admin.php?mod=order&act=del&id=1407200003" onclick="return pe_cfone(this, '删除订单')" class="cblue font12">删除订单</a></p>
+							</td>
+		</tr>
+		</table>
+				<div class="hy_table_order c666">
+			<span class="fl">订单编号：1407200002</span>
+			<span class="fr">下单时间：2014-07-20 22:53</span>
+			<div class="clear"></div>
+		</div>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #D4E7FF;">
+		<tr>
+			<td style="text-align:left;">
+								<div class="dingdan_list" style="padding-top:0">
+					<a href="http://localhost/l/product/12" class="fl mar5"><img src="http://localhost/l/data/cache/thumb/2014-07/thumb_60x60_20140720202937l.jpg" width="45" height="45"></a>
+					<div class="fl font12">
+						<a href="http://localhost/l/product/12" title="奈戴尔2014夏装新款韩版时尚潮款连体裤女装收腰显瘦欧美配腰带 HOP1" target="_blank" class="cblue dd_name">奈戴尔2014夏装新款韩版时尚潮款连体裤女装收腰显瘦欧美配腰带 HOP1</a>
+												</div>
+					<span class="fr font12"><span class="num">￥199.0</span>(×3)</span>
+					<div class="clear"></div>
+				</div>
+							</td>
+			<td width="100">
+				<p class="cred num font14 strong">597.0</p>
+				<p class="c888 font12">(卖家包邮)</p>
+			</td>
+			<td width="100">
+			<!--货到付款-->
+											<p class="cgreen font13">交易成功</p>
+							<!--先款后货-->
+							<p class="c888 font12 mat3">货到付款</p>
+			</td>
+			<td width="100">
+				<a href="orderinfo.html" target="_blank" class="font13">订单详情</a>
+							</td>
+		</tr>
+		</table>
+				<div class="hy_table_order c666">
+			<span class="fl">订单编号：1407200001</span>
+			<span class="fr">下单时间：2014-07-20 22:50</span>
+			<div class="clear"></div>
+		</div>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #D4E7FF;">
+		<tr>
+			<td style="text-align:left;">
+								<div class="dingdan_list" style="padding-top:0">
+					<a href="http://localhost/l/product/13" class="fl mar5"><img src="http://localhost/l/data/cache/thumb/2014-07/thumb_60x60_20140720203302u.jpg" width="45" height="45"></a>
+					<div class="fl font12">
+						<a href="http://localhost/l/product/13" title="花开二度2014新款夏装韩版波西米亚风女装中长款无袖宽松沙滩裙连衣裙雪纺" target="_blank" class="cblue dd_name">花开二度2014新款夏装韩版波西米亚风女装中长款无袖宽松沙滩裙连衣裙雪纺</a>
+												</div>
+					<span class="fr font12"><span class="num">￥456.0</span>(×1)</span>
+					<div class="clear"></div>
+				</div>
+								<div class="dingdan_list" >
+					<a href="http://localhost/l/product/18" class="fl mar5"><img src="http://localhost/l/data/cache/thumb/2014-07/thumb_60x60_20140720204621u.jpg" width="45" height="45"></a>
+					<div class="fl font12">
+						<a href="http://localhost/l/product/18" title="歌莉娅 2014最新夏季女式真皮低跟凉鞋 OL时尚中跟牛皮女鞋粗跟休闲女" target="_blank" class="cblue dd_name">歌莉娅 2014最新夏季女式真皮低跟凉鞋 OL时尚中跟牛皮女鞋粗跟休闲女</a>
+												</div>
+					<span class="fr font12"><span class="num">￥120.0</span>(×1)</span>
+					<div class="clear"></div>
+				</div>
+							</td>
+			<td width="100">
+				<p class="cred num font14 strong">596.0</p>
+				<p class="c888 font12">(含运费20.0元)</p>
+			</td>
+			<td width="100">
+			<!--货到付款-->
+											<p class="cgreen font13">卖家已经发货</p>
+				<p><a class="pay_btn" href="admin.php?mod=order&act=state&state=send&id=1407200001" onclick="return pe_cfone(this, '付款')">付款</a></p>
+							<!--先款后货-->
+							<p class="c888 font12 mat3">货到付款</p>
+			</td>
+			<td width="100">
+				<a href="orderinfo.html" target="_blank" class="font13">订单详情</a>
+							</td>
+		</tr>
+		</table>
+				<div class="hy_pay">
+			<div class="fenye"></div>
+		</div>
+	</div>
+</div>
+<script charset="utf-8" src="http://localhost/l/include/plugin/artdialog/jquery.artDialog.js?skin=chrome"></script>
+<script charset="utf-8" src="http://localhost/l/include/plugin/artdialog/plugins/iframeTools.js"></script>
+	
+		<div class="clear"></div>
+	</div>
+	<div class="foot">Copyright <span class="num">&copy;</span> 2014-2017 <a target="_blank" href="#"></a> 版权所有</div>
+</div>
+<script type="text/javascript"> 
+$(function(){
+	$(".list").find("tr").hover(
+		function(){
+			if ($(this).find("td").hasClass("bgtt")) return;
+			$(this).find("td").css("background-color", "#ffffdd");
+		},
+		function(){
+			if ($(this).find("td").hasClass("bgtt")) return;
+			$(this).find("td").css("background-color", "#fff");
+		}
+	)
+})
+</script>
+
+
+
+		<!-- end right -->
+
+
+
+</body>
+</html>	

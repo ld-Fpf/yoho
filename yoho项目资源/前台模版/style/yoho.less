@@ -1,0 +1,692 @@
+// 全局设置
+*{
+	margin:0;
+	padding:0;
+	font-family: arial,"Microsoft YaHei";
+	font-size: 12px;
+	color: #000;
+	line-height: 150%;
+}
+dl, ul, li, ol {
+    list-style: outside none none;
+    padding: 0px;
+    margin: 0px;
+}
+form {
+    display: inline;
+}
+input, textarea, select {
+    vertical-align: middle;
+    font-size: 12px;
+    color: #333;
+    outline: medium none;
+}
+input {
+    border: medium none;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+.red {
+    color: #E01;
+}
+.relative {
+    position: relative;
+}
+.rgb6 {
+    color: #666;
+}
+.rgbf {
+    color: #FFF;
+}
+.rgb9 {
+    color: #999;
+}
+.top {
+    vertical-align: top;
+}
+.a_eu {
+	color: #468fa2;
+	text-decoration: underline;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+.clear {
+    clear: both;
+}
+// @font-face {font-family: 'iconfont';
+//     src: url('./fonts/iconfont.eot'); /* IE9*/
+//     src: url('./fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//     url('./fonts/iconfont.woff') format('woff'), /* chrome、firefox */
+//     url('./fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+//     url('./fonts/iconfont.svg#uxiconfont') format('svg'); /* iOS 4.1- */
+// }
+@font-face {font-family: 'iconfont';
+    src: url('./fonts/iconfont.eot'); /* IE9*/
+    src: url('./fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('./fonts/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('./fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('./fonts/iconfont.svg#uxiconfont') format('svg'); /* iOS 4.1- */
+}
+  .iconfont{
+    font-family:"iconfont" !important;
+    font-size:12px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+// 头部区域
+.head2014{
+	width:100%;
+	// 顶部菜单
+	.head-top{
+		height: 32px;
+		border-bottom: 1px solid #ddd;
+		background: #f4f4f4;
+		.screen{
+			width:1150px;
+			margin:0 auto;
+			// left区域
+			.left{
+				float:left;
+				ul{
+					width:282px;
+					height:33px;
+					li{
+						float:left;
+						line-height: 32px;
+						padding:0 13px;
+					}
+					.cur{
+						background: none repeat scroll 0% 0% #FFF;
+						border-left: 1px solid #DDD;
+						border-right: 1px solid #DDD;
+						border-bottom: 1px solid #FFF;
+					}
+
+				}
+			}
+			// left区域结束
+			
+			// right区域
+			.right{
+				float:right;
+				ul{
+					width:570px;
+					height:33px;
+					line-height: 18px;
+					li.list{
+						float: left;
+						padding: 0px 1px;
+						border-left: 1px solid #F4F4F4;
+						border-right: 1px solid #F4F4F4;
+						.list-a{
+							padding: 0px 5px;
+							line-height: 32px;
+							display: inline-block;
+							color: #000;
+							.iconfont{
+								font-size:10px;
+								margin-left:-1px;
+								display: inline-block;
+							}
+							b{
+								line-height:32px;
+								.red{
+									color: #E01;
+								}
+							}
+							
+						}
+						.login-out{
+							color:#069;
+						}
+					}
+
+					li.line-v{
+						line-height: 32px;
+						padding: 0px;
+						span{
+							color: #ddd;
+						}
+					}
+				}
+			}
+			// right区域结束
+		}
+	}
+
+	// 头部区域
+	.head-mid{
+		padding: 15px 0px 25px;
+		height: 55px;
+		.screen{
+			width:1150px;
+			margin:0 auto;
+
+			// 头部区域左侧开始
+			.left{
+				float:left;
+			}
+			.boys-girls{
+				padding-top: 32px;
+				a{
+					font-size: 20px;
+					font-weight: bold;
+					color: #000;
+					line-height: 18px;
+				}
+				a:hover{
+					text-decoration: none;
+				}
+				a.cur{
+					border-bottom: 2px solid #000;
+					b{
+						font-size: 16px;
+						font-weight: bold;
+						line-height: 18px;
+					}
+				}
+				span{
+					font-size: 16px;
+					color: #DDD;
+					line-height: 18px;
+					padding: 0px 10px;
+				}
+				a.girls{
+					color: #F36;
+					b{
+						font-size: 16px;
+						font-weight: bold;
+						line-height: 18px;
+						color: #F36;
+					}
+				}
+			}
+			// 头部区域左侧结束
+			
+			// 头部区域右侧
+			.right{
+				float:right;
+				.head-two-dim{
+					margin-left: 15px;
+				}
+				.nav-input{
+					border: 1px solid #CCC;
+					padding: 4px 13px;
+					height: 22px;
+					margin-top: 18px;
+					form{
+						display: inline;
+						input{
+							height: 22px;
+							width: 168px;
+							line-height: 22px;
+							outline: medium none;
+							border: 0px none;
+						}
+						a {
+							text-decoration: none;
+							color: #666;
+							outline: medium none;
+						  }
+						.input-button{
+							height: 22px;
+							line-height: 22px;
+							padding-left: 13px;
+							border-left: 1px solid #DDD;
+						}
+						.iconfont{
+							display: inline-block;
+							vertical-align: middle;
+						}
+					}
+				}
+			}
+			// 头部区域右侧结束 
+			
+			// 头部中间区域开始
+			.center{
+				position: absolute;
+				left: 50%;
+				margin-left: -92px;
+				margin-top: 10px;
+				text-align: center;
+			}
+			// 头部中间区域结束
+			
+		}
+	}
+
+	// 头部导航开始
+	.head-nav{
+		background: none repeat scroll 0% 0% #000;
+		width: 100%;
+		height: 40px;
+		.screen{
+			width:1150px;
+			margin:0 auto;
+			.left{
+				float:left;
+			}
+			ul{
+				li.first a.a-list {
+					margin-left: 0;
+				}
+				li a.a-list {
+					color: #fff;
+					line-height: 40px;
+					font-size: 14px;
+					display: inline-block;
+					margin-right: 43px;
+					margin-left: 42px;
+					span{
+						color: #fff;
+						line-height: 40px;
+						font-size: 14px;
+						font-family: 微软雅黑;
+					}
+				}
+			}
+		}
+	}
+	// 头部导航结束
+}
+
+// 主体区域开始
+.screen {
+	width: 1150px;
+	margin:10px auto 15px;
+	.focus-top2 {
+		width: 100%;
+		height: 450px;
+		#bigSlide {
+			width: 1150px;
+			height: 450px;
+			float: left;
+			overflow: hidden;
+		}
+	}
+	.focus-bottom ul {
+		margin-top: 6px;
+		margin-right: -6px;
+		padding: 0 2px;
+		height: 54px;
+		overflow: hidden;
+		li {
+			float: left;
+			margin-right: 6px;
+		}
+	}
+
+	// 优选品牌开始
+	.dl-index {
+	    width: 100%;
+	    margin-top: 20px;
+	    float:left;
+	    dt{
+	    	height:22px;
+		border-bottom: 2px solid #000;
+		padding-bottom: 10px;
+	    	.left{
+	    		float:left;
+	    	}
+	    	.title{
+	    		color: #000;
+			font-size: 18px;
+			line-height: 20px;
+			font-weight: bold;
+	    	}
+	    	.right{
+	    		float:right;
+	    	}
+	    	.keys{
+	    		a {
+				color: #000;
+				padding: 0 10px;
+			}
+			span {
+				color: #eee;
+			}
+	    	}
+	    }
+
+	    .hot-brand-new .recommendBox-new {
+	    	width: 1035px;
+		height: 180px;
+	    	overflow: hidden;
+		ul{
+			margin-right: -2px;
+			_margin-right: -4px;
+			li{
+				float: left;
+				width: 115px;
+				height: 90px;
+				a {
+					text-decoration: none;
+					color: #666;
+					outline: none;
+				}
+			}
+		}
+	    }
+
+	    .index-unit-1 {
+	    	width: 115px;
+		height: 180px;
+		ul{
+			li {
+			    width: 115px;
+			    height: 90px;
+			    .btn-page {
+			    	width: 115px;
+				height: 90px;
+				background: url(../images/btn_page_big.jpg) no-repeat scroll center center transparent;
+				}
+			    }
+		}
+
+	    }
+	}
+	// 优选品牌结束
+	
+	// 人气单品开始
+	.index-unit-5 {
+	    width: 958px;
+	    ul {
+	    	margin-right: -2px;
+	    	li {
+		    float: left;
+		    margin: 0px 2px -2px 0px;
+		}
+	    }
+	}
+
+	.index-ads {
+		width: 190px;
+		margin-top: 20px;
+		.ads-1 img{
+			width: 190px;
+			height: 320px;
+			margin-bottom: 2px;
+		}
+	}
+	// 人气单品结束
+	
+	// 潮流上装、经典裤装、潮人配饰开始
+	.dl-index{
+		.category-list {
+			padding: 8px 0px;
+			background: none repeat scroll 0% 0% #F8F8F8;
+			width:190px;
+				li{
+					width: 90px;
+					float: left;
+					margin-right: 5px;
+					overflow: hidden;
+					a {
+					    display: block;
+					    overflow: hidden;
+					    padding: 0px 0px 0px 15px;
+					    height: 28px;
+					    line-height: 28px;
+					    color:#666;
+					}
+				}
+				.hot {
+				    background: none repeat scroll 0% 0% #F00;
+				    color: #FFF;
+				    padding: 2px 3px;
+				    font-size: 10px;
+				    display: inline-block;
+				    margin-left: 5px;
+				    height: 14px;
+				    line-height: 14px;
+				}
+		}
+		.brands-list {
+			width:190px;
+			height:297px;
+			padding: 8px 0;
+			background: none repeat scroll 0% 0% #F2F2F2;
+			li{
+				width: 120px;
+				float:left;
+				margin-right: 5px;
+				margin-top:1px;
+				overflow: hidden;
+				a {
+				    display: block;
+				    overflow: hidden;
+				    padding: 0px 0px 0px 15px;
+				    height: 28px;
+				    line-height: 28px;
+				    color:#666;
+				}
+			}
+		}
+	}
+	// 潮流上装、经典裤装、潮人配饰结束
+	
+	// 底部banner开始
+	.index-banner {
+	    width: 100%;
+	    margin-top: 10px;
+	    margin-bottom: 10px;
+	}
+	// 底部banner结束
+}
+// 主题区域结束
+
+// 底部区域开始
+.index-foot {
+	height:285px;
+	background: none repeat scroll 0% 0% #EEE;
+	padding: 20px 0px;
+    .screen {
+	    width: 1150px;
+	    margin:0 auto;
+	    dd {
+	    	width: 370px;
+	    	margin-right: 20px;
+		float: left;
+		overflow: hidden;
+		.foot-panel {
+			background: none repeat scroll 0% 0% #FFF;
+			padding: 20px;
+		}
+		.title {
+			text-align: center;
+			.title-line {
+				border-bottom: 1px solid #DDD;
+				position: absolute;
+				top: 9px;
+				width: 100%;
+				left: 0px;
+			}
+			.text {
+				position: absolute;
+				width: 100%;
+				text-align: center;
+				left: 0px;
+				top: 0px;
+				span {
+					background: none repeat scroll 0% 0% #FFF;
+					font-size: 18px;
+					line-height: 18px;
+					padding: 0px 10px;
+				}
+			}
+		}
+
+		#foot-services{
+			ul {
+				margin-top: 18px;
+				padding-top: 18px;
+				
+			}
+			.two-dim {
+				height: 131px;
+				overflow: hidden;
+				margin-right: -10px;
+				li{
+					border: 1px solid #DDD;
+					padding: 7px;
+					margin-right: 10px;
+					p {
+						text-align: center;
+						margin-top: 13px;
+						margin-bottom: 3px;
+						line-height: 12px;
+					}
+				}
+				img.dim-img {
+					width: 87px;
+					height: 87px;
+				}
+			}
+		}
+		.item-nav {
+			padding-top: 20px;
+			a {
+				color: #999;
+				padding: 0px 3px;
+				cursor: pointer;
+				.iconfont{
+					font-size:10px;
+					line-height:10px;
+					margin-left:-1px;
+					display: inline-block;
+				}
+			}
+		}
+	    }
+		dd.last {
+		margin-right: 0px;
+		}
+	}
+}
+// 底部区域结束
+
+// 黑色底部开始
+.footer2013{
+	width:100%;
+	height:295px;
+	background: none repeat scroll 0% 0% #000;
+	.promise {
+		padding: 20px 0px 10px;
+		// background: none repeat scroll 0% 0% #000;
+		.screen {
+			width: 1150px;
+			margin:0 auto;
+			.left {
+				margin-right: 60px;
+				line-height: 30px;
+				font-size: 12px;
+				font-weight: bold;
+				.iconfont{
+					font-size: 24px;
+					line-height: 24px;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+
+	.footer-right {
+		width: 240px;
+	}
+	.subscribe {
+		border: 1px solid #262626;
+		input {
+			width: 180px;
+			height: 32px;
+			padding: 0px 10px;
+			line-height: 32px;
+			border: medium none;
+			margin: 0px;
+			background: none repeat scroll 0% 0% #000;
+			a {
+				padding: 0px 10px;
+				font-size: 18px;
+				line-height: 32px;
+				opacity: 0.5;
+			}
+		}
+		.iconfont{
+			font-size: 20px;
+			// line-height: 24px;
+			margin-top: 8px;
+		}
+	}
+
+
+
+
+	.footer-help {
+		background: none repeat scroll 0% 0% #000;
+		padding: 15px 0px 30px;
+		.screen {
+			border-top: 1px solid #262626;
+			padding: 15px 0px;
+			width: 1150px;
+			margin:0 auto;
+			ul{
+				li {
+					width: 180px;
+					p {
+						span {
+							color: #FFF;
+							line-height: 24px;
+						}
+						a {
+							color: #666;
+							line-height: 24px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	.footer-link {
+		background: none repeat scroll 0% 0% #000;
+		padding: 30px 0px 30px;
+		.screen {
+			width: 1150px;
+			margin:0 auto;
+			.right-flag {
+				margin-top: 3px;
+				a {
+					margin-right: 5px;
+				}
+			}
+			.about-us {
+				margin-left: 10px;
+				line-height: 20px;
+				color: #666;
+				p{
+					color: #666;
+					a {
+						color: #666;
+					}
+					span{
+						padding: 0px 10px;
+					}
+				}
+			}
+		}
+	}
+}
+// 黑色底部结束

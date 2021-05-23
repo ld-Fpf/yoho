@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" type="text/css" href="./style/cart.css">
+</head>
+<body>
+<!-- 头部开始 -->
+<div class="header-simple">
+  <div class="screen990">
+	<div class="clear">
+		<div class="left logo">
+			<a href=""><img src="./images/logo-boys-8.png"></a>
+		</div>
+		<div class="right">
+			<ul class="simple-items clear">
+				<li class="left" id="loginBox">
+				<span>Hi~</span>[<a href="" class="list-a login-out">请登录</a>]&nbsp;[<a href="" class="list-a login-out">免费注册</a>]
+				</li>
+				<li class="left"><span class="item"><a href="" class="rgb2">我的收藏</a></span></li>
+				<li class="left"><span class="item"><a href="" class="rgb2">订单中心</a></span></li>
+				<li class="left"><span class="item"><a href="" class="rgb2">帮助中心</a></span></li>
+				<li class="left"><span class="rgb2 item"><span class="iconfont">&#xe604;</span>&nbsp;<strong>400-889-9646</strong></span></li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</div>
+<!-- 头部结束 -->
+
+
+<!-- 标题部分开始 -->
+<div class="cartnew-title">
+    	<h2 class="step1">我的购物车</h2>
+        <ul>
+            <li><span class="act">查看购物车</span></li>
+            <li><span>填写订单</span></li>
+            <li class="end"><span>付款，完成购买</span></li>
+        </ul>
+</div>
+<!-- 标题部分结束 -->
+
+<!-- 主体部分开始 -->
+<div class="cartnew-main">
+	<div id="cartDetail">
+		<!-- 温馨提示开始 -->
+		<div class="cartnew-tips">
+			<div class="tipsbox" id="tipsbox">
+				<a href="javascript:void(0);" class="btn_close" title="关闭"></a>
+				<strong>温馨提示：</strong>亲爱的顾客，您还没有 <a href="javascript:void(0);" class="a_eu">登录</a> 哦，所有商品价格、活动信息以登录后显示为准.
+			</div>
+		</div>
+		<!-- 温馨提示结束 -->
+		<div class="cartnew-main">
+			<table class="cartnew_table cart_pre_sale">
+			   <tbody>
+			    	<tr>
+			        	<th class="th1">商品信息</th>
+			            <th class="th2">单价（元）</th>
+			            <th class="th3">返YOHO币 <img src="./images/ico_help_w.png" style="vertical-align:middle;"></th>
+			            <th class="th4">数量</th>
+			            <th class="th5">小计（元）</th>
+			            <th class="th6">操作</th>
+			        </tr>
+			    
+			   <!-- <tr id="noGoodsInCart">
+		        	<td colspan="6" class="cart-empty">
+		            	<span class="btn_type5"><a href="">选购商品</a></span>
+		                <span class="btn_type5"><a href="">查看订单</a></span>
+		            </td>
+			    </tr> -->
+			</tbody>
+		</table>
+
+		<!-- 购物车内商品信息开始 -->
+		<table class="cartnew_table cart_common_goods">
+			<tbody>
+			<tr>
+			            <th class="th1" style="height:0; background:#fff;"></th>
+			            <th class="th2" style="height:0; background:#fff;"></th>
+			            <th class="th3" style="height:0; background:#fff;"></th>
+			            <th class="th4" style="height:0; background:#fff;"></th>
+			            <th class="th5" style="height:0; background:#fff;"></th>
+			            <th class="th6" style="height:0; background:#fff;"></th>
+			        </tr>
+			   
+			        <tr>
+			        	<td>
+			            <div class="cartnew-img">
+			            	<input name="cBuyId" onclick="cart.loadCartDetail(1);" value="32455951" id="g_common_32455951" checked="" type="checkbox">
+			            	<a href="http://www.yohobuy.com/product/pro_128005_178641/HARDLYEVERS932NiuZaiKu.html" target="_blank"><img src="http://img03.static.yohobuy.com/thumb/2014/11/07/02/01e9c9f9fbd0803a488e4199298ede504d-0060x0060-2-goodsimg.jpg" alt=""></a>
+			                <p>
+			                                <a href="http://www.yohobuy.com/product/pro_128005_178641/HARDLYEVERS932NiuZaiKu.html" target="_blank" class="a_e">
+			                <b id="productName627560" style="width:200px;height:20px;over-flow:hidden;">
+			                HARDLYEVER'S  荧光泼墨直筒牛...</b>
+			                </a><br><span class="f_g">颜色：蓝色  尺码：30英寸</span></p>
+			            </div>    
+			            </td>
+			           	 <td>   ￥399.00 </td>
+			            <td>0</td>
+			            <td>
+			            	<p class="amount_wrapper">
+			                   <!-- <input name="" class="amount_cut" onclick="cart.cutNum(32455951);" type="button">
+			                   <input value="1" id="curNum32455951" readonly="readonly" type="text">
+			                   <input name="" class="amount_add" onclick="cart.addNum(32455951,-1);" type="button"> -->             1       
+			                </p>
+			                            </td>
+			                         	<td><strong>￥399.00 </strong></td>
+			          	             <td><a href="javascript:void(0);" onclick="cart.remove(32455951,0);" class="btn_h"><span>删除</span></a> 
+			            	            <a href="javascript:void(0);" onclick="cart.moveToFavorite(32455951);" class="btn_h"><span>移入收藏</span></a>
+			                        </td>
+			        </tr>
+			 </tbody>  	  
+		</table>
+		<!-- 购物车内商品信息结束 -->
+	
+		<!-- 购物车计算开始 -->
+		<div class="cartnew-sum">
+
+
+		<div class="left batch_div">
+		<a href="javascript:void(0);" class="btn_h" style="display:none;"><span>清空商品</span></a>
+		<input onclick="checkAllGoods(this, 'g_');" checked="checked" id="cbSelAllGoods" type="checkbox"><span>全选</span><a href="javascript:void(0);" onclick="cart.multiRemove();">批量删除</a><a href="javascript:void(0);" onclick="cart.multiMoveToFavorite();">批量移入收藏夹</a>
+		</div>
+
+
+
+		<div class="right">
+		<p class="sum">商品总价（￥0.00）- 活动（￥0.00）= 商品金额总计（￥0.00）</p>
+		<p>获赠YOHO币：0个　商品总价（不含运费）：<strong>￥0.00</strong> 元</p>
+		</div>
+		</div>
+		<!-- 购物车计算结束 -->
+
+		<!-- 按钮部分开始 -->
+		<div class="cartnew-submit" id="payDiv">
+	        	<a href="" class="btn_continue">再逛逛</a> 
+	        	<a href="javascript:void(0)" onclick="cart.checkStock();" class="btn_account">去结算</a>
+	        	<!-- <a href="javascript:void(0)" class="btn_account_disabled">去结算</a>
+	        	<div class="go_cash_tips" id="cannotPayNotice"><span>请将普通商品与预售商品分开结算，普通商品订单我们将为您优先发货。</span></div> -->
+	        </div>
+	        <!-- 按钮部分结束 -->
+		</div>
+
+		<div class="cartnew-goodslist cartnew-goodslist-open" id="userViews"><div class="title">
+		<h2>最近浏览的商品</h2>
+		<div style="display: block;" class="right" id="viewPage">
+		</div>
+		</div>
+
+		<!-- 最近浏览商品开始 -->
+		<div class="main">
+		<ul>
+			<li class="end">
+				<div class="list">
+					<div class="thumb"><a href=""><img src="./images/goodsimg.jpg"></a></div>
+					<div class="name"><a href=""><h3>Dickies 字母印花连帽卫衣 </h3></a></div>
+					<div class="price"><del>￥499.00</del> ￥239.00</div>
+					<div class="op"><a href="javascript:void(0);" class="btn_view_s"></a></div>
+				</div>
+			</li>
+			<li class="end">
+				<div class="list">
+					<div class="thumb"><a href=""><img src="./images/goodsimg.jpg"></a></div>
+					<div class="name"><a href=""><h3>Dickies 字母印花连帽卫衣 </h3></a></div>
+					<div class="price"><del>￥499.00</del> ￥239.00</div>
+					<div class="op"><a href="javascript:void(0);" class="btn_view_s"></a></div>
+				</div>
+			</li>
+			<li class="end">
+				<div class="list">
+					<div class="thumb"><a href=""><img src="./images/goodsimg.jpg"></a></div>
+					<div class="name"><a href=""><h3>Dickies 字母印花连帽卫衣 </h3></a></div>
+					<div class="price"><del>￥499.00</del> ￥239.00</div>
+					<div class="op"><a href="javascript:void(0);" class="btn_view_s"></a></div>
+				</div>
+			</li>
+			<li class="end">
+				<div class="list">
+					<div class="thumb"><a href=""><img src="./images/goodsimg.jpg"></a></div>
+					<div class="name"><a href=""><h3>Dickies 字母印花连帽卫衣 </h3></a></div>
+					<div class="price"><del>￥499.00</del> ￥239.00</div>
+					<div class="op"><a href="javascript:void(0);" class="btn_view_s"></a></div>
+				</div>
+			</li>
+			<li class="end">
+				<div class="list">
+					<div class="thumb"><a href=""><img src="./images/goodsimg.jpg"></a></div>
+					<div class="name"><a href=""><h3>Dickies 字母印花连帽卫衣 </h3></a></div>
+					<div class="price"><del>￥499.00</del> ￥239.00</div>
+					<div class="op"><a href="javascript:void(0);" class="btn_view_s"></a></div>
+				</div>
+			</li>
+			<li class="end">
+				<div class="list">
+					<div class="thumb"><a href=""><img src="./images/goodsimg.jpg"></a></div>
+					<div class="name"><a href=""><h3>Dickies 字母印花连帽卫衣 </h3></a></div>
+					<div class="price"><del>￥499.00</del> ￥239.00</div>
+					<div class="op"><a href="javascript:void(0);" class="btn_view_s"></a></div>
+				</div>
+			</li>
+		</ul>
+		</div>
+		<!-- 最近浏览商品结束 -->
+	</div>
+
+
+	</div>
+
+	<div class="cartnew-goodslist cartnew-goodslist-open" id="orderBuyProductPage">
+	</div>
+</div>
+<!-- 主体部分结束 -->
+
+
+
+<!-- 黑色底部开始 -->
+<div class="footer2013 clear">
+	<div class="promise">
+		<div class="screen clear">
+			<div class="left"><span class="iconfont rgbf">&#xe608;</span><span class="red">100%</span><span class="rgbf">品牌授权正品</span></div>
+			<div class="left"><span class="iconfont rgbf">&#xe607;</span><span class="red">7天</span><span class="rgbf">无理由退换货</span></div>
+			<div class="left"><span class="iconfont rgbf">&#xe604;</span><span class="rgbf">客服电话：</span><span class="red">400-889-9646</span>&nbsp;&nbsp;<span class="rgb9">09:00-22:30(周一至周日)</span></div>
+			<div class="right subscribe footer-right"><input style="" class="rgb6 top" name="subscriberBox" id="subscriberBox" value="订阅我们的邮件"><a href="javascript:void(0);" id="subscriberBtn" class="iconfont rgbf">&#xe606;</a></div>
+			</div>
+		</div>
+
+		<div class="footer-help clear">
+			<div class="screen clear">
+				<div class="left">
+					<ul class="clear">
+						<li class="left">
+							<p><span>新手指南</span></p>
+							<p><a href="">新用户注册</a></p>
+							<p><a href="">会员登录</a></p>
+							<p><a href="">订购流程</a></p>
+							<p><a href="">交易须知</a></p>
+						</li>
+						<li class="left">
+							<p><span>付款方式</span></p>
+							<p><a href="">支付方式</a></p>
+							<p><a href="">常见支付问题</a></p>
+							<p><a href="">如何办理退款</a></p>
+							<p><a href="">发票制度说明</a></p>
+						</li>
+						<li class="left">
+							<p><span>配送方式</span></p>
+							<p><a href="">配送时间及范围</a></p>
+							<p><a href="">订单的拆分</a></p>
+							<p><a href="">商品验收与签收</a></p>
+						</li>
+						<li class="left">
+							<p><span>售后服务</span></p>
+							<p><a href="">如何办理退换货</a></p>
+							<p><a href="">退换货政策</a></p>
+						</li>
+						<li class="left">
+							<p><span>帮助中心</span></p>
+							<p><a href="">找回密码</a></p>
+							<p><a href="">常见问题</a></p>
+							<p><a href="">谨防诈骗</a></p>
+						</li>
+						<li class="left">
+							<p><span>优惠政策</span></p>
+							<p><a href="">VIP会员制度说明</a></p>
+							<p><a href="">YOHO币</a></p>
+							<p><a href="">优惠券</a></p>
+							<p><a href="">兑换礼品卡</a></p>
+						</li>
+					</ul>
+				</div>
+			  </div>
+		</div>
+
+
+		<div class="footer-link clear">
+			<div class="screen clear">
+				<div class="left right-flag">
+					<a href=""><img src="http://static.yohobuy.com/images/v3/icon/credit-flag3.png"></a>
+					<a href=""><img src="http://static.yohobuy.com/images/v3/icon/isc2.png"></a>
+				</div>
+				<div class="left about-us">
+					<p>
+						<a href="">返回首页</a><span>|</span><a href="">YOHO!有货</a><span>|</span><a href="">新力传媒</a><span>|</span><a href="">联系我们</a><span>|</span><a href="">隐私条款</a><span>|</span><a href="">友情链接</a>
+					</p>
+					<p>CopyRight © 2007-2016 南京新与力文化传播有限公司 苏ICP备09011225号 NewPower Co. 版权所有 经营许可证编号：苏B2-20120395</p>
+				</div>
+				
+			</div>
+		</div>
+</div>
+<!-- 黑色底部结束 -->
+</body>
+</html>

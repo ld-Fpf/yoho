@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>后台首页 - 欢迎使用商城系统</title>
+	<link type="text/css" rel="stylesheet" href="../css/style.css" />
+	<script type="text/javascript" src="../../include/js/jquery.js"></script>
+</head>
+<div class="bgimg"></div>
+<div class="pagetop">
+	<div class="head">
+		<div class="logo fl"></div>
+
+		<div class="admin_t fr">
+			<ul>
+				<li><a href=""><img border=0 src="../images/exit4.gif"></a></li>
+				<li><a href="" onclick="return confirm('你确定要退出系统吗？')" ><img border=0 src="../images/exit3.gif"></a></li>
+			</ul>
+		</div>
+
+		<div class="admin_u fr">
+				<b>欢迎您-</b><a title="" target="_top" href="">admin</a>&nbsp;【超级管理员】 &nbsp;&nbsp;
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="content">
+	<div class="main">
+		<div class="left">
+			<div class="fenlei">
+				<h3>商品管理</h3>
+				<ul>
+					<li ><a href="../goods/list.html">商品列表</a></li>
+					<li ><a href="../goods/cat.html">商品分类</a></li>
+					<li ><a href="../goods/ask.html">商品咨询</a></li>
+					<li ><a href="../goods/comment.html">商品评价</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>交易管理</h3>
+				<ul>
+					<li ><a href="../order/list.html">订单管理</a></li>
+					<li ><a href="../order/payway.html">支付方式</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>信息管理</h3>
+				<ul>
+					<li ><a href="../article/cat.html">文章分类</a></li>
+					<li ><a href="../article/list.html">文章列表</a></li>
+					<li ><a href="../article/page.html">单页列表</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>用户管理</h3>
+				<ul>
+					<li ><a href="../user/list.html">会员列表</a></li>
+					<li ><a href="../user/admin.html">管理列表</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>控制面板</h3>
+				<ul>
+					<li ><a href="../set/base.html">基本信息</a></li>
+					<li ><a href="../set/cache.html">缓存管理</a></li>
+					<li ><a href="../set/link.html">友情链接</a></li>
+					<li ><a href="../set/ad.html">广告列表</a></li>
+				</ul>
+			</div>
+
+		</div>
+		<!-- start right -->
+
+<div class="right">
+	<div class="now">
+		<div class="now_l"></div>
+		<div class="now_m">缓存管理</div>
+		<div class="now_r"></div>
+		<div class="clear"></div>
+	</div>
+	<div class="tixing"><span class="cgreen">温馨提示：</span>当您网站上的数据显示异常，或是网页不能显示时请执行更新缓存操作。</div>
+	<form method="post" id="form">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="list mat5">
+	<tr>
+		<td class="bgtt" width="120">缓存名称</td>
+		<td class="bgtt">缓存说明</td>
+		<td class="bgtt" width="100">大小（KB）</td>
+		<td class="bgtt" width="30">操作</td>
+	</tr>
+		<tr>
+		<td>分类信息</td>
+		<td class="aleft">网站【商品分类】【文章分类】里信息显示错乱或不显示时，可尝试更新此项。</td>
+		<td>4.4</td>
+		<td><a href="admin.php?mod=cache&act=update&cache=category" class="admin_edit">更新</a></td>
+	</tr>
+		<tr>
+		<td>单页信息</td>
+		<td class="aleft">网站【单页列表】里信息显示错乱或不显示时，可尝试更新此项。</td>
+		<td>1</td>
+		<td><a href="admin.php?mod=cache&act=update&cache=page" class="admin_edit">更新</a></td>
+	</tr>
+		<tr>
+		<td>网站信息</td>
+		<td class="aleft">网站【基本信息】里信息显示错乱或不显示时，可尝试更新此项。</td>
+		<td>1.4</td>
+		<td><a href="admin.php?mod=cache&act=update&cache=setting" class="admin_edit">更新</a></td>
+	</tr>
+		<tr>
+		<td>支付信息</td>
+		<td class="aleft">网站【支付方式】里信息显示错乱或不显示时，可尝试更新此项。</td>
+		<td>2.4</td>
+		<td><a href="admin.php?mod=cache&act=update&cache=payway" class="admin_edit">更新</a></td>
+	</tr>
+		<tr>
+		<td>友链信息</td>
+		<td class="aleft">网站【友情链接】里信息显示错乱或不显示时，可尝试更新此项。</td>
+		<td>0.4</td>
+		<td><a href="admin.php?mod=cache&act=update&cache=link" class="admin_edit">更新</a></td>
+	</tr>
+		<tr>
+		<td>广告信息</td>
+		<td class="aleft">网站【广告列表】里信息显示错乱或不显示时，可尝试更新此项。</td>
+		<td>0.8</td>
+		<td><a href="admin.php?mod=cache&act=update&cache=ad" class="admin_edit">更新</a></td>
+	</tr>
+		<tr>
+		<td>模板信息</td>
+		<td class="aleft">网站页面显示错乱或不显示时，可尝试更新此项。</td>
+		<td>0</td>
+		<td><a href="admin.php?mod=cache&act=update&cache=template" class="admin_edit">更新</a></td>
+	</tr>
+		<tr>
+		<td>附件信息</td>
+		<td class="aleft">附件缓存占用过多空间时，可更新此项。</td>
+		<td>0</td>
+		<td><a href="admin.php?mod=cache&act=update&cache=attachment" class="admin_edit">更新</a></td>
+	</tr>
+		<tr>
+		<td>缩略图信息</td>
+		<td class="aleft">缩略图缓存占用过多空间时，可更新此项。</td>
+		<td>0</td>
+		<td><a href="admin.php?mod=cache&act=update&cache=thumb" class="admin_edit">更新</a></td>
+	</tr>
+		<tr>
+		<td class="bgtt" colspan="4"><button href="admin.php?mod=cache&act=update" onclick="return pe_doall(this, 'form')">一键更新缓存</button></td>
+	</tr>
+	</table>
+	</form>
+</div>
+	
+
+		<div class="clear"></div>
+	</div>
+	<div class="foot">Copyright <span class="num">&copy;</span> 2014-2017 <a target="_blank" href="#"></a> 版权所有</div>
+</div>
+
+<script type="text/javascript"> 
+$(function(){
+	$(".list").find("tr").hover(
+		function(){
+			if ($(this).find("td").hasClass("bgtt")) return;
+			$(this).find("td").css("background-color", "#ffffdd");
+		},
+		function(){
+			if ($(this).find("td").hasClass("bgtt")) return;
+			$(this).find("td").css("background-color", "#fff");
+		}
+	)
+})
+</script>
+</body>
+</html>	<style type="text/css">
+	#msgshow{top:250px; left:40%; position:absolute;}
+	#msgshow_l{background:url(http://localhost/l/include/image/dui_l.gif) no-repeat; width:38px; height:50px; float:left;}
+	#msgshow_r{background:url(http://localhost/l/include/image/dui_r.gif) no-repeat; width:7px; height:50px; float:left;}
+	#msgshow_m{background:url(http://localhost/l/include/image/dui_m.gif) repeat-x; height:33px; float:left; padding:17px 8px 0 5px; font-size:14px; font-weight:bold; color:#53663A; display:inline-block; min-width:200px; _width:200px;}
+	</style>	<script type="text/javascript">
+		$("#msgshow").remove();
+		$("body").append('<div id="msgshow"><div id="msgshow_l"></div><div id="msgshow_m">缓存更新成功!</div><div id="msgshow_r"></div><div class="clear"></div></div>');
+		$("#msgshow").show();
+		setTimeout(function(){ $("#msgshow").fadeOut(2000) }, 2000);
+	</script>
+
+
+
+		<!-- end right -->
+
+

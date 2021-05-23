@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>后台首页 - 欢迎使用商城系统</title>
+	<link type="text/css" rel="stylesheet" href="../css/style.css" />
+	<script type="text/javascript" src="../../include/js/jquery.js"></script>
+</head>
+<div class="bgimg"></div>
+<div class="pagetop">
+	<div class="head">
+		<div class="logo fl"></div>
+
+		<div class="admin_t fr">
+			<ul>
+				<li><a href=""><img border=0 src="../images/exit4.gif"></a></li>
+				<li><a href="" onclick="return confirm('你确定要退出系统吗？')" ><img border=0 src="../images/exit3.gif"></a></li>
+			</ul>
+		</div>
+
+		<div class="admin_u fr">
+				<b>欢迎您-</b><a title="" target="_top" href="">admin</a>&nbsp;【超级管理员】 &nbsp;&nbsp;
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="content">
+	<div class="main">
+		<div class="left">
+			<div class="fenlei">
+				<h3>商品管理</h3>
+				<ul>
+					<li ><a href="../goods/list.html">商品列表</a></li>
+					<li ><a href="../goods/cat.html">商品分类</a></li>
+					<li ><a href="../goods/ask.html">商品咨询</a></li>
+					<li ><a href="../goods/comment.html">商品评价</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>交易管理</h3>
+				<ul>
+					<li ><a href="../order/list.html">订单管理</a></li>
+					<li ><a href="../order/payway.html">支付方式</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>信息管理</h3>
+				<ul>
+					<li ><a href="../article/cat.html">文章分类</a></li>
+					<li ><a href="../article/list.html">文章列表</a></li>
+					<li ><a href="../article/page.html">单页列表</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>用户管理</h3>
+				<ul>
+					<li ><a href="../user/list.html">会员列表</a></li>
+					<li ><a href="../user/admin.html">管理列表</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>控制面板</h3>
+				<ul>
+					<li ><a href="../set/base.html">基本信息</a></li>
+					<li ><a href="../set/cache.html">缓存管理</a></li>
+					<li ><a href="../set/link.html">友情链接</a></li>
+					<li ><a href="../set/ad.html">广告列表</a></li>
+				</ul>
+			</div>
+		</div>
+<div class="right">
+	<div class="now">
+		<div class="now_l"></div>
+		<div class="now_m">
+			<span class="fl">发布商品</span>
+			<span class="fr fabu"><a href="admin.php?mod=product&act=add">发布商品</a></span>
+		</div>
+		<div class="now_r"></div>
+		<div class="clear"></div>
+	</div>
+	<form method="post" enctype="multipart/form-data">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wenzhang">
+	<tr>
+		<td width="100" class="bg_f8" align="right">商品名称：</td>
+		<td colspan="3"><input type="text" name="info[product_name]" value="" class="inputall input500" maxlength="36" /></td>
+		<td rowspan="7" valign="top" width="80">
+			<img src="http://localhost/l/include/image/nopic.gif" width="160" height="170" style="border:1px solid #ddd; display:block;" />
+			<p class="mat5"><input type="file" name="product_logo" size="12" style="width:160px;" /></p>
+		</td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">商品分类：</td>
+		<td colspan="3">
+			<select name="info[category_id]" class="inputselect">
+						<option value="2" >时尚女装</option>
+						<option value="9" >　 ┝ 上装</option>
+						<option value="13" >　 　　┝ T恤</option>
+						<option value="14" >　 　　┝ 衬衫</option>
+						<option value="10" >　 ┝ 裙装</option>
+						<option value="11" >　 ┝ 下装</option>
+						<option value="12" >　 ┝ 外套</option>
+						<option value="3" >时尚女鞋</option>
+						<option value="5" >　 ┝ 魅力女靴</option>
+						<option value="6" >　 ┝ 时尚单鞋</option>
+						<option value="7" >　 ┝ 休闲帆布</option>
+						<option value="8" >　 ┝ 坡跟鞋</option>
+						<option value="4" >潮流女包</option>
+						</select>
+		</td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">本店价格：</td>
+		<td width="250"><input type="text" name="info[product_money]" value="" class="inputall input100" /> <span class="c888">元</span></td>
+		<td width="100" class="bg_f8" align="right">运　　费：</td>
+		<td><input type="text" name="info[product_wlmoney]" value="" class="inputall input100" /> <span class="c888">元（注：0元为卖家包邮）</span></td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">市场售价：</td>
+		<td colspan="3"><input type="text" name="info[product_smoney]" value="" class="inputall input100" /> <span class="c888">元</span></td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">商品货号：</td>
+		<td colspan="3"><input type="text" name="info[product_mark]" value="" class="inputall input100" /></td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">库存总量：</td>
+		<td colspan="3"><input type="text" name="info[product_num]" value="" class="inputall input100" /></td>
+	</tr>
+	<tr>
+		<td class="bg_f8" align="right">发布日期：</td>
+		<td colspan="3"><input type="text" name="info[product_atime]" value="2014-07-20 21:16" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm'})" class="Wdate" /></td>
+	</tr>
+	</table>
+	<div class="mat5"><textarea name="info[product_text]" id="editortext" style="width:950px;height:600px"></textarea></div>
+	<div class="mat10 center">
+		<input type="hidden" name="pesubmit" />
+		<input type="button" value="提 交" class="tjbtn" />
+	</div>
+	</form>
+</div>
+<style type="text/css"> 
+a.js_add{display:block; float:left; width:120px; height:30px; line-height:30px; text-align:center;background:#76A500; color:#f5f5f5; border-radius:2px; font-family:'宋体'; font-size:14px; font-weight:bold}
+a:hover.js_add,a:hover.js_del{background-color:#cccc00;}
+a.js_del{width:42px; padding:5px 10px; text-align:center;background:#FF9900; color:#f5f5f5; border-radius:2px; font-family:'宋体'; font-size:12px;}
+</style>
+<script type="text/javascript" src="http://localhost/l/include/plugin/my97/WdatePicker.js"></script>
+<script charset="utf-8" src="http://localhost/l/include/plugin/editor/kindeditor.js"></script>
+<script charset="utf-8" src="http://localhost/l/include/plugin/editor/lang/zh_CN.js"></script>
+<script type="text/javascript" charset="utf-8"> 
+var editor;
+KindEditor.ready(function(K) {
+	editor = K.create('#editortext', {
+		allowFlashUpload :false,
+		afterBlur: function(){
+			this.sync();
+		}
+	});
+});
+$("label").click(function(){
+	if ($(this).find(":input").is(":checked")) {
+		$(this).css("background","#faf18f");
+	}
+	else {
+		$(this).css("background","#fff")
+	}
+	prorule_html_show();
+})
+$(":checkbox").each(function(){
+	if ($(this).is(":checked")) {
+		$(this).parent("label").css("background","#faf18f");
+	}
+})
+function prorule_html_show() {
+	var i = 0;
+	$(".rule_id").each(function(){
+		var rule_id = $(this).attr("rule_id");
+		if ($(this).find(":input").is(":checked")) {
+			i++;
+			$("#"+rule_id).show().find("input").removeAttr("disabled");
+			$(":input[name='"+rule_id+"[]']").parent("td").show().find("input").removeAttr("disabled");
+		}
+		else {
+			$("#"+rule_id).hide().find("input").attr("disabled", "disabled");
+			$(":input[name='"+rule_id+"[]']").parent("td").hide().find("input").attr("disabled", "disabled");
+		}
+	})
+	if (i > 0) {
+		$(".table_td").show();
+	}
+	else {
+		$(".table_td").hide();
+	}
+}
+$(".js_add").click(function(){
+	//alert($(this).parents("tr").html());
+	var tr_clone = $("#prorule_html tr:last").clone(false);
+	tr_clone.show();
+	$("#prorule_html").append(tr_clone);
+})
+$(".js_del").live("click", function(){
+	$(this).parent().parent("tr").remove();
+})
+$(function(){
+	prorule_html_show();
+	$(":button").click(function(){
+		var kong_num = rule_num = 0;
+		if ($(":input[name='rule_idarr[]']:checked").length > 0) {
+			$("#prorule_html").find(":input").each(function(){
+				if ($(this).attr("disabled") == "disabled" || $(this).is(":hidden")) return true;
+				if ($(this).val() == '') {
+					kong_num++;
+				}
+				else {
+					rule_num++;
+				}
+			})
+			if (rule_num == 0) {
+				alert('您勾选的规格名称，但未增加规格属性...');
+				return;
+			}
+			if (kong_num > 0) {
+				alert('规格属性尚未填写完全');
+				return;
+			}
+		}
+		$("form").submit();
+	})
+})
+function move_left(obj) {
+    var current = $(obj).parent();
+    var prev = current.prevAll(":visible").first();
+	var current_other = $(":input[name='"+current.attr("id")+"[]']").parent();
+   	var prev_other;
+	if (current.index()>0) {
+		current.insertBefore(prev);
+		current_other.each(function(){
+			prev_other = $(this).prevAll(":visible").first();
+			$(this).insertBefore(prev_other);
+		})
+	}
+}  
+function move_right(obj) {
+    var current = $(obj).parent();
+    var next = current.nextAll(":visible").first();
+	var current_other = $(":input[name='"+current.attr("id")+"[]']").parent();
+    var prev_other;
+	var num = $(obj).parent().parent().find("td").length;
+    if (current.index()<num-4) {
+		current.insertAfter(next);
+		current_other.each(function(){
+			prev_other = $(this).nextAll(":visible").first();
+			$(this).insertAfter(prev_other);
+		})
+	}
+}
+</script>
+		<div class="clear"></div>
+	</div>
+	<div class="foot">Copyright <span class="num">&copy;</span> 2014-2017 <a target="_blank" href="#"></a> 版权所有</div>
+
+</div>
+<script type="text/javascript"> 
+$(function(){
+	$(".list").find("tr").hover(
+		function(){
+			if ($(this).find("td").hasClass("bgtt")) return;
+			$(this).find("td").css("background-color", "#ffffdd");
+		},
+		function(){
+			if ($(this).find("td").hasClass("bgtt")) return;
+			$(this).find("td").css("background-color", "#fff");
+		}
+	)
+})
+</script>
+
+
+
+
+</body>
+</html>	

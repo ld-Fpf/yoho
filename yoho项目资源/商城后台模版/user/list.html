@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>后台首页 - 欢迎使用商城系统</title>
+	<link type="text/css" rel="stylesheet" href="../css/style.css" />
+	<script type="text/javascript" src="../../include/js/jquery.js"></script>
+</head>
+<div class="bgimg"></div>
+<div class="pagetop">
+	<div class="head">
+		<div class="logo fl"></div>
+
+		<div class="admin_t fr">
+			<ul>
+				<li><a href=""><img border=0 src="../images/exit4.gif"></a></li>
+				<li><a href="" onclick="return confirm('你确定要退出系统吗？')" ><img border=0 src="../images/exit3.gif"></a></li>
+			</ul>
+		</div>
+
+		<div class="admin_u fr">
+				<b>欢迎您-</b><a title="" target="_top" href="">admin</a>&nbsp;【超级管理员】 &nbsp;&nbsp;
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="content">
+	<div class="main">
+		<div class="left">
+			<div class="fenlei">
+				<h3>商品管理</h3>
+				<ul>
+					<li ><a href="../goods/list.html">商品列表</a></li>
+					<li ><a href="../goods/cat.html">商品分类</a></li>
+					<li ><a href="../goods/ask.html">商品咨询</a></li>
+					<li ><a href="../goods/comment.html">商品评价</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>交易管理</h3>
+				<ul>
+					<li ><a href="../order/list.html">订单管理</a></li>
+					<li ><a href="../order/payway.html">支付方式</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>信息管理</h3>
+				<ul>
+					<li ><a href="../article/cat.html">文章分类</a></li>
+					<li ><a href="../article/list.html">文章列表</a></li>
+					<li ><a href="../article/page.html">单页列表</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>用户管理</h3>
+				<ul>
+					<li ><a href="../user/list.html">会员列表</a></li>
+					<li ><a href="../user/admin.html">管理列表</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>控制面板</h3>
+				<ul>
+					<li ><a href="../set/base.html">基本信息</a></li>
+					<li ><a href="../set/cache.html">缓存管理</a></li>
+					<li ><a href="../set/link.html">友情链接</a></li>
+					<li ><a href="../set/ad.html">广告列表</a></li>
+				</ul>
+			</div>
+
+		</div>
+		<!-- start right -->
+
+<div class="right">
+	<div class="now">
+		<div class="now_l"></div>
+		<div class="now_m">会员列表</div>
+		<div class="now_r"></div>
+		<div class="clear"></div>
+	</div>
+	<div class="search">
+		<div class="fr searbox">
+			<form method="get">
+				<input type="hidden" name="mod" value="user" />
+				用户名：<input type="text" name="name" value="" class="inputtext inputtext_150" />
+				联系电话：<input type="text" name="phone" value="" class="inputtext inputtext_150" />
+				常用邮箱：<input type="text" name="email" value="" class="inputtext inputtext_150" />
+				<select name="orderby" class="inputselect">
+				<option value="" href="?mod=user">默认排序</option>
+								<option value="ltime" href="?mod=user&orderby=ltime" >最近登录</option>
+								</select>
+				<input type="submit" value="搜索" class="input2" />
+			</form>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<form method="post" id="form">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="list">
+	<tr>
+		<td class="bgtt" width="10"><input type="checkbox" name="checkall" onclick="pe_checkall(this, 'user_id')" /></td>
+		<td class="bgtt" width="50">ID号</td>
+		<td class="bgtt">用户名</td>
+		<td class="bgtt" width="120">联系电话</td>
+		<td class="bgtt" width="180">常用邮箱</td>
+		<td class="bgtt" width="80">注册日期</td>
+		<td class="bgtt" width="120">上次登录</td>
+		<td class="bgtt" width="88">操作</td>
+	</tr>
+		<tr>
+		<td><input type="checkbox" name="user_id[]" value="3"></td>
+		<td>3</td>
+		<td>小新新</td>
+		<td></td>
+		<td></td>
+		<td><span >2014-07-20</span></td>
+		<td><span >23小时前</span></td>
+		<td>
+			<a href="usermod.html" class="admin_edit mar3">修改</a>
+			<a href="admin.php?mod=user&act=del&id=3" class="admin_del" onclick="return pe_cfone(this, '删除')">删除</a>
+		</td>
+	</tr>
+		<tr>
+		<td><input type="checkbox" name="user_id[]" value="2"></td>
+		<td>2</td>
+		<td>猪头</td>
+		<td>1243132</td>
+		<td>aa@aa.cn</td>
+		<td><span >2014-07-20</span></td>
+		<td><span >23小时前</span></td>
+		<td>
+			<a href="usermod.html" class="admin_edit mar3">修改</a>
+			<a href="admin.php?mod=user&act=del&id=2" class="admin_del" onclick="return pe_cfone(this, '删除')">删除</a>
+		</td>
+	</tr>
+		<tr>
+		<td><input type="checkbox" name="user_id[]" value="1"></td>
+		<td>1</td>
+		<td>小萝莉</td>
+		<td>234123</td>
+		<td>aa@aa.cn</td>
+		<td><span >2014-07-20</span></td>
+		<td><span >22小时前</span></td>
+		<td>
+			<a href="usermod.html" class="admin_edit mar3">修改</a>
+			<a href="admin.php?mod=user&act=del&id=1" class="admin_del" onclick="return pe_cfone(this, '删除')">删除</a>
+		</td>
+	</tr>
+		<tr>
+		<td class="bgtt"><input type="checkbox" name="checkall" onclick="pe_checkall(this, 'user_id')" /></td>
+		<td class="bgtt aleft" colspan="7">
+			<span class="fl"><button href="admin.php?mod=user&act=del" onclick="return pe_cfall(this, 'user_id', 'form', '批量删除')">批量删除</button></span>
+			<span class="fenye"></span>
+		</td>
+	</tr>
+	</table>
+	</form>
+</div>
+<script type="text/javascript"> 
+$(function(){
+	$("select").change(function(){
+		window.location.href = 'admin.php' + $(this).find("option:selected").attr("href");
+	})
+})
+</script>
+			<!-- end right -->
+
+
+		<div class="clear"></div>
+	</div>
+	<div class="foot">Copyright <span class="num">&copy;</span> 2014-2017 <a target="_blank" href="#"></a> 版权所有</div>
+</div>
+<script type="text/javascript"> 
+$(function(){
+	$(".list").find("tr").hover(
+		function(){
+			if ($(this).find("td").hasClass("bgtt")) return;
+			$(this).find("td").css("background-color", "#ffffdd");
+		},
+		function(){
+			if ($(this).find("td").hasClass("bgtt")) return;
+			$(this).find("td").css("background-color", "#fff");
+		}
+	)
+})
+</script>
+
+
+
+	
+
+</body>
+</html>	
