@@ -9,6 +9,10 @@ class ListController extends CommonController{
         $cid = Q('cid',0,'intval');
         // $cate=cache('cate');
         $cate = K('Category')->get_all_data();
+        $lcate = K('Category')->where(array('pid'=>0))->all();
+        $this->assign('lcate', $lcate);
+        $cname = K('Category')->get_one_data(array('category_id'=>$cid));
+        $this->assign('cname', $cname['name']);
         //如果不是正常进入，返回首页
         if(!isset($cate[$cid])) go(__ROOT__);
         //如果参数没有s变量生成此变量
@@ -32,9 +36,10 @@ class ListController extends CommonController{
         $this->assignGoods($cid);
         //查找面包屑
         // $tips = Category::getParents($cate,$cid);
-        // p($tips);
+        // $cids = $this->_get_son_id($cid);
+        // p($cids);die;
         //分配面包屑
-        // $this->assign('tips', $tips);
+        // $this->assign('cids', $cids);
         //分配搜索属性
         $this->assignSerachAttr($cid);
        $this->display();
@@ -72,6 +77,7 @@ class ListController extends CommonController{
         }else{
             $page=new page(M('yoho_goods')->where('category_id='.$cid)->count(),20);
             $res = M('yoho_goods')->limit($page->limit())->where('category_id='.$cid)->order($order)->all();
+            if(empty($res)) go(__ROOT__);
             foreach($res as $key=>$value){
                 $bname = K('Brand')->get_one_data(array('brand_id'=>$value['brand_id']));
                 $value['bname'] = $bname['name'];
@@ -103,6 +109,30 @@ class ListController extends CommonController{
 
         $this->page=$page->show(2);
         $this->goods=$data;
+    }
+
+
+
+    /**
+     * 获得所有子集分类cid
+     */
+    private function _get_son_id($cid){
+        $data = M('yoho_category')->all();
+        $cids = $this->_get_son($data,$cid);
+        $cids[] = $cid;
+        return $cids;
+    }
+
+    private function _get_son($data,$cid){
+        $temp = array();
+        foreach ($data as $k => $v) {
+            if($v['pid'] == $cid){
+                $temp[] = $v['cid'];
+                $temp = array_merge($temp,$this->_get_son($data,$v['cid']));
+            }
+        }
+
+        return $temp;
     }
 
     

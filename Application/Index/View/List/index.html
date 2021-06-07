@@ -7,12 +7,26 @@
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/list.css">
 	<script type="text/javascript" src="__STATIC__/jquery/jquery-1.7.2.min.js"></script>
 	<include file="__View__/Common/head"/>
+	<script type="text/javascript">
+	$(function(){
+		$('.goods-category li').toggle(
+			function(){
+				$(this).children('ul').css('display','block');
+				$(this).children('a').children(' .iconfont').html("&#xe612;");
+			},
+			function(){
+				$(this).children('ul').css('display','none');
+				$(this).children('a').children(' .iconfont').html("&#xe60d;");
+			}
+		)
+	})
+	</script>
 <!-- 主体区域开始 -->
 
 <div class="wrapper screen wrapper-goods">
 	<!-- 面包屑导航开始 -->
 	<div class="mini-site-nav">
-	        <a href="" title="YOHO!有货">BOYS首页</a>
+	        <a href="__ROOT__" title="YOHO!有货">BOYS首页</a>&nbsp;&nbsp;>&nbsp;&nbsp;{$cname}
 	</div>
 	<!-- 面包屑导航结束 -->
 
@@ -24,46 +38,21 @@
 			    <li>
 			    	<a href="">全部品类<span class="num">25089</span></a>
 			    </li>
-			        <li>
-			            <a href="javascript:void(0);">
-			            	<span class="iconfont">&#xe60d;</span>上衣<span class="num">11468</span>
-			            </a>
-			        </li>
-			        <li>
-			            <a href="javascript:void(0);">
-			            	<span class="iconfont">&#xe60d;</span>裤装<span class="num">3062</span>
-			            </a>
-			        </li>
-			        <li>
-			            <a href="javascript:void(0);">
-			            	<span class="iconfont">&#xe60d;</span>裙装<span class="num">715</span>
-			            </a>
-			        </li>
-			        <li>
-			            <a href="javascript:void(0);">
-			            	<span class="iconfont">&#xe60d;</span>鞋靴<span class="num">1909</span>
-			            </a>
-			        </li>
-			        <li>
-			            <a href="javascript:void(0);">
-			            	<span class="iconfont">&#xe60d;</span>包类<span class="num">2355</span>
-			            </a>
-			        </li>
-			        <li>
-			            <a href="javascript:void(0);">
-			            	<span class="iconfont">&#xe60d;</span>服配<span class="num">3780</span>
-			            </a>
-			        </li>
-			        <li>
-			            <a href="javascript:void(0);">
-			            	<span class="iconfont">&#xe60d;</span>创意市集<span class="num">986</span>
-			            </a>
-			        </li>
-			        <li>
-			            <a href="javascript:void(0);">
-			            	<span class="iconfont">&#xe60d;</span>数码周边<span class="num">814</span>
-			            </a>
-			        </li>
+			    <foreach from="$lcate" key="$k" value="$v">
+				<li>
+					<a href="javascript:void(0);">
+						<span class="iconfont">&#xe60d;</span>{$v.name}<span class="num">11468</span>
+					</a>
+					<ul class="hidden">
+						<li class=""><a href="">全部裤装<span class="num">2148</span></a></li>
+						<li class=""><a href="">休闲裤<span class="num">1288</span></a></li>
+						<li class=""><a href="">牛仔裤<span class="num">568</span></a></li>
+						<li class=""><a href="">短裤<span class="num">271</span></a></li>
+						<li class=""><a href="">打底裤<span class="num">18</span></a></li>
+						<li class=""><a href="">连体裤<span class="num">3</span></a></li>
+					</ul>
+				</li>
+			    </foreach>
 			</ul>
 
 			<div class="goods-serial">
