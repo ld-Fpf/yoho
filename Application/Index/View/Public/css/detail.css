@@ -319,6 +319,7 @@ a:hover {
   font-family: 微软雅黑;
 }
 .brands-nav {
+  margin-top: -15px;
   height: 45px;
   cursor: pointer;
   background: #333;
@@ -513,6 +514,12 @@ a:hover {
   padding: 0px 5px;
   margin-bottom: 5px;
   min-width: 28px;
+}
+.detail-info .info-right .info-buy .size dd .act {
+  color: white;
+  background: #222;
+  padding: 0 3px;
+  border-radius: 3px;
 }
 .detail-info .info-right .info-buy .size dd .size-ruler {
   border: 0px none;

@@ -3,7 +3,7 @@ if (!defined("HDPHP_PATH"))exit('No direct script access allowed');
 //更多配置请查看hdphp/Config/config.php
 $config = array(
     /********************************基本参数********************************/
-    'AUTO_LOAD_FILE'                => array(),     //自动加载文件
+    'AUTO_LOAD_FILE'                => array('Functions.php'),     //自动加载文件
     /********************************数据库********************************/
     'DB_DRIVER'                     => 'mysqli',    //驱动
     'DB_CHARSET'                    => 'utf8',      //字符集

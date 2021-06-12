@@ -3,9 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	<title>商品列表</title>
+	<title>商品详情</title>
 	<link rel="stylesheet" type="text/css" href="http://localhost/yoho/Application/Index/View/Public/css/yoho.css">
-	<link rel="stylesheet" type="text/css" href="http://localhost/yoho/Application/Index/View/Public/css/list.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/yoho/Application/Index/View/Public/css/detail.css">
 	<script type="text/javascript" src="http://localhost/yoho/Static/jquery/jquery-1.7.2.min.js"></script>
 	<?php if(!defined('HDPHP_PATH'))exit;C('SHOW_NOTICE',FALSE);?>
 <script type="text/javascript">
@@ -414,71 +414,80 @@
 	<!-- 头部导航结束 -->
 </div>
 <!-- 头部区域结束 -->
-	<script type="text/javascript">
-    	var CONTROLLER = "http://localhost/yoho/index.php/Index/List";
-    </script>
-	<script type="text/javascript" src="http://localhost/yoho/Application/Index/View/List/js/js.js"></script>
-	<script type="text/javascript">
-	// $(function(){
-	// 	$('.goods-category li').toggle(
-	// 		function(){
-	// 			$(this).children('ul').css('display','block');
-	// 			$(this).children('a').children(' .iconfont').html("&#xe612;");
-	// 		},
-	// 		function(){
-	// 			$(this).children('ul').css('display','none');
-	// 			$(this).children('a').children(' .iconfont').html("&#xe60d;");
-	// 		}
-	// 	)
-	// })
-	</script>
+
 <!-- 主体区域开始 -->
 
-<div class="wrapper screen wrapper-goods">
-	<!-- 面包屑导航开始 -->
+<!-- 品牌导航开始 -->
+<div class="brands-nav">
+    <div style="background:#333;">
+        <div class="clear screen">
+            <div class="left">
+                <img src="http://localhost/yoho/Application/Index/View/Public/images/brand.png" alt="HARDLYEVER'S" height="45">
+              </div>
+            
+            <div class="right favor">
+                    <a href="" title="HARDLYEVER'S">
+                        <span class="iconfont">&#xe600;</span>
+                    </a>
+                    <a href="javascript:void(0);" id="brandFavor" brand="250" class="">
+                        <span class="iconfont">&#xe601;</span>
+                    </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 品牌导航结束 -->
+
+<!-- 商品详情开始 -->
+<div class="wrapper screen wrapper-goods-detail">
+	<!-- 面包屑开始 -->
 	<div class="mini-site-nav">
-	        <a href="http://localhost/yoho" title="YOHO!有货">BOYS首页</a>&nbsp;&nbsp;>&nbsp;&nbsp;<?php echo $cname;?>
+	    <a href="">BOYS首页</a><span class="ifont10">&gt;</span>
+	    <a href=""><?php echo $cname;?></a><span class="ifont10">&gt;</span>
+	    <!-- <a href="">牛仔裤</a><span class="ifont10">&gt;</span> -->
+	    <span>
+	        <h1><?php echo $goods['name'];?></h1>
+	    </span>
 	</div>
-	<!-- 面包屑导航结束 -->
+	<!-- 面包屑结束 -->
 
-	<!-- 商品列表开始 -->
-	<div class="clear goods-main">
-		<!-- 左侧分类开始 -->
-		<div class="left goods-left">
-			<ul class="goods-category clear">
-			    <li>
-			    	<a href="">全部品类<span class="num">25089</span></a>
-			    </li>
-			    <?php foreach ($lcate as $k=>$v){?>
-				<li pid="<?php echo $v['pid'];?>" cid="<?php echo $v['category_id'];?>">
-					<a href="javascript:void(0);">
-						<span class="iconfont">&#xe60d;</span><?php echo $v['name'];?><span class="num">11468</span>
-					</a>
-					<ul class="hidden" cid="<?php echo $v['category_id'];?>">
-						<!-- <?php foreach ($lcate as $k=>$v){?>
-							<li class=""><a href=""><?php echo $v['name'];?><span class="num">2148</span></a></li>
-						<?php }?> -->
-					</ul>
-				</li>
-			    <?php }?>
-			</ul>
+	<!-- 购买选项开始 -->
+	<div class="clear detail-info" style="width: 990px;margin-left: 100px;">
+	    <div class="left clear info-left">
 
-			<div class="goods-serial">
-			      <div id="list-left-ads"></div>
-			</div>
-		</div>
-		<!-- 左侧分类结束 -->
+	        <div class="left goods-img-big relative">
+	            <div class="absolute goods-tag-small" id="goods_tag_small"></div>
+	            <img id="bigImage" src="http://img11.static.yhbimg.com/goodsimg/2014/11/13/06/0184ace5aff9115b1404451570a8889421.jpg?imageMogr2/thumbnail/420x560/extent/420x560/background/d2hpdGU=/position/center">
+	        </div>
 
-		<!-- 右侧开始 -->
-		<div class="right goods-right">
-		      <div id="searchbanner"></div>
-		      <a name="selected"></a>
+	        <div class="right goods-img-small">
+	        	<?php foreach ($pic as $k=>$v){?>
+		        	<a href="javascript:void(0);">
+		        		<img src="http://localhost/yoho/<?php echo $v['small_pic'];?>" width="75" height="100">
+		        	</a>
+	        	<?php }?>
+	        </div>
+	    </div>
 
-		      <!-- 搜索条件开始 -->
-		      <div class="search-condition expand-selected">
-
-				<!-- 价格筛选开始 -->
-				        <?php
+	    <div class="right info-right">
+	        <div class="title">
+	            <h2><?php echo $goods['name'];?></h2>
+	            <p>
+	                <a href="" title="<?php echo $bname;?>"><?php echo $bname;?></a>
+	            </p>
+	        </div>
+	        <div class="info-price">
+	        	<div class="price-del">
+	        		<span>市场价：</span><b>￥<?php echo $goods['marketprice'];?></b>
+	        	</div>
+	        	<div class="price">
+	        		<span>促销价：</span><span class="price-sale">￥<?php echo $goods['shopprice'];?></span>
+	        	</div>
+	        </div>
+	        <div class="info-activity"></div>
+	        <div class="info-buy">
+	            <div class="move-panel">
+			        <?php
         //初始化
         $hd['list']['ac'] = array(
             'first' => false,
@@ -487,7 +496,7 @@
             'index' => 0
         );
         if (empty($attrClass)) {
-            echo ' 没有数据 ';
+            echo '';
         } else {
             $listId = 0;
             $listShowNum=0;
@@ -515,13 +524,11 @@
                 $listShowNum++;
                 $listNextId+=1
                 ?>
-		      	<dl class="clear">
-		      	        <dt><span><?php echo $ac['title'];?>：</span></dt>
-		      	        <dd class="outer-100">
-		      	            <div class="inner-left">
-						<!-- <a href="" class="">￥0-300</a> -->
-						<?php echo searchAttrUrl(0,$hd['list']['ac']['index'],全部);?>
-						        <?php
+	                <dl class="size clear">
+	                    <dt class="left rgb9" id="select_size_title">选<?php echo $ac['title'];?>：</dt>
+	                    <dd class="left">
+	                        <div class="clear" id="sizeList">
+	                        	        <?php
         //初始化
         $hd['list']['av'] = array(
             'first' => false,
@@ -529,13 +536,13 @@
             'total' => 0,
             'index' => 0
         );
-        if (empty($ac['attrValue'])) {
+        if (empty($ac['_val'])) {
             echo '';
         } else {
             $listId = 0;
             $listShowNum=0;
             $listNextId=0;
-            foreach ($ac['attrValue'] as $av) {
+            foreach ($ac['_val'] as $av) {
                 //开始值
                 if ($listId<0) {
                     $listId++;
@@ -550,7 +557,7 @@
                 //第1个值
                 $hd['list'][av]['first']=($listId == 0);
                 //最后一个值
-                $hd['list'][av]['last']= (count($ac['attrValue'])-1 <= $listId);
+                $hd['list'][av]['last']= (count($ac['_val'])-1 <= $listId);
                 //总数
                 $hd['list'][av]['total']++;
                 //增加数
@@ -558,124 +565,201 @@
                 $listShowNum++;
                 $listNextId+=1
                 ?>
-							<?php echo searchAttrUrl($av['avid'],$hd['list']['ac']['index'],$av['attr_value']);?>
-						<?php }}?>
-		      	            </div>
-		      	        </dd>
-		      	    </dl>
-		      	    <?php }}?>
-		      	    <!-- 价格筛选结束 -->
-
-					<!-- 更多选项开始 -->
-		      	    <div class="control-bar">
-		      	        <a class="button-less" style="display:none;" href="javascript:void(0);">收起<span class="iconfont">&#xe60b;</span></a>
-		      	        <a class="button-more" href="javascript:void(0);">更多选项(颜色...)<span class="iconfont">&#xe603;</span></a>
-		      	    </div>
-		      	    <!-- 更多选项结束 -->
-
-
-
-		      	    <!-- 商品排序选项开始 -->
-		      	    <div class="clear sort-condition">
-    	                        <div class="left sort-left">
-    	                            <a href="/?order=s_t_desc" class="">最新<span class="iconfont">&#xe612;</span></a>
-    	                            <!-- a href="">人气<span class="iconfont">]</span></a-->
-    	                            <a href="/?order=s_p_asc" class="">价格<span class="iconfont">&#xe614;</span></a>
-    	                            <a href="/?order=p_d_asc" class="">折扣<span class="iconfont">&#xe614;</span></a>
-    	                            <a href="/?specialoffer=1" class=""><span class="select-input"><span class="iconfont">&#xe613;</span></span><span>特价</span></a>
-    	                            <a href="/?limit=1" class=""><span class="select-input"><span class="iconfont">&#xe613;</span></span><span>限量</span></a>
-    	                            <a href="/?new=1" class=""><span class="select-input"><span class="iconfont">&#xe613;</span></span><span>新品</span></a>
-    	                        </div>
-		      	    </div>
-		      	    <!-- 商品排序选项结束 -->
-
-
-				<!-- 商品循环开始 -->
-	      	    	<div class="goods-list">
-	      	    		        <?php
-        //初始化
-        $hd['list']['g'] = array(
-            'first' => false,
-            'last'  => false,
-            'total' => 0,
-            'index' => 0
-        );
-        if (empty($goods)) {
-            echo ' 没有数据 ';
-        } else {
-            $listId = 0;
-            $listShowNum=0;
-            $listNextId=0;
-            foreach ($goods as $g) {
-                //开始值
-                if ($listId<0) {
-                    $listId++;
-                    continue;
-                }
-                //步长
-                if($listId!=$listNextId){$listId++;continue;}
-                //显示条数
-                if($listShowNum>=100)break;
-                //第几个值
-                $hd['list'][g]['index']++;
-                //第1个值
-                $hd['list'][g]['first']=($listId == 0);
-                //最后一个值
-                $hd['list'][g]['last']= (count($goods)-1 <= $listId);
-                //总数
-                $hd['list'][g]['total']++;
-                //增加数
-                $listId++;
-                $listShowNum++;
-                $listNextId+=1
-                ?>
-	      	    		<div class="goods-info">
-			      		<div class="lazy">
-			      			<a href="<?php echo U('Detail/index', array('cid' => $g['category_id'], 'gid' => $g['good_id']));?>">
-			      				<img src="http://localhost/yoho/<?php echo $g['listpic'];?>" width="235" height="314" />
-			      			</a>
-			      		</div>
-			      		<div class="product-info">
-			      			<div class="name">
-			      				<a href="<?php echo U('Detail/index', array('cid' => $g['category_id'], 'gid' => $g['good_id']));?>"><?php echo $g['name'];?></a>
-			      			</div>
-			      			<div class="brand"><a href="<?php echo U('Detail/index', array('cid' => $g['category_id'], 'gid' => $g['good_id']));?>"><?php echo $g['bname'];?></a></div>
-			      			<div class="price"><span class="rgb9 delete">￥<?php echo $g['marketprice'];?></span><span><b>￥<?php echo $g['shopprice'];?></b></span></div>
-			      		</div>
-			      	</div>
-			      	<?php }}?>
-			      </div>
-					<!-- 商品循环结束 -->
-				<div class="clear"></div>
-				
-				<!-- 分页开始 -->
-				<div class="goods-bottom clear">
-				      <div class="left">
-				      	<span class="rgb9">1 - 59 / 共25066件商品</span>
-				      </div>
-				      <div class="goods-page right">
-				      	<?php echo $page;?>
-				      </div>
-				</div>
-				<!-- 分页结束 -->
-
-			      </div>
-		      </div>
-		      <!-- 搜索条件结束 -->
-
-			<!-- 商品列表展示开始 -->
-		      
-			<!-- 商品列表展示结束 -->
-		</div>
-		<!-- 右侧结束 -->
-
-
+	                        		    <?php if(in_array($av['taid'],$stVal)){ ?>
+	                        			<a href="javascript:void(0);" title="" class="left act" onclick="return selectSpec(this);"><?php echo $av['avalue'];?></a>
+	                        		<?php }else{ ?>
+	                        			<a href="javascript:void(0);" title="" class="left" onclick="return selectSpec(this);"><?php echo $av['avalue'];?></a>
+	                        		<?php } ?>
+	                        	<?php }}?>
+	                        </div>
+	                    </dd>
+	                </dl>
+			  <?php }}?>
+	                <dl class="amount clear">
+	                        <dt class="left rgb9">选数量：</dt>
+	                        <dd class="left" id="amount-unit">
+	                            <div class="clear amount-unit">
+	                                <input class="amount-input left" name="num" id="num" value="1" disabled="" type="text">
+	                                <div class="left">
+	                                    <a href="javascript:void(0);" class="amount-add"><span class="iconfont">&#xe60b;</span></a>
+	                                    <a href="javascript:void(0);" class="amount-sub amount-subtract">
+	                                    	<span class="iconfont">&#xe603;</span>
+	                                    </a>
+	                                </div>
+	                            </div>
+	                        </dd>
+	                        <dd class="left amount-tips"><span class="rgb9"></span></dd>
+	                    </dl>
+	                    <div class="info-submit clear">
+	                        <div class="">
+	                        	<a href="javascript:void(0);" class="left button-goods button-cart" id="buyclick"><span class="iconfont font16">&#xe60a;</span>添加到购物车</a>
+	                        </div>
+	                        <div class="" id="fav_item">
+	                        	<a href="javascript:void(0);" onclick="productdetails.favitem();" class="left button-favor">             <span class="iconfont">&#xe601;</span>收藏商品</a>
+	                        </div>
+	                    </div>
+	                  </div>
+	            <div id="resultBox" class="move-panel"></div>
+	        </div>
+	        <div class="info-other">
+	            <div class="info-share clear">
+	                <span class="share-to"><span class="rgb9">分享商品：</span>
+	                    <a title="分享到新浪微博" href="javascript:void(0);" class="share-a share-sina"></a>
+	                    <a title="分享到腾讯微博" href="javascript:void(0);" class="share-a share-tencent"></a>
+	                    <a title="分享到人人网" href="javascript:void(0);" class="share-a share-renren"></a>
+	                    <a title="分享到QQ空间" href="javascript:void(0);" class="share-a share-qzone"></a>
+	                    <a title="分享到QQ好友" href="javascript:void(0);" class="share-a share-qq"></a>
+	                    <a title="分享到豆瓣" href="javascript:void(0);" class="share-a share-douban"></a>
+	                </span>
+	            </div>
+	        </div>
+	    </div><!--end info-right-->
 	</div>
-	<!-- 商品列表结束 -->
+	<!-- 购买选项结束 -->
+	<div class="clear"></div>
+	<!-- 商品信息开始 -->
+	<dl class="goods-attr" id="like"></dl>
+	<dl class="goods-attr">
+	        <dt class="center">
+	            <span class="cur" id="description">商品信息 DESCRIPTION</span>
+	            <span class="sep">|</span>
+	            <span class="" id="materials">材质洗涤 MATERIALS</span>
+	        </dt>
+	        <dd class="goods-desciption">
+	            <ul class="clear">
+	    <li class="left"><span>编号：</span>51078039</li>
+	    <li class="left" id="goodsColor"><span>颜色：</span>蓝色</li>
+	            <li class="left">
+	            <span>性别：</span>
+	            男款        </li>
+	        </ul>
+	        </dd>
+	        <dd class="goods-material hidden" id="material">
+	        </dd>
+	    </dl>
+	<div class="clear"></div>
+	<dl class="goods-attr">
+	        <dt class="center">
+	            <span class="cur" id="sizeInfo"><a name="size-info"></a>尺码信息 SIZE INFO</span>
+	            <span class="sep">|</span>
+	            <span id="sizeImg">测量方式 MEASURE</span>
+	        </dt>
+	        <dd class="goods-size-info">
+	            <table>
+	    <thead>
+	    <tr>
+	        <th width="110">尺码</th><th width="110">大腿围</th><th width="110">臀围</th><th width="110">裤脚围</th><th width="110">裤长</th><th width="110">裆长</th><th width="110">腰围</th>    </tr>
+	    </thead>
+	    <tbody>
+	    <tr><td>30英寸</td><td>56</td><td>98</td><td>38</td><td>103</td><td>23</td><td>80</td></tr>    <tr><td>29英寸</td><td>54</td><td>94</td><td>36</td><td>101</td><td>23</td><td>76</td></tr>    <tr><td>32英寸</td><td>58</td><td>102</td><td>38</td><td>103</td><td>24</td><td>82</td></tr>    <tr><td>34英寸</td><td>60</td><td>108</td><td>40</td><td>108</td><td>25</td><td>88</td></tr>        </tbody>
+	</table>
+	<p class="center measure-tips">※ 以上尺寸为实物人工测量，因测量方式不同会有1-2CM误差，相关数据仅作参考，以收到实物为准。&nbsp;&nbsp;单位：厘米</p>        </dd>
+	        <dd class="hidden measure">
+	            <p class="center">
+	                <img id="cateimage" src="http://static.yohobuy.com/images/v3/icon/img-white.png">
+	            </p>
+	        </dd>
+	    </dl>
 
+
+		<div class="clear"></div>
+	    <dl class="goods-attr">
+	        <dt class="center">
+	            <span class="cur">商品详情 DETAILS</span>
+	        </dt>
+	        <dd>
+	            <div class="goodsdetail-mod">
+	                        </div>
+	        </dd>
+	        <dd class="goods-detail-richtext">
+	            <?php echo htmlspecialchars_decode($pic['0']['intro']);?>
+	        </dd>
+	    </dl>
+
+
+
+
+	    <dl class="goods-attr">
+	        <dt class="center">
+	            <span class=""><a href="javascript:void(0);" id="userConsult">顾客咨询 (<span id="consultNums">3</span>)</a></span>
+	            <span class="sep">|</span>
+	            <span class="cur"><a href="javascript:void(0);" id="userComments">购买评价 (<span id="commentsNums">0</span>)</a></span>
+	        </dt>
+	    </dl>
+
+
+	    <div class="comments">
+	        <dl style="display: block;" id="commentsItem" class="">
+	            <dt>购买评价(<span id="commentsNum">0</span>)</dt>
+	                  <dd style="display: none;" id="commentsBtnBox" class="hidden" page="1">
+	                <p class="center load-more"><a href="javascript:void(0);" id="commentsBtn" onclick="comcoulist.commentlist();">加载更多&nbsp;<span class="ifont">.</span></a></p>
+	            </dd>
+	            <dd>
+	                <p class="center"><a href="http://www.yohobuy.com/home/comment" target="_blank" class="do-comment"><span class="iconfont">&#xe60c;</span>我要评论</a></p>
+	            </dd>
+	        </dl>
+	        <dl style="display: none;" id="consultItem" class="hidden">
+	            <dt>购买咨询(<span id="consultNum">3</span>)</dt>
+	                          <dd>             <div class="clear">                 <div class="left photo">                     <img src="http://static.yohobuy.com/images/v3/boy.jpg">                 </div>                 <div class="left user-info">                     <p>                         <span class="user-question">身高165体重118.我腿有点粗。买29英寸怕穿起紧。会不会啊</span>                     </p>                     <p>                         <span class="time">2014-12-29 15:27:34</span>                     </p>                 </div>             </div>             <div class="user-reply">                 <p>您好，根据您提供的信息建议您参30英寸哦，购买裤子是参考具体腰围裤长厘米数的，不同品牌款式的尺码是不一样的，您也可以测量下自己的腰围裤长然后参考网页尺码选择哦，如果有任何问题都可以致电我们电话客服4008899646，我们会竭诚为您服务，感谢您对yoho!有货的关注。</p>             </div>         </dd>              <dd>             <div class="clear">                 <div class="left photo">                     <img src="http://static.yohobuy.com/images/v3/boy.jpg">                 </div>                 <div class="left user-info">                     <p>                         <span class="user-question">腰围二尺六，身高170体重67，可以估计一下大概穿多大的嘛？</span>                     </p>                     <p>                         <span class="time">2014-11-18 01:33:17</span>                     </p>                 </div>             </div>             <div class="user-reply">                 <p>您好，根据您提供的信息建议您参考32英寸哦，购买裤子是参考具体腰围裤长厘米数的，不同品牌款式的尺码是不一样的，您也可以测量下自己的腰围臀围裤长然后参考网页尺码选择哦，如果有任何问题都可以致电我们电话客服4008899646，我们会竭诚为您服务，感谢您对yoho!有货的关注。</p>             </div>         </dd>              <dd>             <div class="clear">                 <div class="left photo">                     <img src="http://static.yohobuy.com/images/v3/boy.jpg">                 </div>                 <div class="left user-info">                     <p>                         <span class="user-question">您好，腰围二尺六穿几寸的裤子？</span>                     </p>                     <p>                         <span class="time">2014-11-16 16:24:01</span>                     </p>                 </div>             </div>             <div class="user-reply">                 <p>您好，购买裤子是参考具体腰围裤长厘米数的，不同品牌款式的尺码是不一样的，您也可以测量下自己的腰围臀围裤长然后参考网页尺码选择哦，如果有任何问题都可以致电我们电话客服4008899646，我们会竭诚为您服务，感谢您对yoho!有货的关注。</p>             </div>         </dd>      <dd style="display: none;" id="consultBtnBox" class="hidden" page="1">
+	                <p class="center load-more"><a href="javascript:void(0);" id="commentsBtn" onclick="comcoulist.consultlist();">加载更多&nbsp;<span class="ifont">.</span></a></p>
+	            </dd>
+	            <dd>
+	                <p class="center"><a href="javascript:void(0);" class="do-comment" id="consultFormBtn">我要咨询</a></p>
+	            </dd>
+	            <dd style="display:none;"></dd>
+	        </dl>
+
+	        <div class="after-sale-close">
+	            <p><a href="javascript:void(0);" class="rgb2"><span class="iconfont">&#xe60e;</span><span>售后服务</span></a></p>
+	        </div>
+
+	        <div class="goods-sure">
+	            <p class="center"><img src="http://localhost/yoho/Application/Index/View/Public/images/goods-sure.png"></p>
+	        </div>
+	    </div>
+
+	    <dl class="goods-attr" id="recentReview">
+	    	<dt class="center">
+	    		<span class="cur">最近浏览 RECENT REVIEW</span>
+	    	</dt>
+	    	<dd class="goods-suggest">
+	    		<ul class="clear" style="margin: 0 auto;width: 1010px;">
+	    			<li class="left ">
+	    				<a href=""><img src="http://localhost/yoho/Application/Index/View/Public/images/recent.jpg"></a>
+	    				<a href="" class="name">HARDLYEVER'S  荧光泼墨直筒牛仔裤</a>
+	    				<span class="price-del">￥475</span>
+	    				<span class="price">￥399</span>
+	    			</li>
+	    			<li class="left ">
+	    				<a href=""><img src="http://localhost/yoho/Application/Index/View/Public/images/recent.jpg"></a>
+	    				<a href="" class="name">HARDLYEVER'S  荧光泼墨直筒牛仔裤</a>
+	    				<span class="price-del">￥475</span>
+	    				<span class="price">￥399</span>
+	    			</li>
+	    			<li class="left ">
+	    				<a href=""><img src="http://localhost/yoho/Application/Index/View/Public/images/recent.jpg"></a>
+	    				<a href="" class="name">HARDLYEVER'S  荧光泼墨直筒牛仔裤</a>
+	    				<span class="price-del">￥475</span>
+	    				<span class="price">￥399</span>
+	    			</li>
+	    			<li class="left ">
+	    				<a href=""><img src="http://localhost/yoho/Application/Index/View/Public/images/recent.jpg"></a>
+	    				<a href="" class="name">HARDLYEVER'S  荧光泼墨直筒牛仔裤</a>
+	    				<span class="price-del">￥475</span>
+	    				<span class="price">￥399</span>
+	    			</li>
+	    		</ul>
+	    	</dd>
+	    </dl>
+	    <!-- 商品信息结束 -->
 </div>
+<!-- 商品详情结束 -->
+
+
 
 <!-- 主体区域结束 -->
+
+
 
 <!-- 黑色底部开始 -->
 <div class="footer2013 clear">
@@ -734,7 +818,45 @@
 				</div>
 			  </div>
 		</div>
+<script type="text/javascript">
+			var avalue='';
+			$("a[taid][class='act']").each(function(){
+				avalue += '-'+$(this).attr('avalue');
+			})
+			//将隐藏表单加上选中属性
+			avalue=avalue.slice(1);
+			$('input[name="avalue"]').val(avalue);
+			$('#yixuanze').text($('#yxzv').val()); //已选择span
 
+			//选择默认规格属性
+				function selectSpec(id){
+					//点击之后变为选中样式
+					// 记录点击之前的样式
+					var pre = $(id).siblings('a').parent().find("a[class='act']");
+					$(id).siblings().removeClass('xuan').end().addClass('xuan');
+					var avid=''; //组合avid为 0_0_0 样式
+					$("a[avid][class='xuan']").each(function(){
+						avid+='_'+$(this).attr('avid');
+					})
+					avid=avid.slice(1);
+					var gid = <?php echo $hd['get']['gid'];?>;
+					$.post("<?php echo (U('havingst'));?>",{gid:gid,avid:avid},function(s){
+						if(s==1){
+							var url = '__METH__/gid/<?php echo $hd['get']['gid'];?>/avid/'+avid;
+							location.href=url;
+						}else{
+							// var url = '__METH__/gid/<?php echo $hd['get']['gid'];?>/avid/<?php echo $hd['get']['avid'];?>';
+							// location.href=url;
+							a=0;
+							$.msg({str:'没有库存！',shade:1,close:function(){
+								// $(id).removeClass('xuan');pre.addClass('xuan');
+							}});
+							return false;
+						}
+					})
+					return false;
+				}
+</script>
 
 		<div class="footer-link clear">
 			<div class="screen clear">

@@ -9,7 +9,9 @@ class ListController extends CommonController{
         $cid = Q('cid',0,'intval');
         // $cate=cache('cate');
         $cate = K('Category')->get_all_data();
+        // 左侧大分类
         $lcate = K('Category')->where(array('pid'=>0))->all();
+        // p($cate);die;
         $this->assign('lcate', $lcate);
         $cname = K('Category')->get_one_data(array('category_id'=>$cid));
         $this->assign('cname', $cname['name']);
@@ -133,6 +135,17 @@ class ListController extends CommonController{
         }
 
         return $temp;
+    }
+
+
+    /**
+     * ajax获得子集分类id
+     */
+    public function ajax_get_son(){
+        if(!IS_AJAX) $this->error('非法请求');
+        $sonId = K('Category')->get_son_data(Q('post.cid',0,'intval'));
+        //给js返回json数据
+        $this->ajax($sonId);
     }
 
     
